@@ -44,7 +44,10 @@ header{padding:38px 0 30px}
 h1{font-size:clamp(30px,8vw,44px)}
 header .lead{margin-top:14px;color:var(--body);font-size:17px}
 
-.paycard{margin-top:26px;background:var(--ink);color:#fff;border-radius:20px;padding:24px}
+.heroimg{margin-top:20px;border-radius:20px;overflow:hidden;background:#E3DFD7}
+.heroimg img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.paycard{margin-top:-46px;position:relative;z-index:2;margin-left:10px;margin-right:10px;
+  background:var(--ink);color:#fff;border-radius:20px;padding:24px;box-shadow:0 14px 34px rgba(0,0,0,.24)}
 .paycard .lab{font-size:14px;color:#A5A29B;font-weight:600}
 .paycard .val{font-size:clamp(40px,12vw,58px);font-weight:800;color:var(--yellow);letter-spacing:-.03em;
   line-height:1.05;margin-top:6px;font-variant-numeric:tabular-nums}
@@ -130,6 +133,13 @@ footer{border-top:2px solid var(--line);margin-top:26px;padding:22px 0 34px;colo
   <h1 data-i="h1"></h1>
   <p class="lead" data-i="lead"></p>
 
+  <div class="heroimg">
+    <picture>
+      <source srcset="workers.webp" type="image/webp">
+      <img src="workers.jpg" width="1400" height="875" fetchpriority="high" data-alt="imgAlt" alt="">
+    </picture>
+  </div>
+
   <div class="paycard">
     <div class="lab" data-i="payLabel"></div>
     <div class="val"><span data-i="payValue"></span> <span class="unit" data-i="payUnit"></span></div>
@@ -198,7 +208,7 @@ footer{border-top:2px solid var(--line);margin-top:26px;padding:22px 0 34px;colo
 
 <footer><div class="wrap">
   <p data-i="footCompany"></p>
-  <p><a href="#" data-i="footPrivacy"></a></p>
+  <p><a href="privacy.html" data-i="footPrivacy"></a></p>
 </div></footer>
 
 <nav class="dock">
@@ -212,6 +222,7 @@ const CONFIG = { formEndpoint:"", whatsapp:"420608067777", phone:"+420 608 067 7
 const T = {
 uk:{
  place:"Кадань і Хомутов, Чехія",
+ imgAlt:"Працівники заводу автокомпонентів біля виробничої лінії",
  h1:"Виробництво деталей для автомобілів",
  lead:"Набираємо чоловіків і жінок на повний робочий день. Офіційний договір, зміни 8–12 годин.",
  payLabel:"Оплата", payValue:"160–185 Kč", payUnit:"за годину",
@@ -244,6 +255,7 @@ uk:{
 },
 cs:{
  place:"Kadaň a Chomutov, ČR",
+ imgAlt:"Pracovníci závodu na výrobu autodílů u výrobní linky",
  h1:"Výroba dílů pro automobily",
  lead:"Nabíráme muže i ženy na plný úvazek. Oficiální smlouva, směny 8–12 hodin.",
  payLabel:"Mzda", payValue:"160–185 Kč", payUnit:"za hodinu",
@@ -276,6 +288,7 @@ cs:{
 },
 ro:{
  place:"Kadaň și Chomutov, Cehia",
+ imgAlt:"Angajați ai fabricii de piese auto lângă linia de producție",
  h1:"Producție de piese auto",
  lead:"Angajăm bărbați și femei cu normă întreagă. Contract oficial, ture de 8–12 ore.",
  payLabel:"Salariu", payValue:"160–185 CZK", payUnit:"pe oră",
@@ -313,6 +326,9 @@ function apply(l){
   lang=l; document.documentElement.lang=l;
   document.querySelectorAll("[data-i]").forEach(el=>{
     const v=T[l][el.dataset.i]; if(v!==undefined) el.textContent=v;
+  });
+  document.querySelectorAll("[data-alt]").forEach(el=>{
+    const v=T[l][el.dataset.alt]; if(v!==undefined) el.alt=v;
   });
   document.querySelectorAll(".langs button").forEach(b=>
     b.setAttribute("aria-pressed", b.dataset.lang===l?"true":"false"));
