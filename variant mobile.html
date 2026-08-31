@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Виробництво деталей для автомобілів — Кадань, Хомутов</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141414;
+  --yellow:#FFC400;
+  --yellow-deep:#E0AC00;
+  --paper:#FBFAF7;
+  --body:#54524D;
+  --line:#141414;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Manrope,system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  padding-bottom:84px}
+@media(min-width:800px){body{padding-bottom:0}}
+h1,h2,h3{margin:0;font-weight:800;line-height:1.12;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:660px;margin:0 auto;padding:0 18px}
+
+.bar{position:sticky;top:0;z-index:30;background:var(--ink);color:#fff}
+.bar .wrap{display:flex;align-items:center;height:56px;gap:10px}
+.mark{font-weight:800;font-size:16px;letter-spacing:-.01em}
+.mark em{font-style:normal;color:var(--yellow)}
+.langs{margin-left:auto;display:flex;gap:4px}
+.langs button{font:600 13px/1 Manrope,sans-serif;background:#242424;color:#A5A29B;border:0;
+  padding:9px 12px;border-radius:8px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--yellow);color:var(--ink)}
+
+.hazard{height:9px;background:repeating-linear-gradient(135deg,var(--yellow) 0 16px,var(--ink) 16px 32px)}
+
+header{padding:38px 0 30px}
+.place{display:inline-block;background:var(--yellow);font-weight:600;font-size:14px;
+  padding:7px 13px;border-radius:999px;margin-bottom:18px}
+h1{font-size:clamp(30px,8vw,44px)}
+header .lead{margin-top:14px;color:var(--body);font-size:17px}
+
+.paycard{margin-top:26px;background:var(--ink);color:#fff;border-radius:20px;padding:24px}
+.paycard .lab{font-size:14px;color:#A5A29B;font-weight:600}
+.paycard .val{font-size:clamp(40px,12vw,58px);font-weight:800;color:var(--yellow);letter-spacing:-.03em;
+  line-height:1.05;margin-top:6px;font-variant-numeric:tabular-nums}
+.paycard .unit{font-size:18px;color:#fff;font-weight:600}
+.paycard .fine{font-size:13px;color:#A5A29B;margin-top:10px}
+
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.btn{display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;
+  border-radius:14px;padding:17px 14px;font-size:16px;border:2px solid var(--ink)}
+.btn.solid{background:var(--yellow);border-color:var(--yellow)}
+.btn.solid:hover{background:var(--yellow-deep);border-color:var(--yellow-deep)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+
+section{padding:34px 0}
+h2{font-size:clamp(23px,5.5vw,30px);margin-bottom:18px}
+.block{border:2px solid var(--line);border-radius:18px;padding:20px;background:#fff;margin-bottom:12px}
+.block h3{font-size:19px;margin-bottom:5px}
+.block p{color:var(--body);font-size:16px}
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tags li{list-style:none;border:2px solid var(--line);border-radius:999px;padding:10px 16px;
+  font-weight:600;font-size:15px;background:#fff}
+
+.steps{list-style:none;counter-reset:s;margin:0;padding:0}
+.steps li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;padding:14px 0}
+.steps li+li{border-top:2px dotted #CFCAC0}
+.steps li:before{content:counter(s);flex:0 0 auto;width:34px;height:34px;border-radius:10px;
+  background:var(--yellow);font:800 16px/34px Manrope,sans-serif;text-align:center}
+.steps b{display:block;font-size:18px;font-weight:800}
+.steps span{color:var(--body);font-size:16px}
+
+.formsec{background:var(--ink);color:#fff;border-radius:26px;padding:28px 20px;margin:34px 0}
+.formsec h2{color:#fff}
+.formsec .sub{color:#A5A29B;font-size:15px;margin:-8px 0 20px}
+.f{display:grid;gap:14px}
+label{display:block;font:600 14px/1.4 Manrope,sans-serif;color:#A5A29B;margin-bottom:6px}
+input,select,textarea{width:100%;background:#1F1F1F;color:#fff;border:2px solid #333;border-radius:12px;
+  padding:15px;font:500 17px/1.3 Manrope,sans-serif}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--yellow)}
+textarea{min-height:88px;resize:vertical}
+.check{display:flex;gap:11px;align-items:flex-start;font-size:14px;color:#A5A29B;line-height:1.5}
+.check input{width:22px;height:22px;flex:0 0 auto;margin-top:1px;accent-color:var(--yellow)}
+button.send{background:var(--yellow);color:var(--ink);border:0;border-radius:14px;padding:18px;
+  font:800 18px/1 Manrope,sans-serif;cursor:pointer;width:100%}
+button.send:hover{background:var(--yellow-deep)}
+button.send:disabled{opacity:.6;cursor:default}
+.msg{font-size:15px;padding:14px;border-radius:12px;display:none}
+.msg.ok{display:block;background:#17301E;color:#8FE3AA}
+.msg.bad{display:block;background:#3A2A12;color:var(--yellow)}
+
+.phone{display:block;font-size:clamp(26px,7vw,40px);font-weight:800;text-decoration:none;
+  letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.chips a{text-decoration:none;border:2px solid var(--line);border-radius:999px;padding:10px 18px;
+  font-weight:700;font-size:15px;background:#fff}
+.chips a:hover{background:var(--ink);color:#fff}
+
+footer{border-top:2px solid var(--line);margin-top:26px;padding:22px 0 34px;color:var(--body);font-size:13px;line-height:1.7}
+
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--ink);
+  padding:11px 14px calc(11px + env(safe-area-inset-bottom));display:flex;gap:9px}
+.dock a{flex:1;text-align:center;text-decoration:none;font-weight:800;font-size:16px;padding:15px 8px;border-radius:12px}
+.dock .call{background:var(--yellow);color:var(--ink)}
+.dock .apply{background:#2A2A2A;color:#fff}
+@media(min-width:800px){.dock{display:none}}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <div class="mark">AUTO<em>PARTS</em></div>
+  <div class="langs" role="group">
+    <button data-lang="uk" aria-pressed="true">UA</button>
+    <button data-lang="cs" aria-pressed="false">CZ</button>
+    <button data-lang="ro" aria-pressed="false">RO</button>
+  </div>
+</div></div>
+<div class="hazard"></div>
+
+<header><div class="wrap">
+  <div class="place" data-i="place"></div>
+  <h1 data-i="h1"></h1>
+  <p class="lead" data-i="lead"></p>
+
+  <div class="paycard">
+    <div class="lab" data-i="payLabel"></div>
+    <div class="val"><span data-i="payValue"></span> <span class="unit" data-i="payUnit"></span></div>
+    <div class="fine" data-i="payNote"></div>
+  </div>
+
+  <div class="actions">
+    <a class="btn solid" href="#form" data-i="ctaApply"></a>
+    <a class="btn ghost" href="tel:+420608067777" data-i="ctaCall"></a>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <h2 data-i="offerTitle"></h2>
+  <div class="block"><h3 data-i="o1t"></h3><p data-i="o1d"></p></div>
+  <div class="block"><h3 data-i="o2t"></h3><p data-i="o2d"></p></div>
+  <div class="block"><h3 data-i="o3t"></h3><p data-i="o3d"></p></div>
+  <div class="block"><h3 data-i="o4t"></h3><p data-i="o4d"></p></div>
+</div></section>
+
+<section><div class="wrap">
+  <h2 data-i="reqTitle"></h2>
+  <ul class="tags">
+    <li data-i="r1"></li><li data-i="r2"></li><li data-i="r3"></li><li data-i="r4"></li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <h2 data-i="howTitle"></h2>
+  <ol class="steps">
+    <li><div><b data-i="s1t"></b><span data-i="s1d"></span></div></li>
+    <li><div><b data-i="s2t"></b><span data-i="s2d"></span></div></li>
+    <li><div><b data-i="s3t"></b><span data-i="s3d"></span></div></li>
+    <li><div><b data-i="s4t"></b><span data-i="s4d"></span></div></li>
+  </ol>
+</div></section>
+
+<div class="wrap"><div class="formsec" id="form">
+  <h2 data-i="formTitle"></h2>
+  <p class="sub" data-i="formSub"></p>
+  <form id="applyForm" class="f" novalidate>
+    <div><label for="f-name" data-i="fName"></label><input id="f-name" name="name" required autocomplete="name"></div>
+    <div><label for="f-phone" data-i="fPhone"></label><input id="f-phone" name="phone" type="tel" required placeholder="+420 …" autocomplete="tel"></div>
+    <div><label for="f-msg" data-i="fMessenger"></label>
+      <select id="f-msg" name="messenger">
+        <option>Telegram</option><option>Viber</option><option>WhatsApp</option><option data-i="fCall"></option>
+      </select></div>
+    <div><label for="f-city" data-i="fCity"></label><input id="f-city" name="city" autocomplete="address-level2"></div>
+    <div><label for="f-note" data-i="fNote"></label><textarea id="f-note" name="note"></textarea></div>
+    <div class="check"><input id="f-ok" type="checkbox" required>
+      <label for="f-ok" style="margin:0" data-i="fConsent"></label></div>
+    <button class="send" type="submit" data-i="fSubmit"></button>
+    <div class="msg" id="formMsg"></div>
+  </form>
+</div></div>
+
+<section><div class="wrap">
+  <h2 data-i="contactTitle"></h2>
+  <a class="phone" href="tel:+420608067777">+420 608 067 777</a>
+  <div class="chips">
+    <a href="https://t.me/+420608067777">Telegram</a>
+    <a href="viber://chat?number=%2B420608067777">Viber</a>
+    <a href="https://wa.me/420608067777">WhatsApp</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <p data-i="footCompany"></p>
+  <p><a href="#" data-i="footPrivacy"></a></p>
+</div></footer>
+
+<nav class="dock">
+  <a class="call" href="tel:+420608067777" data-i="ctaCall"></a>
+  <a class="apply" href="#form" data-i="ctaApply"></a>
+</nav>
+
+<script>
+const CONFIG = { formEndpoint:"", whatsapp:"420608067777", phone:"+420 608 067 777" };
+
+const T = {
+uk:{
+ place:"Кадань і Хомутов, Чехія",
+ h1:"Виробництво деталей для автомобілів",
+ lead:"Набираємо чоловіків і жінок на повний робочий день. Офіційний договір, зміни 8–12 годин.",
+ payLabel:"Оплата", payValue:"160–185 Kč", payUnit:"за годину",
+ payNote:"Ставка залежить від ділянки та зміни.",
+ ctaApply:"Залишити заявку", ctaCall:"Зателефонувати",
+ offerTitle:"Що пропонуємо",
+ o1t:"Офіційне працевлаштування", o1d:"Трудовий договір за чеським законодавством, зарплата на банківський рахунок.",
+ o2t:"Стабільна робота на повний день", o2d:"Постійні замовлення заводу, а не сезонна підробітка.",
+ o3t:"Зміни 8–12 годин", o3d:"Денні та нічні зміни, графік узгоджуємо заздалегідь.",
+ o4t:"Підтримка з документами", o4d:"Допомагаємо оформити документи, потрібні для роботи в Чехії.",
+ reqTitle:"Кого шукаємо",
+ r1:"Від 18 років", r2:"Позмінний графік",
+ r3:"Уважність на лінії", r4:"Досвід не потрібен",
+ howTitle:"Як влаштуватися",
+ s1t:"Залишаєте заявку", s1d:"Заповніть форму або зателефонуйте.",
+ s2t:"Ми телефонуємо", s2d:"Уточнюємо деталі, відповідаємо на питання про оплату та житло.",
+ s3t:"Оформлення документів", s3d:"Готуємо договір і все потрібне для виходу на роботу.",
+ s4t:"Вихід на зміну", s4d:"Показуємо робоче місце і ставимо в графік.",
+ formTitle:"Залишити заявку", formSub:"Передзвонимо протягом робочого дня.",
+ fName:"Імʼя та прізвище", fPhone:"Телефон", fMessenger:"Зручний месенджер", fCall:"Дзвінок",
+ fCity:"Місто, де ви зараз", fNote:"Коментар (необовʼязково)",
+ fConsent:"Погоджуюся на обробку моїх персональних даних для розгляду заявки.",
+ fSubmit:"Надіслати заявку", fSending:"Надсилаємо…",
+ fOk:"Заявку надіслано. Ми зателефонуємо найближчим часом.",
+ fErr:"Не вдалося надіслати. Зателефонуйте нам: "+CONFIG.phone,
+ fFill:"Заповніть імʼя, телефон і підтвердіть згоду.",
+ contactTitle:"Звʼязатися напряму",
+ footCompany:"Назва компанії, IČO, номер ліцензії на посередництво в працевлаштуванні",
+ footPrivacy:"Політика обробки персональних даних"
+},
+cs:{
+ place:"Kadaň a Chomutov, ČR",
+ h1:"Výroba dílů pro automobily",
+ lead:"Nabíráme muže i ženy na plný úvazek. Oficiální smlouva, směny 8–12 hodin.",
+ payLabel:"Mzda", payValue:"160–185 Kč", payUnit:"za hodinu",
+ payNote:"Sazba závisí na provozu a směně.",
+ ctaApply:"Poslat žádost", ctaCall:"Zavolat",
+ offerTitle:"Co nabízíme",
+ o1t:"Oficiální zaměstnání", o1d:"Pracovní smlouva podle českého práva, mzda na bankovní účet.",
+ o2t:"Stabilní práce na plný úvazek", o2d:"Stálé zakázky závodu, ne sezónní brigáda.",
+ o3t:"Směny 8–12 hodin", o3d:"Denní i noční směny, rozpis domlouváme dopředu.",
+ o4t:"Podpora s dokumenty", o4d:"Pomůžeme vyřídit doklady potřebné pro práci v ČR.",
+ reqTitle:"Koho hledáme",
+ r1:"Od 18 let", r2:"Práce na směny",
+ r3:"Pečlivost na lince", r4:"Praxe není nutná",
+ howTitle:"Jak se přihlásit",
+ s1t:"Pošlete žádost", s1d:"Vyplňte formulář nebo zavolejte.",
+ s2t:"Zavoláme vám", s2d:"Upřesníme detaily a odpovíme na otázky ke mzdě i ubytování.",
+ s3t:"Vyřídíme dokumenty", s3d:"Připravíme smlouvu a vše potřebné k nástupu.",
+ s4t:"Nástup na směnu", s4d:"Ukážeme pracoviště a zařadíme vás do rozpisu.",
+ formTitle:"Nezávazná žádost", formSub:"Ozveme se ještě během pracovního dne.",
+ fName:"Jméno a příjmení", fPhone:"Telefon", fMessenger:"Preferovaný messenger", fCall:"Telefonát",
+ fCity:"Město, kde se nacházíte", fNote:"Poznámka (nepovinné)",
+ fConsent:"Souhlasím se zpracováním osobních údajů za účelem vyřízení žádosti.",
+ fSubmit:"Odeslat žádost", fSending:"Odesíláme…",
+ fOk:"Žádost odeslána. Brzy se vám ozveme.",
+ fErr:"Odeslání se nezdařilo. Zavolejte nám: "+CONFIG.phone,
+ fFill:"Vyplňte jméno, telefon a potvrďte souhlas.",
+ contactTitle:"Kontaktujte nás přímo",
+ footCompany:"Název společnosti, IČO, číslo povolení ke zprostředkování zaměstnání",
+ footPrivacy:"Zásady zpracování osobních údajů"
+},
+ro:{
+ place:"Kadaň și Chomutov, Cehia",
+ h1:"Producție de piese auto",
+ lead:"Angajăm bărbați și femei cu normă întreagă. Contract oficial, ture de 8–12 ore.",
+ payLabel:"Salariu", payValue:"160–185 CZK", payUnit:"pe oră",
+ payNote:"Tariful depinde de secție și de tură.",
+ ctaApply:"Trimite cererea", ctaCall:"Sună acum",
+ offerTitle:"Ce oferim",
+ o1t:"Angajare oficială", o1d:"Contract de muncă conform legislației cehe, salariul în cont bancar.",
+ o2t:"Loc de muncă stabil, normă întreagă", o2d:"Comenzi constante ale fabricii, nu muncă sezonieră.",
+ o3t:"Ture de 8–12 ore", o3d:"Ture de zi și de noapte, programul se stabilește din timp.",
+ o4t:"Sprijin cu actele", o4d:"Vă ajutăm să pregătiți documentele necesare pentru muncă în Cehia.",
+ reqTitle:"Pe cine căutăm",
+ r1:"De la 18 ani", r2:"Lucru în ture",
+ r3:"Atenție pe linie", r4:"Fără experiență",
+ howTitle:"Cum vă înscrieți",
+ s1t:"Trimiteți cererea", s1d:"Completați formularul sau sunați-ne.",
+ s2t:"Vă sunăm", s2d:"Clarificăm detaliile și răspundem la întrebări despre salariu și cazare.",
+ s3t:"Pregătim actele", s3d:"Întocmim contractul și documentele necesare.",
+ s4t:"Începeți tura", s4d:"Vă arătăm locul de muncă și vă includem în program.",
+ formTitle:"Trimiteți o cerere", formSub:"Vă sunăm în aceeași zi lucrătoare.",
+ fName:"Nume și prenume", fPhone:"Telefon", fMessenger:"Messenger preferat", fCall:"Apel telefonic",
+ fCity:"Orașul în care vă aflați", fNote:"Mesaj (opțional)",
+ fConsent:"Sunt de acord cu prelucrarea datelor mele personale pentru procesarea cererii.",
+ fSubmit:"Trimite cererea", fSending:"Se trimite…",
+ fOk:"Cererea a fost trimisă. Vă vom contacta în curând.",
+ fErr:"Trimiterea a eșuat. Sunați-ne: "+CONFIG.phone,
+ fFill:"Completați numele, telefonul și bifați acordul.",
+ contactTitle:"Contactați-ne direct",
+ footCompany:"Denumirea companiei, IČO, numărul licenței de mediere a muncii",
+ footPrivacy:"Politica de prelucrare a datelor personale"
+}
+};
+
+let lang="uk";
+function apply(l){
+  lang=l; document.documentElement.lang=l;
+  document.querySelectorAll("[data-i]").forEach(el=>{
+    const v=T[l][el.dataset.i]; if(v!==undefined) el.textContent=v;
+  });
+  document.querySelectorAll(".langs button").forEach(b=>
+    b.setAttribute("aria-pressed", b.dataset.lang===l?"true":"false"));
+  document.title = T[l].h1 + " — Kadaň, Chomutov";
+}
+document.querySelectorAll(".langs button").forEach(b=>b.addEventListener("click",()=>apply(b.dataset.lang)));
+const nav=(navigator.language||"uk").slice(0,2);
+apply(["uk","cs","ro"].includes(nav)?nav:"uk");
+
+document.getElementById("applyForm").addEventListener("submit", async e=>{
+  e.preventDefault();
+  const f=e.target, box=document.getElementById("formMsg"), btn=f.querySelector("button.send");
+  const d={name:f.name.value.trim(),phone:f.phone.value.trim(),messenger:f.messenger.value,
+           city:f.city.value.trim(),note:f.note.value.trim()};
+  if(!d.name||!d.phone||!f.querySelector("#f-ok").checked){
+    box.className="msg bad"; box.textContent=T[lang].fFill; return;
+  }
+  if(!CONFIG.formEndpoint){
+    const text=`${T[lang].formTitle}\n${T[lang].fName}: ${d.name}\n${T[lang].fPhone}: ${d.phone}\n${T[lang].fMessenger}: ${d.messenger}\n${T[lang].fCity}: ${d.city}\n${d.note}`;
+    window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`,"_blank");
+    box.className="msg ok"; box.textContent=T[lang].fOk; f.reset(); return;
+  }
+  btn.disabled=true; btn.textContent=T[lang].fSending;
+  try{
+    const r=await fetch(CONFIG.formEndpoint,{method:"POST",
+      headers:{"Content-Type":"application/json","Accept":"application/json"},
+      body:JSON.stringify({...d,lang})});
+    if(!r.ok) throw 0;
+    box.className="msg ok"; box.textContent=T[lang].fOk; f.reset();
+  }catch(_){ box.className="msg bad"; box.textContent=T[lang].fErr; }
+  btn.disabled=false; btn.textContent=T[lang].fSubmit;
+});
+</script>
+</body>
+</html>
