@@ -46,11 +46,21 @@
       <img src="workers.jpg" width="1400" height="875" fetchpriority="high" data-alt="imgAlt" alt="">
     </picture>
   </div>
-  <div class="paycard">
-    <div class="l" data-i="payLabel"></div>
-    <div class="v"><span data-i="payValue"></span> <span class="u" data-i="payUnit"></span></div>
-    <div class="fine" data-i="payNote"></div>
+  <div class="facts">
+    <div class="fact main">
+      <span class="k" data-i="payLabel"></span>
+      <span class="v"><span data-i="payValue"></span><small data-i="payUnit"></small></span>
+    </div>
+    <div class="fact">
+      <span class="k" data-i="shiftLabel"></span>
+      <span class="v2" data-i="shiftValue"></span>
+    </div>
+    <div class="fact">
+      <span class="k" data-i="contractLabel"></span>
+      <span class="v2" data-i="contractValue"></span>
+    </div>
   </div>
+  <p class="note" style="margin-top:10px" data-i="payNote"></p>
   <div class="btnrow">
     <a class="btn solid" href="#form"><svg class="ic"><use href="#i-send"></use></svg><span data-i="ctaApply"></span></a>
     <a class="btn ghost" href="tel:+420608067777"><svg class="ic"><use href="#i-phone"></use></svg><span data-i="ctaCall"></span></a>
@@ -117,7 +127,11 @@ const PAGE = {
   "imgAlt": "Працівники заводу автокомпонентів біля виробничої лінії",
   "payLabel": "Оплата",
   "payValue": "160–185 Kč",
-  "payUnit": "за годину",
+  "payUnit": "/ год",
+  "shiftLabel": "Графік",
+  "shiftValue": "Зміни 8–12 годин,\nденні та нічні",
+  "contractLabel": "Оформлення",
+  "contractValue": "Офіційний договір,\nповний робочий день",
   "payNote": "Ставка залежить від ділянки та зміни.",
   "ctaApply": "Залишити заявку",
   "ctaCall": "Зателефонувати",
@@ -155,7 +169,11 @@ const PAGE = {
   "imgAlt": "Pracovníci závodu na výrobu autodílů u výrobní linky",
   "payLabel": "Mzda",
   "payValue": "160–185 Kč",
-  "payUnit": "za hodinu",
+  "payUnit": "/ hod",
+  "shiftLabel": "Rozvrh",
+  "shiftValue": "Směny 8–12 hodin,\ndenní i noční",
+  "contractLabel": "Forma",
+  "contractValue": "Oficiální smlouva,\nplný úvazek",
   "payNote": "Sazba závisí na provozu a směně.",
   "ctaApply": "Poslat žádost",
   "ctaCall": "Zavolat",
@@ -193,7 +211,11 @@ const PAGE = {
   "imgAlt": "Angajați ai fabricii de piese auto lângă linia de producție",
   "payLabel": "Salariu",
   "payValue": "160–185 CZK",
-  "payUnit": "pe oră",
+  "payUnit": "/ oră",
+  "shiftLabel": "Program",
+  "shiftValue": "Ture de 8–12 ore,\nzi și noapte",
+  "contractLabel": "Angajare",
+  "contractValue": "Contract oficial,\nnormă întreagă",
   "payNote": "Tariful depinde de secție și de tură.",
   "ctaApply": "Trimite cererea",
   "ctaCall": "Sună acum",
