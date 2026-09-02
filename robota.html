@@ -37,7 +37,10 @@
 
 
 <header><div class="wrap">
-  <span class="tag"><svg class="ic sm"><use href="#i-pin"></use></svg><span data-i="place"></span></span>
+  <div class="tagrow">
+    <span class="tag hot"><span class="dot"></span><span data-i="hotLabel"></span></span>
+    <span class="tag"><svg class="ic sm"><use href="#i-pin"></use></svg><span data-i="place"></span></span>
+  </div>
   <h1 data-i="h1"></h1>
   <p class="lead" data-i="lead"></p>
   <div class="heroimg">
@@ -49,7 +52,8 @@
   <div class="facts">
     <div class="fact main">
       <span class="k" data-i="payLabel"></span>
-      <span class="v"><span data-i="payValue"></span><small data-i="payUnit"></small></span>
+      <span class="v" data-i="payValue"></span>
+      <span class="u" data-i="payUnit"></span>
     </div>
     <div class="fact">
       <span class="k" data-i="shiftLabel"></span>
@@ -127,7 +131,8 @@ const PAGE = {
   "imgAlt": "Працівники заводу автокомпонентів біля виробничої лінії",
   "payLabel": "Оплата",
   "payValue": "160–185 Kč",
-  "payUnit": "/ год",
+  "payUnit": "за годину",
+  "hotLabel": "Терміновий набір",
   "shiftLabel": "Графік",
   "shiftValue": "Зміни 8–12 годин,\nденні та нічні",
   "contractLabel": "Оформлення",
@@ -169,7 +174,8 @@ const PAGE = {
   "imgAlt": "Pracovníci závodu na výrobu autodílů u výrobní linky",
   "payLabel": "Mzda",
   "payValue": "160–185 Kč",
-  "payUnit": "/ hod",
+  "payUnit": "za hodinu",
+  "hotLabel": "Nábor probíhá",
   "shiftLabel": "Rozvrh",
   "shiftValue": "Směny 8–12 hodin,\ndenní i noční",
   "contractLabel": "Forma",
@@ -211,7 +217,8 @@ const PAGE = {
   "imgAlt": "Angajați ai fabricii de piese auto lângă linia de producție",
   "payLabel": "Salariu",
   "payValue": "160–185 CZK",
-  "payUnit": "/ oră",
+  "payUnit": "pe oră",
+  "hotLabel": "Recrutare urgentă",
   "shiftLabel": "Program",
   "shiftValue": "Ture de 8–12 ore,\nzi și noapte",
   "contractLabel": "Angajare",
