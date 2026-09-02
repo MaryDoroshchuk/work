@@ -1,0 +1,155 @@
+/* ================================================================
+   PALSIR CZ — спільні стилі
+   Кольори міняються тут, у :root — і одразу на всіх сторінках
+   ================================================================ */
+:root{
+  --ink:#141414;
+  --yellow:#FFC400;
+  --yellow-deep:#E0AC00;
+  --paper:#FBFAF7;
+  --body:#54524D;
+  --line:#141414;
+  --soft:#DDD9D1;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:Manrope,system-ui,sans-serif;font-size:17px;line-height:1.58;
+  -webkit-font-smoothing:antialiased;padding-bottom:84px}
+@media(min-width:800px){body{padding-bottom:0}}
+h1,h2,h3{margin:0;font-weight:800;line-height:1.13;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:680px;margin:0 auto;padding:0 18px}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ---------- шапка ---------- */
+.bar{position:sticky;top:0;z-index:30;background:var(--ink);color:#fff}
+.bar .wrap{display:flex;align-items:center;height:56px;gap:10px}
+.mark{font-weight:800;font-size:16px;text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.mark em{font-style:normal;color:var(--yellow)}
+.langs{margin-left:auto;display:flex;gap:4px}
+.langs button{font:600 13px/1 Manrope,sans-serif;background:#242424;color:#A5A29B;border:0;
+  padding:9px 11px;border-radius:8px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--yellow);color:var(--ink)}
+.hazard{height:9px;background:repeating-linear-gradient(135deg,var(--yellow) 0 16px,var(--ink) 16px 32px)}
+
+/* ---------- навігація ---------- */
+.nav{background:var(--ink);border-top:1px solid #2A2A2A}
+.nav .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:9px;padding-bottom:9px;scrollbar-width:none}
+.nav .wrap::-webkit-scrollbar{display:none}
+.nav a{color:#A5A29B;text-decoration:none;font-weight:600;font-size:14px;
+  padding:9px 13px;border-radius:9px;white-space:nowrap}
+.nav a:hover{color:#fff;background:#242424}
+.nav a[aria-current="page"]{background:#fff;color:var(--ink)}
+
+/* ---------- типографіка сторінок ---------- */
+header{padding:36px 0 4px}
+h1{font-size:clamp(28px,7.4vw,42px)}
+.tag{display:inline-block;background:var(--yellow);font-weight:600;font-size:14px;
+  padding:7px 13px;border-radius:999px;margin-bottom:16px}
+.lead{margin-top:14px;color:var(--body);font-size:17px}
+section{padding:30px 0}
+h2{font-size:clamp(22px,5.2vw,29px);margin-bottom:14px}
+h3{font-size:19px;margin-bottom:6px}
+.prose p+p{margin-top:13px}
+.prose{color:var(--body)}
+.prose b,.prose strong{color:var(--ink)}
+.note{color:var(--body);font-size:15px}
+
+/* ---------- блоки ---------- */
+.block{border:2px solid var(--line);border-radius:18px;padding:20px;background:#fff;margin-bottom:12px}
+.block p{color:var(--body);font-size:16px}
+.block h3+p{margin-top:4px}
+.dark{background:var(--ink);color:#fff;border-radius:22px;padding:24px}
+.dark h2,.dark h3{color:#fff}
+.dark p{color:#C6C2BA}
+
+/* списки з галочками */
+.ticks{list-style:none;margin:0;padding:0}
+.ticks li{position:relative;padding:11px 0 11px 32px;border-bottom:1px solid var(--soft);font-size:16px}
+.ticks li:last-child{border-bottom:0}
+.ticks li:before{content:"";position:absolute;left:2px;top:19px;width:13px;height:13px;
+  border-radius:4px;background:var(--yellow)}
+.ticks.on-dark li{border-color:#2E2E2E;color:#E6E3DE}
+
+/* теги-пігулки */
+.tags{display:flex;flex-wrap:wrap;gap:9px;padding:0;margin:0}
+.tags li{list-style:none;border:2px solid var(--line);border-radius:999px;padding:10px 16px;
+  font-weight:600;font-size:15px;background:#fff}
+
+/* кроки */
+.steps{list-style:none;counter-reset:s;margin:0;padding:0}
+.steps li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;padding:14px 0}
+.steps li+li{border-top:2px dotted #CFCAC0}
+.steps li:before{content:counter(s);flex:0 0 auto;width:34px;height:34px;border-radius:10px;
+  background:var(--yellow);font:800 16px/34px Manrope,sans-serif;text-align:center}
+.steps b{display:block;font-size:18px;font-weight:800}
+.steps span{color:var(--body);font-size:16px}
+
+/* фото */
+.heroimg{margin-top:20px;border-radius:20px;overflow:hidden;background:var(--soft)}
+.heroimg img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+
+/* картка оплати */
+.paycard{margin:-46px 10px 0;position:relative;z-index:2;background:var(--ink);color:#fff;
+  border-radius:20px;padding:24px;box-shadow:0 14px 34px rgba(0,0,0,.24)}
+.paycard .l{font-size:14px;color:#A5A29B;font-weight:600}
+.paycard .v{font-size:clamp(38px,11vw,54px);font-weight:800;color:var(--yellow);
+  letter-spacing:-.03em;line-height:1.05;margin-top:6px;font-variant-numeric:tabular-nums}
+.paycard .u{font-size:18px;color:#fff;font-weight:600}
+.paycard .fine{font-size:13px;color:#A5A29B;margin-top:10px}
+
+/* кнопки */
+.btnrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.btn{display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;
+  border-radius:14px;padding:16px 14px;font-size:16px;border:2px solid var(--ink);text-align:center}
+.btn.solid{background:var(--yellow);border-color:var(--yellow)}
+.btn.solid:hover{background:var(--yellow-deep);border-color:var(--yellow-deep)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.btn.wide{grid-column:1/-1}
+
+/* ---------- форма ---------- */
+.formsec{background:var(--ink);color:#fff;border-radius:26px;padding:28px 20px;margin:30px 0}
+.formsec h2{color:#fff}
+.formsec .sub{color:#A5A29B;font-size:15px;margin:-6px 0 20px}
+.f{display:grid;gap:14px}
+label{display:block;font:600 14px/1.4 Manrope,sans-serif;color:#A5A29B;margin-bottom:6px}
+input,select,textarea{width:100%;background:#1F1F1F;color:#fff;border:2px solid #333;
+  border-radius:12px;padding:15px;font:500 17px/1.3 Manrope,sans-serif}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--yellow)}
+textarea{min-height:96px;resize:vertical}
+.check{display:flex;gap:11px;align-items:flex-start;font-size:14px;color:#A5A29B;line-height:1.5}
+.check input{width:22px;height:22px;flex:0 0 auto;margin-top:1px;accent-color:var(--yellow)}
+button.send{background:var(--yellow);color:var(--ink);border:0;border-radius:14px;padding:18px;
+  font:800 18px/1 Manrope,sans-serif;cursor:pointer;width:100%}
+button.send:hover{background:var(--yellow-deep)}
+button.send:disabled{opacity:.6;cursor:default}
+.msg{font-size:15px;padding:14px;border-radius:12px;display:none}
+.msg.ok{display:block;background:#17301E;color:#8FE3AA}
+.msg.bad{display:block;background:#3A2A12;color:var(--yellow)}
+
+/* ---------- контакти ---------- */
+.phone{display:block;font-size:clamp(26px,7vw,40px);font-weight:800;text-decoration:none;
+  letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.chips a{text-decoration:none;border:2px solid var(--line);border-radius:999px;
+  padding:10px 18px;font-weight:700;font-size:15px;background:#fff}
+.chips a:hover{background:var(--ink);color:#fff}
+.legal{border:2px solid var(--line);border-radius:18px;background:#fff;padding:18px;margin-top:16px}
+.legal dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 16px;font-size:15px}
+.legal dt{color:var(--body);font-weight:600}
+.legal dd{margin:0;font-weight:600}
+
+/* ---------- підвал і док ---------- */
+footer{border-top:2px solid var(--line);margin-top:26px;padding:22px 0 34px;
+  color:var(--body);font-size:13px;line-height:1.7}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--ink);
+  padding:11px 14px calc(11px + env(safe-area-inset-bottom));display:flex;gap:9px}
+.dock a{flex:1;text-align:center;text-decoration:none;font-weight:800;font-size:16px;
+  padding:15px 8px;border-radius:12px}
+.dock .call{background:var(--yellow);color:var(--ink)}
+.dock .apply{background:#2A2A2A;color:#fff}
+@media(min-width:800px){.dock{display:none}}
