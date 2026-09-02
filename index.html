@@ -40,7 +40,10 @@
   <span class="tag"><svg class="ic sm"><use href="#i-shield"></use></svg><span data-i="tag"></span></span>
   <h1 data-i="h1"></h1>
   <p class="lead" data-i="lead"></p>
-  <div class="heroimg"><img src="img/foto-agentura.jpg" data-alt="imgAlt" alt="" loading="eager"></div>
+  <div class="heroimg"><picture>
+      <source srcset="img/foto-agentura.webp" type="image/webp">
+      <img src="img/foto-agentura.jpg" width="1400" height="875" fetchpriority="high" data-alt="imgAlt" alt="">
+    </picture></div>
   <div class="btnrow">
     <a class="btn solid" href="robota.html"><svg class="ic"><use href="#i-factory"></use></svg><span data-i="ctaJobs"></span></a>
     <a class="btn ghost" href="firmam.html"><svg class="ic"><use href="#i-users"></use></svg><span data-i="ctaFirms"></span></a>
@@ -104,7 +107,7 @@ const PAGE = {
   "tag": "Агенція праці з 2015 року",
   "h1": "PALSIR CZ — персонал і документи для роботи в Чехії",
   "lead": "Працевлаштовуємо людей зі Східної Європи та забезпечуємо компанії робочою силою. Ліцензія на посередництво, повний кадровий сервіс, супровід іноземців в органах.",
-  "imgAlt": "Виробничий цех",
+  "imgAlt": "Працівник агенції на об'єкті",
   "ctaJobs": "Шукаю роботу",
   "ctaFirms": "Потрібні працівники",
   "f1t": "З 2015 року",
@@ -132,7 +135,7 @@ const PAGE = {
   "tag": "Agentura práce od roku 2015",
   "h1": "PALSIR CZ — personál a dokumenty pro práci v ČR",
   "lead": "Zaměstnáváme lidi z východní Evropy a zajišťujeme firmám pracovní sílu. Povolení ke zprostředkování, kompletní personální servis, doprovod cizinců na úřadech.",
-  "imgAlt": "Výrobní hala",
+  "imgAlt": "Pracovník agentury na pracovišti",
   "ctaJobs": "Hledám práci",
   "ctaFirms": "Potřebuji pracovníky",
   "f1t": "Od roku 2015",
@@ -160,7 +163,7 @@ const PAGE = {
   "tag": "Agenție de muncă din 2015",
   "h1": "PALSIR CZ — personal și documente pentru muncă în Cehia",
   "lead": "Angajăm oameni din Europa de Est și asigurăm companiilor forță de muncă. Licență de mediere, serviciu complet de personal, asistență pentru străini la autorități.",
-  "imgAlt": "Hala de producție",
+  "imgAlt": "Lucrător al agenției la locul de muncă",
   "ctaJobs": "Caut de lucru",
   "ctaFirms": "Am nevoie de lucrători",
   "f1t": "Din 2015",
