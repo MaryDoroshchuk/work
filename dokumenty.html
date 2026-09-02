@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Документи для іноземців | Palsir CZ</title>
-<meta name="description" content="Робоча карта, довгострокова віза, постійне проживання, запрошення. Оформлення документів і супровід в органах ЧР.">
+<title>Dokumenty pro cizince | Palsir CZ</title>
+<meta name="description" content="Zaměstnanecká karta, dlouhodobé vízum, trvalý pobyt, pozvání. Vyřízení dokumentů a doprovod na úřadech.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
@@ -13,23 +13,31 @@
 <body>
 
 <div class="bar"><div class="wrap">
-  <a class="mark" href="index.html">PAL<em>SIR</em> CZ</a>
+  <a class="mark" href="index.html">
+    <img src="img/logo.png" alt="Palsir CZ">
+    <span class="wordmark">PAL<em>SIR</em> CZ</span>
+  </a>
+  <nav class="nav-desk">
+    <a href="index.html" data-i="navHome"></a>
+    <a href="robota.html" data-i="navJobs"></a>
+    <a href="firmam.html" data-i="navFirms"></a>
+    <a href="dokumenty.html" aria-current="page" data-i="navDocs"></a>
+    <a href="kontakt.html" data-i="navContact"></a>
+  </nav>
   <div class="langs" role="group">
     <button data-lang="uk" aria-pressed="true">UA</button>
     <button data-lang="cs" aria-pressed="false">CZ</button>
     <button data-lang="ro" aria-pressed="false">RO</button>
   </div>
+  <button class="burger" type="button" aria-expanded="false" aria-label="Menu">
+    <svg class="ic"><use href="#i-menu"></use></svg>
+  </button>
 </div></div>
-<nav class="nav"><div class="wrap">
-  <a href="index.html" data-i="navJobs"></a>
-  <a href="firmam.html" data-i="navFirms"></a>
-  <a href="dokumenty.html" aria-current="page" data-i="navDocs"></a>
-  <a href="kontakt.html" data-i="navContact"></a>
-</div></nav>
 <div class="hazard"></div>
 
+
 <header><div class="wrap">
-  <span class="tag" data-i="tag"></span>
+  <span class="tag"><svg class="ic sm"><use href="#i-doc"></use></svg><span data-i="tag"></span></span>
   <h1 data-i="h1"></h1>
   <p class="lead" data-i="lead"></p>
 </div></header>
@@ -46,19 +54,17 @@
 </div></section>
 
 <section><div class="wrap">
-  <div class="dark">
-    <h2 data-i="cardTitle"></h2>
-    <div data-html="cardText"></div>
-  </div>
-  <div class="block" style="margin-top:14px">
-    <h3 data-i="cardWhoTitle"></h3><p data-i="cardWhoText"></p>
-  </div>
+  <div class="dark"><div class="iconbox"><svg class="ic"><use href="#i-doc"></use></svg></div>
+    <h2 data-i="cardTitle"></h2><div data-html="cardText"></div></div>
+  <div class="block" style="margin-top:14px"><div class="iconbox"><svg class="ic"><use href="#i-globe"></use></svg></div>
+    <h3 data-i="cardWhoTitle"></h3><p data-i="cardWhoText"></p></div>
   <h3 style="margin:22px 0 10px" data-i="cardDocsTitle"></h3>
   <div class="block"><ul class="ticks" data-html="cardDocsList"></ul></div>
 </div></section>
 
 <section><div class="wrap">
   <h2 data-i="permTitle"></h2>
+  <div class="figure"><img src="img/foto-pobyt.jpg" data-alt="img1" alt="" loading="lazy"></div>
   <div class="block"><ul class="ticks" data-html="permList"></ul></div>
 </div></section>
 
@@ -67,197 +73,93 @@
   <div class="block"><ul class="ticks" data-html="visaList"></ul></div>
 </div></section>
 
-<div class="wrap"><div class="formsec" id="form">
-  <h2 data-i="formTitle"></h2>
-  <p class="sub" data-i="formSub"></p>
-  <form id="applyForm" class="f" novalidate>
-    <div><label for="f-name" data-i="fName"></label><input id="f-name" name="name" required autocomplete="name"></div>
-    <div><label for="f-phone" data-i="fPhone"></label><input id="f-phone" name="phone" type="tel" required placeholder="+420 …" autocomplete="tel"></div>
-    <div><label for="f-msg" data-i="fMessenger"></label>
-      <select id="f-msg" name="messenger">
-        <option>Telegram</option><option>Viber</option><option>WhatsApp</option><option data-i="fCall"></option>
-      </select></div>
-    <div><label for="f-note" data-i="fQuestion"></label><textarea id="f-note" name="note"></textarea></div>
-    <div class="check"><input id="f-ok" type="checkbox" required>
-      <label for="f-ok" style="margin:0" data-i="fConsent"></label></div>
-    <button class="send" type="submit" data-i="fSubmit"></button>
-    <div class="msg" id="formMsg"></div>
-  </form>
-</div></div>
+
+<div class="wrap"><div data-form id="form"></div></div>
 
 <footer><div class="wrap">
-  <p data-i="footCompany"></p>
-  <p data-i="footLicense"></p>
-  <p><a href="privacy.html" data-i="footPrivacy"></a></p>
+  <p class="brand">PALSIR CZ<sup>&#8482;</sup> &copy; 2015–2026</p>
+  <div class="frow">
+    <span data-i="footTagline"></span>
+    <span>IČO 04383249</span>
+    <a href="privacy.html" data-i="footPrivacy"></a>
+  </div>
 </div></footer>
 
 <nav class="dock">
-  <a class="call" href="tel:+420608067777" data-i="dockCall"></a>
-  <a class="apply" href="#form" data-i="dockApply"></a>
+  <a class="call" href="tel:+420608067777">
+    <svg class="ic"><use href="#i-phone"></use></svg><span data-i="dockCall"></span></a>
+  <a class="apply" href="#form">
+    <svg class="ic"><use href="#i-send"></use></svg><span data-i="dockApply"></span></a>
 </nav>
 
 <script src="common.js"></script>
 <script>
 const PAGE = {
-uk:{
- tag:"Послуги для іноземців",
- h1:"Документи для життя і роботи в Чехії",
- lead:"Готуємо заяви, супроводжуємо в органах, оформлюємо робочу карту, візу та постійне проживання.",
- agendaTitle:"Що ми оформлюємо",
- agendaList:`<li>Підготовка заяви на довгострокову візу</li>
-<li>Представництво у справах з органами влади</li>
-<li>Допомога з вищим офіційним засвідченням документів</li>
-<li>Особистий супровід у поліції у справах іноземців</li>
-<li>Орієнтація на ринку праці</li>
-<li>Складання структурованого резюме</li>
-<li>Допомога в орієнтації у трудовому законодавстві</li>
-<li>Зміна мети дозволу на проживання</li>
-<li>Засвідчення документів, апостиль або суперлегалізація</li>
-<li>Офіційний переклад у співпраці з перекладачами</li>
-<li>Запис на прийом у відділ політики притулку і міграції МВС</li>
-<li>Особистий супровід при оформленні документації та на прийомах у МВС</li>
-<li>Проведення через процес реєстрації, включно з отриманням робочої карти</li>`,
- appealTitle:"Оскарження рішень МВС ЧР",
- appealIntro:"Готуємо апеляції у випадках відмови:",
- appealList:`<li>у видачі візи або дозволу на довгострокове проживання</li>
-<li>у видачі робочої або синьої карти</li>
-<li>у продовженні візи або довгострокового проживання</li>
-<li>у продовженні робочої або синьої карти</li>
-<li>у зміні мети візи або довгострокового проживання</li>
-<li>у зміні робочої позиції для робочої або синьої карти</li>`,
- cardTitle:"Що таке робоча карта",
- cardText:`<p>Робоча карта (zaměstnanecká karta) — це дозвіл на довгострокове проживання в Чехії з метою працевлаштування. Вона поєднує право на проживання і право на роботу.</p>
-<p>Власник карти має право перебувати на території ЧР і працювати на посаді, для якої карту видано. За згодою відділу політики притулку і міграції МВС посаду можна змінити або працювати додатково в іншого роботодавця.</p>
-<p>Для видачі потрібен трудовий договір, договір про робочу діяльність або договір про намір, у якому сторони зобовʼязуються укласти такий договір. Місячна зарплата не може бути нижчою за базову ставку мінімальної зарплати, а робочий тиждень має становити щонайменше 15 годин.</p>
-<p>Карта діє на строк роботи, зазначений у договорі, але не довше 2 років.</p>`,
- cardWhoTitle:"Для кого вона призначена",
- cardWhoText:"Для громадян країн, які не входять до ЄС і на яких не поширюються винятки за § 98 і § 98a Закону № 435/2004 Зб. про зайнятість, або які зобовʼязані мати дозвіл на роботу за § 89 абз. 2 і 4, § 95, § 96 та § 97 того ж закону.",
- cardDocsTitle:"Документи, які ми готуємо для робочої карти",
- cardDocsList:`<li>Підготовка всієї документації</li>
-<li>Підтвердження кваліфікації відповідно до посади</li>
-<li>Трудовий договір</li>
-<li>Довідка про розмір зарплати</li>
-<li>Витяг з реєстру судимостей</li>
-<li>Документ про забезпечення житлом</li>`,
- permTitle:"Постійне проживання",
- permList:`<li>Підготовка заяви</li>
-<li>Підготовка решти документації для отримання ПМП</li>
-<li>Ознайомлення з форматом іспиту з чеської мови для ПМП</li>`,
- visaTitle:"Запрошення і короткострокова віза",
- visaList:`<li>Допомога із заповненням формуляра «Запрошення до відвідання ЧР»</li>
-<li>Оформлення медичного страхування для іноземців</li>
-<li>Консультація щодо підтвердження фінансових коштів на проживання</li>`,
- formTitle:"Поставити запитання",
- formSub:"Опишіть ситуацію — підкажемо, що потрібно і скільки це займе.",
- fQuestion:"Ваша ситуація або запитання"
-},
-cs:{
- tag:"Služby pro cizince",
- h1:"Dokumenty pro život a práci v ČR",
- lead:"Vypracujeme žádosti, zastoupíme vás při jednáních s úřady, vyřídíme zaměstnaneckou kartu, vízum i trvalý pobyt.",
- agendaTitle:"Pro cizince zpracujeme tuto agendu",
- agendaList:`<li>Vypracování žádosti o dlouhodobé vízum</li>
-<li>Zastoupení při jednáních s úřady</li>
-<li>Pomoc s vyšším úředním ověřením</li>
-<li>Osobní asistence při jednání s cizineckou policií</li>
-<li>Orientace na trhu práce</li>
-<li>Vypracování strukturovaného životopisu</li>
-<li>Pomoc v orientaci pracovněprávních předpisů</li>
-<li>Změna účelu povolení k pobytu</li>
-<li>Ověření dokumentů, apostila nebo superlegalizace</li>
-<li>Zajištění úředního překladu ve spolupráci s překladateli</li>
-<li>Zajištění termínu na MV, odbor azylové a migrační politiky</li>
-<li>Osobní asistence při vyřizování dokumentace a při jednání na MV</li>
-<li>Provedení procesem registrace včetně převzetí zaměstnanecké karty</li>`,
- appealTitle:"Zpracování odvolání proti rozhodnutí MVČR",
- appealIntro:"Připravíme odvolání v případě zamítnutí:",
- appealList:`<li>žádosti o vydání víza nebo povolení k dlouhodobému pobytu</li>
-<li>žádosti o vydání zaměstnanecké nebo modré karty</li>
-<li>žádosti o prodloužení víza nebo dlouhodobého pobytu</li>
-<li>žádosti o prodloužení zaměstnanecké nebo modré karty</li>
-<li>žádosti o změnu účelu víza nebo dlouhodobého pobytu</li>
-<li>žádosti o změnu pracovní pozice u zaměstnanecké nebo modré karty</li>`,
- cardTitle:"Co je zaměstnanecká karta",
- cardText:`<p>Zaměstnanecká karta vydaná Českou republikou je povolení k dlouhodobému pobytu za účelem výkonu zaměstnání. Spojuje oprávnění k pobytu i oprávnění k zaměstnání.</p>
-<p>Držitel je oprávněn pobývat na území ČR a pracovat na pracovním místě, na které byla karta vydána. Se souhlasem odboru azylové a migrační politiky MV lze místo změnit nebo pracovat na dalším místě či u dalšího zaměstnavatele.</p>
-<p>Pro vydání je nezbytná pracovní smlouva, dohoda o pracovní činnosti nebo smlouva o smlouvě budoucí. Měsíční mzda nesmí být nižší než základní sazba měsíční minimální mzdy a týdenní pracovní doba musí činit nejméně 15 hodin.</p>
-<p>Platnost je na dobu výkonu zaměstnání stanovenou ve smlouvě, nejdéle však na 2 roky.</p>`,
- cardWhoTitle:"Pro koho je určena",
- cardWhoText:"Pro cizince ze zemí, které nejsou členy Evropské unie a na které se nevztahuje některá z výjimek uvedených v § 98 a § 98a zákona č. 435/2004 Sb., o zaměstnanosti, nebo kteří jsou povinni mít povolení k zaměstnání podle § 89 odst. 2 a 4, § 95, § 96 a § 97 téhož zákona.",
- cardDocsTitle:"Podklady pro zaměstnaneckou kartu, které zajišťujeme",
- cardDocsList:`<li>Příprava dokumentace pro zaměstnaneckou kartu</li>
-<li>Prokázání kvalifikace dle příslušné pracovní pozice</li>
-<li>Pracovní smlouva</li>
-<li>Mzdový výměr</li>
-<li>Výpis z rejstříku trestů</li>
-<li>Doklad o zajištění ubytování</li>`,
- permTitle:"Trvalý pobyt",
- permList:`<li>Vypracování žádosti</li>
-<li>Příprava další dokumentace k získání trvalého pobytu</li>
-<li>Seznámení s podobou zkoušky z českého jazyka pro trvalý pobyt</li>`,
- visaTitle:"Pozvání a krátkodobé vízum",
- visaList:`<li>Pomoc při vyplnění formuláře Pozvání k návštěvě ČR</li>
-<li>Sjednání zdravotního pojištění cizinců</li>
-<li>Poradenství při doložení finančních prostředků k pobytu</li>`,
- formTitle:"Zeptejte se",
- formSub:"Popište situaci — poradíme, co je potřeba a jak dlouho to trvá.",
- fQuestion:"Vaše situace nebo dotaz"
-},
-ro:{
- tag:"Servicii pentru străini",
- h1:"Documente pentru viață și muncă în Cehia",
- lead:"Întocmim cererile, vă reprezentăm la autorități, obținem cardul de angajare, viza și rezidența permanentă.",
- agendaTitle:"Ce întocmim pentru străini",
- agendaList:`<li>Întocmirea cererii pentru viza de lungă ședere</li>
-<li>Reprezentare în relația cu autoritățile</li>
-<li>Asistență la supralegalizarea documentelor</li>
-<li>Asistență personală la poliția pentru străini</li>
-<li>Orientare pe piața muncii</li>
-<li>Redactarea unui CV structurat</li>
-<li>Îndrumare privind legislația muncii</li>
-<li>Schimbarea scopului permisului de ședere</li>
-<li>Legalizarea documentelor, apostilă sau supralegalizare</li>
-<li>Traduceri oficiale în colaborare cu traducători autorizați</li>
-<li>Programare la Ministerul de Interne, departamentul de politici de azil și migrație</li>
-<li>Asistență personală la întocmirea documentelor și la ghișeele ministerului</li>
-<li>Însoțire pe tot parcursul înregistrării, inclusiv la ridicarea cardului de angajare</li>`,
- appealTitle:"Contestații împotriva deciziilor Ministerului de Interne",
- appealIntro:"Pregătim contestații în caz de respingere a cererii privind:",
- appealList:`<li>eliberarea vizei sau a permisului de ședere de lungă durată</li>
-<li>eliberarea cardului de angajare sau a cărții albastre</li>
-<li>prelungirea vizei sau a șederii de lungă durată</li>
-<li>prelungirea cardului de angajare sau a cărții albastre</li>
-<li>schimbarea scopului vizei sau al șederii de lungă durată</li>
-<li>schimbarea postului în cazul cardului de angajare sau al cărții albastre</li>`,
- cardTitle:"Ce este cardul de angajare",
- cardText:`<p>Cardul de angajare (zaměstnanecká karta) este un permis de ședere de lungă durată în Cehia în scop de muncă. Reunește dreptul de ședere și dreptul de a lucra.</p>
-<p>Titularul are dreptul să locuiască în Cehia și să lucreze pe postul pentru care a fost emis cardul. Cu acordul departamentului de politici de azil și migrație, postul poate fi schimbat sau se poate lucra suplimentar la alt angajator.</p>
-<p>Pentru emitere este necesar un contract de muncă, un contract de activitate sau un antecontract. Salariul lunar nu poate fi mai mic decât salariul minim de bază, iar programul săptămânal trebuie să fie de cel puțin 15 ore.</p>
-<p>Valabilitatea este pe durata angajării prevăzute în contract, dar cel mult 2 ani.</p>`,
- cardWhoTitle:"Cui i se adresează",
- cardWhoText:"Cetățenilor din state care nu sunt membre ale Uniunii Europene și cărora nu li se aplică excepțiile din § 98 și § 98a din Legea nr. 435/2004 privind ocuparea forței de muncă, sau care au obligația de a deține permis de muncă conform § 89 alin. 2 și 4, § 95, § 96 și § 97 din aceeași lege.",
- cardDocsTitle:"Documentele pe care le pregătim pentru cardul de angajare",
- cardDocsList:`<li>Pregătirea întregii documentații</li>
-<li>Dovada calificării corespunzătoare postului</li>
-<li>Contractul de muncă</li>
-<li>Decizia de salarizare</li>
-<li>Cazierul judiciar</li>
-<li>Dovada asigurării cazării</li>`,
- permTitle:"Rezidență permanentă",
- permList:`<li>Întocmirea cererii</li>
-<li>Pregătirea documentației necesare pentru obținerea rezidenței permanente</li>
-<li>Familiarizarea cu formatul examenului de limbă cehă pentru rezidența permanentă</li>`,
- visaTitle:"Invitație și viză de scurtă ședere",
- visaList:`<li>Asistență la completarea formularului de invitație în Cehia</li>
-<li>Încheierea asigurării medicale pentru străini</li>
-<li>Consultanță privind dovada mijloacelor financiare pentru ședere</li>`,
- formTitle:"Puneți o întrebare",
- formSub:"Descrieți situația — vă spunem ce este necesar și cât durează.",
- fQuestion:"Situația sau întrebarea dumneavoastră"
-}
+ "uk": {
+  "tag": "Послуги для іноземців",
+  "h1": "Документи для життя і роботи в Чехії",
+  "lead": "Готуємо заяви, супроводжуємо в органах, оформлюємо робочу карту, візу та постійне проживання.",
+  "img1": "Документи для проживання",
+  "agendaTitle": "Що ми оформлюємо",
+  "agendaList": "<li>Підготовка заяви на довгострокову візу</li>\n<li>Представництво у справах з органами влади</li>\n<li>Допомога з вищим офіційним засвідченням документів</li>\n<li>Особистий супровід у поліції у справах іноземців</li>\n<li>Орієнтація на ринку праці</li>\n<li>Складання структурованого резюме</li>\n<li>Допомога в орієнтації у трудовому законодавстві</li>\n<li>Зміна мети дозволу на проживання</li>\n<li>Засвідчення документів, апостиль або суперлегалізація</li>\n<li>Офіційний переклад у співпраці з перекладачами</li>\n<li>Запис на прийом у відділ політики притулку і міграції МВС</li>\n<li>Особистий супровід при оформленні документації та на прийомах у МВС</li>\n<li>Проведення через процес реєстрації, включно з отриманням робочої карти</li>",
+  "appealTitle": "Оскарження рішень МВС ЧР",
+  "appealIntro": "Готуємо апеляції у випадках відмови:",
+  "appealList": "<li>у видачі візи або дозволу на довгострокове проживання</li>\n<li>у видачі робочої або синьої карти</li>\n<li>у продовженні візи або довгострокового проживання</li>\n<li>у продовженні робочої або синьої карти</li>\n<li>у зміні мети візи або довгострокового проживання</li>\n<li>у зміні робочої позиції для робочої або синьої карти</li>",
+  "cardTitle": "Що таке робоча карта",
+  "cardText": "<p>Робоча карта (zaměstnanecká karta) — це дозвіл на довгострокове проживання в Чехії з метою працевлаштування. Вона поєднує право на проживання і право на роботу.</p>\n<p>Власник має право перебувати на території ЧР і працювати на посаді, для якої карту видано. За згодою відділу політики притулку і міграції МВС посаду можна змінити або працювати додатково в іншого роботодавця.</p>\n<p>Для видачі потрібен трудовий договір, договір про робочу діяльність або договір про намір. Місячна зарплата не може бути нижчою за базову ставку мінімальної зарплати, а робочий тиждень має становити щонайменше 15 годин.</p>\n<p>Карта діє на строк роботи, зазначений у договорі, але не довше 2 років.</p>",
+  "cardWhoTitle": "Для кого вона призначена",
+  "cardWhoText": "Для громадян країн, які не входять до ЄС і на яких не поширюються винятки за § 98 і § 98a Закону № 435/2004 Зб. про зайнятість, або які зобовʼязані мати дозвіл на роботу за § 89 абз. 2 і 4, § 95, § 96 та § 97 того ж закону.",
+  "cardDocsTitle": "Документи, які ми готуємо для робочої карти",
+  "cardDocsList": "<li>Підготовка всієї документації</li>\n<li>Підтвердження кваліфікації відповідно до посади</li>\n<li>Трудовий договір</li>\n<li>Довідка про розмір зарплати</li>\n<li>Витяг з реєстру судимостей</li>\n<li>Документ про забезпечення житлом</li>",
+  "permTitle": "Постійне проживання",
+  "permList": "<li>Підготовка заяви</li>\n<li>Підготовка решти документації для отримання ПМП</li>\n<li>Ознайомлення з форматом іспиту з чеської мови для ПМП</li>",
+  "visaTitle": "Запрошення і короткострокова віза",
+  "visaList": "<li>Допомога із заповненням формуляра «Запрошення до відвідання ЧР»</li>\n<li>Оформлення медичного страхування для іноземців</li>\n<li>Консультація щодо підтвердження фінансових коштів на проживання</li>"
+ },
+ "cs": {
+  "tag": "Služby pro cizince",
+  "h1": "Dokumenty pro život a práci v ČR",
+  "lead": "Vypracujeme žádosti, zastoupíme vás při jednáních s úřady, vyřídíme zaměstnaneckou kartu, vízum i trvalý pobyt.",
+  "img1": "Dokumenty k pobytu",
+  "agendaTitle": "Pro cizince zpracujeme tuto agendu",
+  "agendaList": "<li>Vypracování žádosti o dlouhodobé vízum</li>\n<li>Zastoupení při jednáních s úřady</li>\n<li>Pomoc s vyšším úředním ověřením</li>\n<li>Osobní asistence při jednání s cizineckou policií</li>\n<li>Orientace na trhu práce</li>\n<li>Vypracování strukturovaného životopisu</li>\n<li>Pomoc v orientaci pracovněprávních předpisů</li>\n<li>Změna účelu povolení k pobytu</li>\n<li>Ověření dokumentů, apostila nebo superlegalizace</li>\n<li>Zajištění úředního překladu ve spolupráci s překladateli</li>\n<li>Zajištění termínu na MV, odbor azylové a migrační politiky</li>\n<li>Osobní asistence při vyřizování dokumentace a při jednání na MV</li>\n<li>Provedení procesem registrace včetně převzetí zaměstnanecké karty</li>",
+  "appealTitle": "Zpracování odvolání proti rozhodnutí MVČR",
+  "appealIntro": "Připravíme odvolání v případě zamítnutí:",
+  "appealList": "<li>žádosti o vydání víza nebo povolení k dlouhodobému pobytu</li>\n<li>žádosti o vydání zaměstnanecké nebo modré karty</li>\n<li>žádosti o prodloužení víza nebo dlouhodobého pobytu</li>\n<li>žádosti o prodloužení zaměstnanecké nebo modré karty</li>\n<li>žádosti o změnu účelu víza nebo dlouhodobého pobytu</li>\n<li>žádosti o změnu pracovní pozice u zaměstnanecké nebo modré karty</li>",
+  "cardTitle": "Co je zaměstnanecká karta",
+  "cardText": "<p>Zaměstnanecká karta vydaná Českou republikou je povolení k dlouhodobému pobytu za účelem výkonu zaměstnání. Spojuje oprávnění k pobytu i oprávnění k zaměstnání.</p>\n<p>Držitel je oprávněn pobývat na území ČR a pracovat na pracovním místě, na které byla karta vydána. Se souhlasem odboru azylové a migrační politiky MV lze místo změnit nebo pracovat u dalšího zaměstnavatele.</p>\n<p>Pro vydání je nezbytná pracovní smlouva, dohoda o pracovní činnosti nebo smlouva o smlouvě budoucí. Měsíční mzda nesmí být nižší než základní sazba měsíční minimální mzdy a týdenní pracovní doba musí činit nejméně 15 hodin.</p>\n<p>Platnost je na dobu výkonu zaměstnání stanovenou ve smlouvě, nejdéle však na 2 roky.</p>",
+  "cardWhoTitle": "Pro koho je určena",
+  "cardWhoText": "Pro cizince ze zemí, které nejsou členy Evropské unie a na které se nevztahuje některá z výjimek uvedených v § 98 a § 98a zákona č. 435/2004 Sb., o zaměstnanosti, nebo kteří jsou povinni mít povolení k zaměstnání podle § 89 odst. 2 a 4, § 95, § 96 a § 97 téhož zákona.",
+  "cardDocsTitle": "Podklady pro zaměstnaneckou kartu, které zajišťujeme",
+  "cardDocsList": "<li>Příprava dokumentace pro zaměstnaneckou kartu</li>\n<li>Prokázání kvalifikace dle příslušné pracovní pozice</li>\n<li>Pracovní smlouva</li>\n<li>Mzdový výměr</li>\n<li>Výpis z rejstříku trestů</li>\n<li>Doklad o zajištění ubytování</li>",
+  "permTitle": "Trvalý pobyt",
+  "permList": "<li>Vypracování žádosti</li>\n<li>Příprava další dokumentace k získání trvalého pobytu</li>\n<li>Seznámení s podobou zkoušky z českého jazyka pro trvalý pobyt</li>",
+  "visaTitle": "Pozvání a krátkodobé vízum",
+  "visaList": "<li>Pomoc při vyplnění formuláře Pozvání k návštěvě ČR</li>\n<li>Sjednání zdravotního pojištění cizinců</li>\n<li>Poradenství při doložení finančních prostředků k pobytu</li>"
+ },
+ "ro": {
+  "tag": "Servicii pentru străini",
+  "h1": "Documente pentru viață și muncă în Cehia",
+  "lead": "Întocmim cererile, vă reprezentăm la autorități, obținem cardul de angajare, viza și rezidența permanentă.",
+  "img1": "Documente de ședere",
+  "agendaTitle": "Ce întocmim pentru străini",
+  "agendaList": "<li>Întocmirea cererii pentru viza de lungă ședere</li>\n<li>Reprezentare în relația cu autoritățile</li>\n<li>Asistență la supralegalizarea documentelor</li>\n<li>Asistență personală la poliția pentru străini</li>\n<li>Orientare pe piața muncii</li>\n<li>Redactarea unui CV structurat</li>\n<li>Îndrumare privind legislația muncii</li>\n<li>Schimbarea scopului permisului de ședere</li>\n<li>Legalizarea documentelor, apostilă sau supralegalizare</li>\n<li>Traduceri oficiale în colaborare cu traducători autorizați</li>\n<li>Programare la Ministerul de Interne, departamentul de politici de azil și migrație</li>\n<li>Asistență personală la întocmirea documentelor și la ghișeele ministerului</li>\n<li>Însoțire pe tot parcursul înregistrării, inclusiv la ridicarea cardului de angajare</li>",
+  "appealTitle": "Contestații împotriva deciziilor Ministerului de Interne",
+  "appealIntro": "Pregătim contestații în caz de respingere a cererii privind:",
+  "appealList": "<li>eliberarea vizei sau a permisului de ședere de lungă durată</li>\n<li>eliberarea cardului de angajare sau a cărții albastre</li>\n<li>prelungirea vizei sau a șederii de lungă durată</li>\n<li>prelungirea cardului de angajare sau a cărții albastre</li>\n<li>schimbarea scopului vizei sau al șederii de lungă durată</li>\n<li>schimbarea postului în cazul cardului de angajare sau al cărții albastre</li>",
+  "cardTitle": "Ce este cardul de angajare",
+  "cardText": "<p>Cardul de angajare (zaměstnanecká karta) este un permis de ședere de lungă durată în Cehia în scop de muncă. Reunește dreptul de ședere și dreptul de a lucra.</p>\n<p>Titularul are dreptul să locuiască în Cehia și să lucreze pe postul pentru care a fost emis cardul. Cu acordul departamentului de politici de azil și migrație, postul poate fi schimbat sau se poate lucra la alt angajator.</p>\n<p>Pentru emitere este necesar un contract de muncă, un contract de activitate sau un antecontract. Salariul lunar nu poate fi mai mic decât salariul minim de bază, iar programul săptămânal trebuie să fie de cel puțin 15 ore.</p>\n<p>Valabilitatea este pe durata angajării prevăzute în contract, dar cel mult 2 ani.</p>",
+  "cardWhoTitle": "Cui i se adresează",
+  "cardWhoText": "Cetățenilor din state care nu sunt membre ale Uniunii Europene și cărora nu li se aplică excepțiile din § 98 și § 98a din Legea nr. 435/2004 privind ocuparea forței de muncă, sau care au obligația de a deține permis de muncă conform § 89 alin. 2 și 4, § 95, § 96 și § 97 din aceeași lege.",
+  "cardDocsTitle": "Documentele pe care le pregătim pentru cardul de angajare",
+  "cardDocsList": "<li>Pregătirea întregii documentații</li>\n<li>Dovada calificării corespunzătoare postului</li>\n<li>Contractul de muncă</li>\n<li>Decizia de salarizare</li>\n<li>Cazierul judiciar</li>\n<li>Dovada asigurării cazării</li>",
+  "permTitle": "Rezidență permanentă",
+  "permList": "<li>Întocmirea cererii</li>\n<li>Pregătirea documentației necesare pentru obținerea rezidenței permanente</li>\n<li>Familiarizarea cu formatul examenului de limbă cehă pentru rezidența permanentă</li>",
+  "visaTitle": "Invitație și viză de scurtă ședere",
+  "visaList": "<li>Asistență la completarea formularului de invitație în Cehia</li>\n<li>Încheierea asigurării medicale pentru străini</li>\n<li>Consultanță privind dovada mijloacelor financiare pentru ședere</li>"
+ }
 };
-initI18n(PAGE, {title:"h1"});
-initForm("applyForm","formMsg");
+buildPage(PAGE, {title:"h1"});
 </script>
 </body>
 </html>

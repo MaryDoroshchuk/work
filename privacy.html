@@ -3,323 +3,85 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<title>Політика обробки персональних даних</title>
+<title>Zásady zpracování osobních údajů | Palsir CZ</title>
+<meta name="description" content="Informace o zpracování osobních údajů podle GDPR.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#141414;
-  --yellow:#FFC400;
-  --paper:#FBFAF7;
-  --body:#54524D;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);
-  font-family:Manrope,system-ui,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
-h1,h2{margin:0;font-weight:800;letter-spacing:-.02em;line-height:1.15}
-p,ul{margin:0}
-a{color:inherit}
-.wrap{max-width:680px;margin:0 auto;padding:0 18px}
-
-.bar{position:sticky;top:0;z-index:30;background:var(--ink);color:#fff}
-.bar .wrap{display:flex;align-items:center;height:56px;gap:10px}
-.mark{font-weight:800;font-size:16px;text-decoration:none}
-.mark em{font-style:normal;color:var(--yellow)}
-.langs{margin-left:auto;display:flex;gap:4px}
-.langs button{font:600 13px/1 Manrope,sans-serif;background:#242424;color:#A5A29B;border:0;
-  padding:9px 12px;border-radius:8px;cursor:pointer}
-.langs button[aria-pressed="true"]{background:var(--yellow);color:var(--ink)}
-.hazard{height:9px;background:repeating-linear-gradient(135deg,var(--yellow) 0 16px,var(--ink) 16px 32px)}
-
-header{padding:38px 0 6px}
-h1{font-size:clamp(28px,7vw,40px)}
-.updated{color:var(--body);font-size:15px;margin-top:12px}
-
-main{padding:14px 0 40px}
-main h2{font-size:20px;margin:34px 0 10px;padding-top:18px;border-top:2px solid var(--ink)}
-main p+p{margin-top:12px}
-main ul{padding-left:20px;margin-top:10px}
-main li{margin-bottom:7px}
-main .note{color:var(--body);font-size:15px}
-.fill{background:var(--yellow);padding:1px 6px;border-radius:5px;font-weight:600;white-space:nowrap}
-.card{border:2px solid var(--ink);border-radius:16px;padding:18px;background:#fff;margin-top:14px}
-.card p+p{margin-top:6px}
-
-.back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;
-  border:2px solid var(--ink);border-radius:14px;padding:14px 20px;margin-top:8px}
-.back:hover{background:var(--ink);color:#fff}
-footer{border-top:2px solid var(--ink);padding:22px 0 40px;color:var(--body);font-size:13px}
-:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="bar"><div class="wrap">
-  <a class="mark" href="index.html">AUTO<em>PARTS</em></a>
+  <a class="mark" href="index.html">
+    <img src="img/logo.png" alt="Palsir CZ">
+    <span class="wordmark">PAL<em>SIR</em> CZ</span>
+  </a>
+  <nav class="nav-desk">
+    <a href="index.html" data-i="navHome"></a>
+    <a href="robota.html" data-i="navJobs"></a>
+    <a href="firmam.html" data-i="navFirms"></a>
+    <a href="dokumenty.html" data-i="navDocs"></a>
+    <a href="kontakt.html" data-i="navContact"></a>
+  </nav>
   <div class="langs" role="group">
     <button data-lang="uk" aria-pressed="true">UA</button>
     <button data-lang="cs" aria-pressed="false">CZ</button>
     <button data-lang="ro" aria-pressed="false">RO</button>
   </div>
+  <button class="burger" type="button" aria-expanded="false" aria-label="Menu">
+    <svg class="ic"><use href="#i-menu"></use></svg>
+  </button>
 </div></div>
 <div class="hazard"></div>
 
+
 <header><div class="wrap">
-  <h1 id="pTitle"></h1>
-  <p class="updated" id="pUpdated"></p>
+  <h1 data-i="h1"></h1>
+  <p class="lead" data-html="updated"></p>
 </div></header>
 
-<main><div class="wrap" id="doc"></div></main>
+<section><div class="wrap doc prose" data-html="doc"></div></section>
 
-<div class="wrap"><a class="back" href="index.html" id="pBack"></a></div>
 
-<footer><div class="wrap"><p id="pFoot"></p></div></footer>
+<div class="wrap"><div data-form id="form"></div></div>
 
+<footer><div class="wrap">
+  <p class="brand">PALSIR CZ<sup>&#8482;</sup> &copy; 2015–2026</p>
+  <div class="frow">
+    <span data-i="footTagline"></span>
+    <span>IČO 04383249</span>
+    <a href="privacy.html" data-i="footPrivacy"></a>
+  </div>
+</div></footer>
+
+<nav class="dock">
+  <a class="call" href="tel:+420608067777">
+    <svg class="ic"><use href="#i-phone"></use></svg><span data-i="dockCall"></span></a>
+  <a class="apply" href="#form">
+    <svg class="ic"><use href="#i-send"></use></svg><span data-i="dockApply"></span></a>
+</nav>
+
+<script src="common.js"></script>
 <script>
-const M = {
-uk:{ title:"Політика обробки персональних даних",
-     updated:'Останнє оновлення: <span class="fill">[дата]</span>',
-     back:"← Повернутися на головну",
-     foot:'<span class="fill">[Назва компанії]</span>, IČO <span class="fill">[номер]</span>' },
-cs:{ title:"Zásady zpracování osobních údajů",
-     updated:'Poslední aktualizace: <span class="fill">[datum]</span>',
-     back:"← Zpět na hlavní stránku",
-     foot:'<span class="fill">[Název společnosti]</span>, IČO <span class="fill">[číslo]</span>' },
-ro:{ title:"Politica de prelucrare a datelor personale",
-     updated:'Ultima actualizare: <span class="fill">[data]</span>',
-     back:"← Înapoi la pagina principală",
-     foot:'<span class="fill">[Denumirea companiei]</span>, IČO <span class="fill">[număr]</span>' }
+const PAGE = {
+ "uk": {
+  "h1": "Політика обробки персональних даних",
+  "updated": "Останнє оновлення: <span class=\"fill\">[дата]</span>",
+  "doc": "\n<h2>1. Хто обробляє ваші дані</h2>\n<p>Адміністратором (správce) персональних даних є <b>Palsir CZ s.r.o.</b>, IČO 04383249, Klostermannova 5987, 430 01 Chomutov, Чеська Республіка.</p>\n<p>Ліцензія на посередництво в працевлаштуванні № <span class=\"fill\">[номер]</span>, видана Úřad práce ČR.</p>\n<p>Email: PalsirCz@email.cz &nbsp;·&nbsp; Телефон: +420 608 067 777</p>\n\n<h2>2. Які дані ми збираємо</h2>\n<p>Через форму на сайті ми отримуємо дані, які ви вводите самі: імʼя або назву компанії, номер телефону, email, обраний спосіб звʼязку і текст повідомлення.</p>\n<p>Якщо ви пишете нам у Telegram, Viber або WhatsApp, ми обробляємо дані, які ви надсилаєте в переписці.</p>\n<p>Ми не запитуємо особливі категорії даних — стан здоровʼя, віросповідання, походження, судимість. Не вказуйте їх у повідомленні.</p>\n\n<h2>3. Навіщо і на якій підставі</h2>\n<ul>\n<li><b>Розгляд звернення та звʼязок з вами.</b> Підстава — ваша згода (ст. 6(1)(a) GDPR) і вжиття заходів на ваш запит перед укладенням договору (ст. 6(1)(b) GDPR).</li>\n<li><b>Передача кандидатури роботодавцю.</b> Підстава — ваша згода.</li>\n</ul>\n<p>Надання даних добровільне, але без імені та телефону ми не зможемо опрацювати звернення.</p>\n\n<h2>4. Кому передаємо</h2>\n<ul>\n<li>роботодавцям, до яких ми підбираємо персонал;</li>\n<li>постачальнику сервісу обробки форм <span class=\"fill\">[Formspree Inc., США]</span>;</li>\n<li>постачальнику хостингу <span class=\"fill\">[GitHub Inc., США]</span>;</li>\n<li>державним органам — якщо цього вимагає закон.</li>\n</ul>\n<p>Передача за межі ЄС відбувається на підставі <span class=\"fill\">[EU–US Data Privacy Framework або стандартних договірних положень]</span>. Ми не продаємо ваші дані і не передаємо їх для реклами.</p>\n\n<h2>5. Скільки зберігаємо</h2>\n<p>Дані зі звернення зберігаємо <span class=\"fill\">[6 місяців]</span> з моменту надсилання. Якщо ви влаштуєтеся на роботу, строк визначається трудовим і податковим законодавством ЧР. Після відкликання згоди видаляємо дані без зайвої затримки, окрім випадків, коли закон зобовʼязує їх зберігати.</p>\n\n<h2>6. Ваші права</h2>\n<ul>\n<li>доступ до даних і копія;</li>\n<li>виправлення неточних даних;</li>\n<li>видалення даних;</li>\n<li>обмеження обробки;</li>\n<li>перенесення даних;</li>\n<li>заперечення проти обробки;</li>\n<li>відкликання згоди в будь-який момент — це не впливає на законність обробки до відкликання.</li>\n</ul>\n<p>Щоб скористатися правами, напишіть на PalsirCz@email.cz. Відповідаємо протягом одного місяця.</p>\n<p>Скарга: Úřad pro ochranu osobních údajů, Pplk. Sochora 27, 170 00 Praha 7, uoou.cz</p>\n\n<h2>7. Cookies, мапа та шрифти</h2>\n<p>Сайт не використовує cookies для відстеження відвідувачів.</p>\n<p>Мапа Google на сторінці контактів завантажується лише після вашого кліку. До цього моменту жодних запитів до Google не надсилається. Після завантаження Google отримує вашу IP-адресу і може встановити власні файли cookie.</p>\n<p>Шрифти завантажуються із сервісу Google Fonts, тому Google може отримати вашу IP-адресу.</p>\n<p class=\"note\"><span class=\"fill\">[Якщо додасте Google Analytics або Meta Pixel — цей розділ треба переписати і додати банер згоди.]</span></p>\n\n<h2>8. Автоматизоване прийняття рішень</h2>\n<p>Не використовуємо автоматизоване прийняття рішень і профілювання. Рішення щодо кандидатів приймають люди.</p>\n\n<h2>9. Зміни цієї політики</h2>\n<p>Актуальна версія завжди опублікована на цій сторінці із зазначенням дати оновлення.</p>\n"
+ },
+ "cs": {
+  "h1": "Zásady zpracování osobních údajů",
+  "updated": "Poslední aktualizace: <span class=\"fill\">[datum]</span>",
+  "doc": "\n<h2>1. Kdo zpracovává vaše údaje</h2>\n<p>Správcem osobních údajů je <b>Palsir CZ s.r.o.</b>, IČO 04383249, Klostermannova 5987, 430 01 Chomutov, Česká republika.</p>\n<p>Povolení ke zprostředkování zaměstnání č. <span class=\"fill\">[číslo]</span>, vydané Úřadem práce ČR.</p>\n<p>E-mail: PalsirCz@email.cz &nbsp;·&nbsp; Telefon: +420 608 067 777</p>\n\n<h2>2. Jaké údaje shromažďujeme</h2>\n<p>Prostřednictvím formuláře získáváme údaje, které vyplníte sami: jméno nebo název firmy, telefonní číslo, e-mail, preferovaný způsob kontaktu a text zprávy.</p>\n<p>Pokud nám napíšete na Telegram, Viber nebo WhatsApp, zpracováváme údaje sdělené v konverzaci.</p>\n<p>Nevyžadujeme zvláštní kategorie údajů — zdravotní stav, náboženské vyznání, původ ani záznam v rejstříku trestů. Neuvádějte je prosím do zprávy.</p>\n\n<h2>3. Proč a na jakém právním základě</h2>\n<ul>\n<li><b>Vyřízení dotazu a kontaktování vás.</b> Právní základ — váš souhlas (čl. 6 odst. 1 písm. a) GDPR) a opatření na vaši žádost před uzavřením smlouvy (čl. 6 odst. 1 písm. b) GDPR).</li>\n<li><b>Předání kandidatury zaměstnavateli.</b> Právní základ — váš souhlas.</li>\n</ul>\n<p>Poskytnutí údajů je dobrovolné, bez jména a telefonu však dotaz nemůžeme vyřídit.</p>\n\n<h2>4. Komu údaje předáváme</h2>\n<ul>\n<li>zaměstnavatelům, pro které vyhledáváme pracovníky;</li>\n<li>poskytovateli služby zpracování formulářů <span class=\"fill\">[Formspree Inc., USA]</span>;</li>\n<li>poskytovateli hostingu <span class=\"fill\">[GitHub Inc., USA]</span>;</li>\n<li>orgánům veřejné moci, pokud to vyžaduje zákon.</li>\n</ul>\n<p>Předání mimo EU probíhá na základě <span class=\"fill\">[EU–US Data Privacy Framework nebo standardních smluvních doložek]</span>. Údaje neprodáváme ani nepředáváme pro reklamní účely.</p>\n\n<h2>5. Jak dlouho údaje uchováváme</h2>\n<p>Údaje z dotazu uchováváme <span class=\"fill\">[6 měsíců]</span> od odeslání. Pokud u nás nastoupíte, doba se řídí pracovněprávními a daňovými předpisy ČR. Po odvolání souhlasu údaje bez zbytečného odkladu vymažeme, s výjimkou případů, kdy nám zákon ukládá je uchovat.</p>\n\n<h2>6. Vaše práva</h2>\n<ul>\n<li>na přístup k údajům a jejich kopii;</li>\n<li>na opravu nepřesných údajů;</li>\n<li>na výmaz údajů;</li>\n<li>na omezení zpracování;</li>\n<li>na přenositelnost údajů;</li>\n<li>vznést námitku proti zpracování;</li>\n<li>odvolat souhlas kdykoli — tím není dotčena zákonnost zpracování před odvoláním.</li>\n</ul>\n<p>Práva uplatníte na PalsirCz@email.cz. Odpovídáme do jednoho měsíce.</p>\n<p>Stížnost: Úřad pro ochranu osobních údajů, Pplk. Sochora 27, 170 00 Praha 7, uoou.cz</p>\n\n<h2>7. Cookies, mapa a písma</h2>\n<p>Web nepoužívá cookies ke sledování návštěvníků.</p>\n<p>Mapa Google na stránce kontaktů se načte až po vašem kliknutí. Do té doby se na Google neodesílají žádné požadavky. Po načtení Google získá vaši IP adresu a může uložit vlastní cookies.</p>\n<p>Písma se načítají ze služby Google Fonts, takže Google může získat vaši IP adresu.</p>\n<p class=\"note\"><span class=\"fill\">[Pokud přidáte Google Analytics nebo Meta Pixel, je nutné tuto část přepsat a doplnit cookies lištu.]</span></p>\n\n<h2>8. Automatizované rozhodování</h2>\n<p>Nepoužíváme automatizované rozhodování ani profilování. O kandidátech rozhodují lidé.</p>\n\n<h2>9. Změny těchto zásad</h2>\n<p>Aktuální znění je vždy zveřejněno na této stránce s datem poslední aktualizace.</p>\n"
+ },
+ "ro": {
+  "h1": "Politica de prelucrare a datelor personale",
+  "updated": "Ultima actualizare: <span class=\"fill\">[data]</span>",
+  "doc": "\n<h2>1. Cine prelucrează datele dumneavoastră</h2>\n<p>Operatorul datelor cu caracter personal este <b>Palsir CZ s.r.o.</b>, IČO 04383249, Klostermannova 5987, 430 01 Chomutov, Republica Cehă.</p>\n<p>Licență de mediere a muncii nr. <span class=\"fill\">[număr]</span>, eliberată de Úřad práce ČR.</p>\n<p>E-mail: PalsirCz@email.cz &nbsp;·&nbsp; Telefon: +420 608 067 777</p>\n\n<h2>2. Ce date colectăm</h2>\n<p>Prin formular primim datele pe care le completați: numele sau denumirea companiei, numărul de telefon, e-mailul, modalitatea de contact preferată și textul mesajului.</p>\n<p>Dacă ne scrieți pe Telegram, Viber sau WhatsApp, prelucrăm datele transmise în conversație.</p>\n<p>Nu solicităm categorii speciale de date — starea de sănătate, religia, originea sau cazierul judiciar. Vă rugăm să nu le menționați în mesaj.</p>\n\n<h2>3. De ce și în ce temei</h2>\n<ul>\n<li><b>Soluționarea solicitării și contactarea dumneavoastră.</b> Temei — consimțământul (art. 6 alin. 1 lit. a) GDPR) și măsurile luate la cererea dumneavoastră înainte de încheierea contractului (art. 6 alin. 1 lit. b) GDPR).</li>\n<li><b>Transmiterea candidaturii către angajator.</b> Temei — consimțământul dumneavoastră.</li>\n</ul>\n<p>Furnizarea datelor este voluntară, însă fără nume și telefon nu putem soluționa solicitarea.</p>\n\n<h2>4. Cui transmitem datele</h2>\n<ul>\n<li>angajatorilor pentru care recrutăm personal;</li>\n<li>furnizorului serviciului de formulare <span class=\"fill\">[Formspree Inc., SUA]</span>;</li>\n<li>furnizorului de găzduire <span class=\"fill\">[GitHub Inc., SUA]</span>;</li>\n<li>autorităților publice, dacă legea o cere.</li>\n</ul>\n<p>Transferul în afara UE se realizează în temeiul <span class=\"fill\">[EU–US Data Privacy Framework sau al clauzelor contractuale standard]</span>. Nu vindem datele și nu le transmitem în scopuri publicitare.</p>\n\n<h2>5. Cât timp păstrăm datele</h2>\n<p>Datele din solicitare se păstrează <span class=\"fill\">[6 luni]</span> de la trimitere. Dacă vă angajați, durata este stabilită de legislația muncii și fiscală din Cehia. După retragerea consimțământului ștergem datele fără întârziere, cu excepția cazurilor în care legea ne obligă să le păstrăm.</p>\n\n<h2>6. Drepturile dumneavoastră</h2>\n<ul>\n<li>dreptul de acces la date și la o copie;</li>\n<li>dreptul la rectificarea datelor inexacte;</li>\n<li>dreptul la ștergerea datelor;</li>\n<li>dreptul la restricționarea prelucrării;</li>\n<li>dreptul la portabilitatea datelor;</li>\n<li>dreptul de a vă opune prelucrării;</li>\n<li>dreptul de a retrage consimțământul oricând — fără a afecta legalitatea prelucrării anterioare.</li>\n</ul>\n<p>Pentru exercitarea drepturilor scrieți la PalsirCz@email.cz. Răspundem în termen de o lună.</p>\n<p>Plângere: Úřad pro ochranu osobních údajů, Pplk. Sochora 27, 170 00 Praha 7, uoou.cz</p>\n\n<h2>7. Cookie-uri, hartă și fonturi</h2>\n<p>Site-ul nu folosește cookie-uri pentru urmărirea vizitatorilor.</p>\n<p>Harta Google de pe pagina de contact se încarcă doar după clicul dumneavoastră. Până atunci nu se trimite nicio cerere către Google. După încărcare, Google primește adresa IP și poate seta propriile cookie-uri.</p>\n<p>Fonturile sunt încărcate din Google Fonts, astfel încât Google poate obține adresa dumneavoastră IP.</p>\n<p class=\"note\"><span class=\"fill\">[Dacă adăugați Google Analytics sau Meta Pixel, această secțiune trebuie rescrisă și adăugat un banner de consimțământ.]</span></p>\n\n<h2>8. Decizii automatizate</h2>\n<p>Nu folosim decizii automatizate și nici crearea de profiluri. Deciziile privind candidații sunt luate de oameni.</p>\n\n<h2>9. Modificări ale acestei politici</h2>\n<p>Versiunea curentă este întotdeauna publicată pe această pagină, cu data ultimei actualizări.</p>\n"
+ }
 };
-
-const DOC = {
-uk:`
-<h2>1. Хто обробляє ваші дані</h2>
-<p>Адміністратором (správce) персональних даних є:</p>
-<div class="card">
-<p><span class="fill">[Назва компанії]</span>, IČO <span class="fill">[номер]</span></p>
-<p>Адреса: <span class="fill">[юридична адреса]</span></p>
-<p>Ліцензія на посередництво в працевлаштуванні № <span class="fill">[номер]</span>, видана Úřad práce ČR</p>
-<p>Email: <span class="fill">[email]</span> &nbsp;·&nbsp; Телефон: +420 608 067 777</p>
-</div>
-<p class="note">З усіх питань щодо ваших даних пишіть на вказаний email.</p>
-
-<h2>2. Які дані ми збираємо</h2>
-<p>Через форму на сайті ми отримуємо дані, які ви вводите самі:</p>
-<ul>
-<li>імʼя та прізвище;</li>
-<li>номер телефону;</li>
-<li>обраний месенджер для звʼязку;</li>
-<li>місто, де ви зараз перебуваєте;</li>
-<li>текст коментаря, якщо ви його заповнили.</li>
-</ul>
-<p>Якщо ви пишете нам у Telegram, Viber або WhatsApp, ми обробляємо ті дані, які ви надсилаєте в переписці.</p>
-<p>Ми не запитуємо особливі категорії даних — стан здоровʼя, віросповідання, походження, судимість. Будь ласка, не вказуйте їх у коментарі.</p>
-
-<h2>3. Навіщо ми це робимо і на якій підставі</h2>
-<ul>
-<li><b>Розгляд вашої заявки та звʼязок з вами.</b> Підстава — ваша згода (ст. 6(1)(a) GDPR) і вжиття заходів на ваш запит перед укладенням договору (ст. 6(1)(b) GDPR).</li>
-<li><b>Передача вашої кандидатури роботодавцю.</b> Підстава — ваша згода.</li>
-<li><b>Зберігання переписки на випадок спору.</b> Підстава — наш законний інтерес (ст. 6(1)(f) GDPR).</li>
-</ul>
-<p>Надання даних добровільне. Але без імені та номера телефону ми не зможемо опрацювати заявку.</p>
-
-<h2>4. Кому ми передаємо дані</h2>
-<ul>
-<li>роботодавцям, до яких ми підбираємо персонал;</li>
-<li>постачальнику сервісу обробки форм <span class="fill">[Formspree Inc., США]</span>;</li>
-<li>постачальнику хостингу <span class="fill">[GitHub Inc., США]</span>;</li>
-<li>державним органам — якщо цього вимагає закон.</li>
-</ul>
-<p>Передача даних за межі ЄС відбувається на підставі <span class="fill">[EU–US Data Privacy Framework або стандартних договірних положень]</span>.</p>
-<p>Ми не продаємо ваші дані і не передаємо їх для реклами.</p>
-
-<h2>5. Скільки часу зберігаємо</h2>
-<p>Дані із заявки зберігаємо <span class="fill">[6 місяців]</span> з моменту її надсилання. Якщо ви влаштуєтеся на роботу, строк зберігання визначається трудовим і податковим законодавством ЧР.</p>
-<p>Якщо ви відкликаєте згоду, ми видалимо дані без зайвої затримки, окрім випадків, коли закон зобовʼязує нас їх зберігати.</p>
-
-<h2>6. Ваші права</h2>
-<ul>
-<li>отримати доступ до своїх даних і копію;</li>
-<li>виправити неточні дані;</li>
-<li>видалити дані;</li>
-<li>обмежити обробку;</li>
-<li>отримати дані в машиночитному форматі;</li>
-<li>заперечити проти обробки;</li>
-<li>відкликати згоду в будь-який момент — це не впливає на законність обробки до відкликання.</li>
-</ul>
-<p>Щоб скористатися правами, напишіть на <span class="fill">[email]</span>. Відповідаємо протягом одного місяця.</p>
-<p>Якщо ви вважаєте, що ми порушили ваші права, ви можете подати скаргу до наглядового органу: Úřad pro ochranu osobních údajů, Pplk. Sochora 27, 170 00 Praha 7, uoou.cz</p>
-
-<h2>7. Cookies та аналітика</h2>
-<p>Сайт не використовує cookies для відстеження відвідувачів.</p>
-<p>Шрифти завантажуються із сервісу Google Fonts, тому Google може отримати вашу IP-адресу.</p>
-<p class="note"><span class="fill">[Якщо ви додасте Google Analytics, Meta Pixel або подібне — цей розділ треба переписати і додати банер згоди на cookies.]</span></p>
-
-<h2>8. Автоматизоване прийняття рішень</h2>
-<p>Ми не використовуємо автоматизоване прийняття рішень і профілювання. Рішення щодо кандидатів приймають люди.</p>
-
-<h2>9. Зміни цієї політики</h2>
-<p>Ми можемо оновлювати цю політику. Актуальна версія завжди опублікована на цій сторінці із зазначенням дати оновлення.</p>
-`,
-
-cs:`
-<h2>1. Kdo zpracovává vaše údaje</h2>
-<p>Správcem osobních údajů je:</p>
-<div class="card">
-<p><span class="fill">[Název společnosti]</span>, IČO <span class="fill">[číslo]</span></p>
-<p>Sídlo: <span class="fill">[adresa sídla]</span></p>
-<p>Povolení ke zprostředkování zaměstnání č. <span class="fill">[číslo]</span>, vydané Úřadem práce ČR</p>
-<p>E-mail: <span class="fill">[e-mail]</span> &nbsp;·&nbsp; Telefon: +420 608 067 777</p>
-</div>
-<p class="note">Ve všech záležitostech týkajících se vašich údajů pište na uvedený e-mail.</p>
-
-<h2>2. Jaké údaje shromažďujeme</h2>
-<p>Prostřednictvím formuláře na webu získáváme údaje, které vyplníte sami:</p>
-<ul>
-<li>jméno a příjmení;</li>
-<li>telefonní číslo;</li>
-<li>preferovaný messenger;</li>
-<li>město, kde se nacházíte;</li>
-<li>text poznámky, pokud ji vyplníte.</li>
-</ul>
-<p>Pokud nám napíšete na Telegram, Viber nebo WhatsApp, zpracováváme údaje, které nám v konverzaci sdělíte.</p>
-<p>Nevyžadujeme zvláštní kategorie údajů — zdravotní stav, náboženské vyznání, původ ani záznam v rejstříku trestů. Neuvádějte je prosím do poznámky.</p>
-
-<h2>3. Proč a na jakém právním základě</h2>
-<ul>
-<li><b>Vyřízení vaší žádosti a kontaktování vás.</b> Právní základ — váš souhlas (čl. 6 odst. 1 písm. a) GDPR) a provedení opatření na vaši žádost před uzavřením smlouvy (čl. 6 odst. 1 písm. b) GDPR).</li>
-<li><b>Předání vaší kandidatury zaměstnavateli.</b> Právní základ — váš souhlas.</li>
-<li><b>Uchování komunikace pro případ sporu.</b> Právní základ — náš oprávněný zájem (čl. 6 odst. 1 písm. f) GDPR).</li>
-</ul>
-<p>Poskytnutí údajů je dobrovolné. Bez jména a telefonu však vaši žádost nemůžeme vyřídit.</p>
-
-<h2>4. Komu údaje předáváme</h2>
-<ul>
-<li>zaměstnavatelům, pro které vyhledáváme pracovníky;</li>
-<li>poskytovateli služby zpracování formulářů <span class="fill">[Formspree Inc., USA]</span>;</li>
-<li>poskytovateli hostingu <span class="fill">[GitHub Inc., USA]</span>;</li>
-<li>orgánům veřejné moci, pokud to vyžaduje zákon.</li>
-</ul>
-<p>Předání údajů mimo EU probíhá na základě <span class="fill">[EU–US Data Privacy Framework nebo standardních smluvních doložek]</span>.</p>
-<p>Vaše údaje neprodáváme ani je nepředáváme pro reklamní účely.</p>
-
-<h2>5. Jak dlouho údaje uchováváme</h2>
-<p>Údaje ze žádosti uchováváme <span class="fill">[6 měsíců]</span> od jejího odeslání. Pokud u nás nastoupíte, doba uchování se řídí pracovněprávními a daňovými předpisy ČR.</p>
-<p>Pokud souhlas odvoláte, údaje bez zbytečného odkladu vymažeme, s výjimkou případů, kdy nám zákon ukládá je uchovat.</p>
-
-<h2>6. Vaše práva</h2>
-<ul>
-<li>na přístup k údajům a jejich kopii;</li>
-<li>na opravu nepřesných údajů;</li>
-<li>na výmaz údajů;</li>
-<li>na omezení zpracování;</li>
-<li>na přenositelnost údajů;</li>
-<li>vznést námitku proti zpracování;</li>
-<li>odvolat souhlas kdykoli — tím není dotčena zákonnost zpracování před odvoláním.</li>
-</ul>
-<p>Práva uplatníte na e-mailu <span class="fill">[e-mail]</span>. Odpovídáme do jednoho měsíce.</p>
-<p>Máte-li za to, že jsme porušili vaše práva, můžete podat stížnost dozorovému úřadu: Úřad pro ochranu osobních údajů, Pplk. Sochora 27, 170 00 Praha 7, uoou.cz</p>
-
-<h2>7. Cookies a analytika</h2>
-<p>Web nepoužívá cookies ke sledování návštěvníků.</p>
-<p>Písma se načítají ze služby Google Fonts, takže Google může získat vaši IP adresu.</p>
-<p class="note"><span class="fill">[Pokud přidáte Google Analytics, Meta Pixel apod., je nutné tuto část přepsat a doplnit cookies lištu.]</span></p>
-
-<h2>8. Automatizované rozhodování</h2>
-<p>Nepoužíváme automatizované rozhodování ani profilování. O kandidátech rozhodují lidé.</p>
-
-<h2>9. Změny těchto zásad</h2>
-<p>Zásady můžeme aktualizovat. Aktuální znění je vždy zveřejněno na této stránce s datem poslední aktualizace.</p>
-`,
-
-ro:`
-<h2>1. Cine prelucrează datele dumneavoastră</h2>
-<p>Operatorul datelor cu caracter personal este:</p>
-<div class="card">
-<p><span class="fill">[Denumirea companiei]</span>, IČO <span class="fill">[număr]</span></p>
-<p>Sediul: <span class="fill">[adresa sediului]</span></p>
-<p>Licență de mediere a muncii nr. <span class="fill">[număr]</span>, eliberată de Úřad práce ČR</p>
-<p>E-mail: <span class="fill">[e-mail]</span> &nbsp;·&nbsp; Telefon: +420 608 067 777</p>
-</div>
-<p class="note">Pentru orice întrebare privind datele dumneavoastră, scrieți la adresa de e-mail indicată.</p>
-
-<h2>2. Ce date colectăm</h2>
-<p>Prin formularul de pe site primim datele pe care le completați dumneavoastră:</p>
-<ul>
-<li>numele și prenumele;</li>
-<li>numărul de telefon;</li>
-<li>messenger-ul preferat;</li>
-<li>orașul în care vă aflați;</li>
-<li>textul mesajului, dacă îl completați.</li>
-</ul>
-<p>Dacă ne scrieți pe Telegram, Viber sau WhatsApp, prelucrăm datele pe care ni le transmiteți în conversație.</p>
-<p>Nu solicităm categorii speciale de date — starea de sănătate, religia, originea sau cazierul judiciar. Vă rugăm să nu le menționați în mesaj.</p>
-
-<h2>3. De ce și în ce temei</h2>
-<ul>
-<li><b>Procesarea cererii și contactarea dumneavoastră.</b> Temei — consimțământul dumneavoastră (art. 6 alin. 1 lit. a) GDPR) și măsurile luate la cererea dumneavoastră înainte de încheierea contractului (art. 6 alin. 1 lit. b) GDPR).</li>
-<li><b>Transmiterea candidaturii către angajator.</b> Temei — consimțământul dumneavoastră.</li>
-<li><b>Păstrarea corespondenței în caz de litigiu.</b> Temei — interesul nostru legitim (art. 6 alin. 1 lit. f) GDPR).</li>
-</ul>
-<p>Furnizarea datelor este voluntară. Fără nume și număr de telefon nu putem însă procesa cererea.</p>
-
-<h2>4. Cui transmitem datele</h2>
-<ul>
-<li>angajatorilor pentru care recrutăm personal;</li>
-<li>furnizorului serviciului de formulare <span class="fill">[Formspree Inc., SUA]</span>;</li>
-<li>furnizorului de găzduire <span class="fill">[GitHub Inc., SUA]</span>;</li>
-<li>autorităților publice, dacă legea o cere.</li>
-</ul>
-<p>Transferul datelor în afara UE se realizează în temeiul <span class="fill">[EU–US Data Privacy Framework sau al clauzelor contractuale standard]</span>.</p>
-<p>Nu vindem datele dumneavoastră și nu le transmitem în scopuri publicitare.</p>
-
-<h2>5. Cât timp păstrăm datele</h2>
-<p>Datele din cerere se păstrează <span class="fill">[6 luni]</span> de la trimiterea acesteia. Dacă vă angajați, durata de păstrare este stabilită de legislația muncii și fiscală din Cehia.</p>
-<p>Dacă vă retrageți consimțământul, ștergem datele fără întârzieri nejustificate, cu excepția cazurilor în care legea ne obligă să le păstrăm.</p>
-
-<h2>6. Drepturile dumneavoastră</h2>
-<ul>
-<li>dreptul de acces la date și la o copie a acestora;</li>
-<li>dreptul la rectificarea datelor inexacte;</li>
-<li>dreptul la ștergerea datelor;</li>
-<li>dreptul la restricționarea prelucrării;</li>
-<li>dreptul la portabilitatea datelor;</li>
-<li>dreptul de a vă opune prelucrării;</li>
-<li>dreptul de a retrage consimțământul oricând — retragerea nu afectează legalitatea prelucrării anterioare.</li>
-</ul>
-<p>Pentru exercitarea drepturilor, scrieți la <span class="fill">[e-mail]</span>. Răspundem în termen de o lună.</p>
-<p>Dacă considerați că v-am încălcat drepturile, puteți depune o plângere la autoritatea de supraveghere: Úřad pro ochranu osobních údajů, Pplk. Sochora 27, 170 00 Praha 7, uoou.cz</p>
-
-<h2>7. Cookie-uri și analiză</h2>
-<p>Site-ul nu folosește cookie-uri pentru urmărirea vizitatorilor.</p>
-<p>Fonturile sunt încărcate din serviciul Google Fonts, astfel încât Google poate obține adresa dumneavoastră IP.</p>
-<p class="note"><span class="fill">[Dacă adăugați Google Analytics, Meta Pixel sau altele, această secțiune trebuie rescrisă și adăugat un banner de cookie-uri.]</span></p>
-
-<h2>8. Decizii automatizate</h2>
-<p>Nu folosim decizii automatizate și nici crearea de profiluri. Deciziile privind candidații sunt luate de oameni.</p>
-
-<h2>9. Modificări ale acestei politici</h2>
-<p>Putem actualiza această politică. Versiunea curentă este întotdeauna publicată pe această pagină, cu data ultimei actualizări.</p>
-`
-};
-
-function apply(l){
-  document.documentElement.lang = l;
-  document.getElementById("pTitle").textContent = M[l].title;
-  document.getElementById("pUpdated").innerHTML = M[l].updated;
-  document.getElementById("pBack").textContent = M[l].back;
-  document.getElementById("pFoot").innerHTML = M[l].foot;
-  document.getElementById("doc").innerHTML = DOC[l];
-  document.querySelectorAll(".langs button").forEach(b=>
-    b.setAttribute("aria-pressed", b.dataset.lang===l ? "true":"false"));
-  document.title = M[l].title;
-}
-document.querySelectorAll(".langs button").forEach(b=>
-  b.addEventListener("click",()=>apply(b.dataset.lang)));
-const nav=(navigator.language||"uk").slice(0,2);
-apply(["uk","cs","ro"].includes(nav)?nav:"uk");
+buildPage(PAGE, {title:"h1"});
 </script>
 </body>
 </html>

@@ -13,118 +13,152 @@
 <body>
 
 <div class="bar"><div class="wrap">
-  <a class="mark" href="index.html">PAL<em>SIR</em> CZ</a>
+  <a class="mark" href="index.html">
+    <img src="img/logo.png" alt="Palsir CZ">
+    <span class="wordmark">PAL<em>SIR</em> CZ</span>
+  </a>
+  <nav class="nav-desk">
+    <a href="index.html" data-i="navHome"></a>
+    <a href="robota.html" data-i="navJobs"></a>
+    <a href="firmam.html" data-i="navFirms"></a>
+    <a href="dokumenty.html" data-i="navDocs"></a>
+    <a href="kontakt.html" aria-current="page" data-i="navContact"></a>
+  </nav>
   <div class="langs" role="group">
     <button data-lang="uk" aria-pressed="true">UA</button>
     <button data-lang="cs" aria-pressed="false">CZ</button>
     <button data-lang="ro" aria-pressed="false">RO</button>
   </div>
+  <button class="burger" type="button" aria-expanded="false" aria-label="Menu">
+    <svg class="ic"><use href="#i-menu"></use></svg>
+  </button>
 </div></div>
-<nav class="nav"><div class="wrap">
-  <a href="index.html" data-i="navJobs"></a>
-  <a href="firmam.html" data-i="navFirms"></a>
-  <a href="dokumenty.html" data-i="navDocs"></a>
-  <a href="kontakt.html" aria-current="page" data-i="navContact"></a>
-</div></nav>
 <div class="hazard"></div>
+
 
 <header><div class="wrap">
   <h1 data-i="h1"></h1>
   <p class="lead" data-i="lead"></p>
 
-  <a class="phone" style="margin-top:20px" href="tel:+420608067777">+420 608 067 777</a>
+  <a class="phone" style="margin-top:22px" href="tel:+420608067777">
+    <svg class="ic lg"><use href="#i-phone"></use></svg>+420 608 067 777</a>
   <div class="chips">
-    <a href="https://t.me/+420608067777">Telegram</a>
-    <a href="viber://chat?number=%2B420608067777">Viber</a>
-    <a href="https://wa.me/420608067777">WhatsApp</a>
-    <a href="mailto:PalsirCz@email.cz">PalsirCz@email.cz</a>
+    <a href="https://t.me/+420608067777"><svg class="ic sm"><use href="#i-telegram"></use></svg>Telegram</a>
+    <a href="viber://chat?number=%2B420608067777"><svg class="ic sm"><use href="#i-viber"></use></svg>Viber</a>
+    <a href="https://wa.me/420608067777"><svg class="ic sm"><use href="#i-whatsapp"></use></svg>WhatsApp</a>
+    <a href="mailto:PalsirCz@email.cz"><svg class="ic sm"><use href="#i-mail"></use></svg>PalsirCz@email.cz</a>
   </div>
 
   <div class="legal">
     <dl>
       <dt data-i="lCompany"></dt><dd>Palsir CZ s.r.o.</dd>
       <dt>IČO</dt><dd>04383249</dd>
-      <dt data-i="lAddress"></dt><dd>Klostermannova 5987<br>430 01 Chomutov<br><span data-i="lCountry"></span></dd>
+      <dt data-i="lAddress"></dt>
+      <dd>Klostermannova 5987<br>430 01 Chomutov<br><span data-i="lCountry"></span></dd>
     </dl>
   </div>
   <p class="note" style="margin-top:12px" data-i="licenseNote"></p>
 </div></header>
 
 <section><div class="wrap">
-  <h2 data-i="whoTitle"></h2>
-  <div class="block"><h3 data-i="w1t"></h3><p data-i="w1d"></p>
-    <div class="btnrow" style="margin-top:12px"><a class="btn ghost wide" href="index.html" data-i="w1c"></a></div></div>
-  <div class="block"><h3 data-i="w2t"></h3><p data-i="w2d"></p>
-    <div class="btnrow" style="margin-top:12px"><a class="btn ghost wide" href="firmam.html" data-i="w2c"></a></div></div>
-  <div class="block"><h3 data-i="w3t"></h3><p data-i="w3d"></p>
-    <div class="btnrow" style="margin-top:12px"><a class="btn ghost wide" href="dokumenty.html" data-i="w3c"></a></div></div>
+  <h2 data-i="mapTitle"></h2>
+  <div class="map">
+    <div class="placeholder">
+      <div class="iconbox" style="margin:0 auto 4px"><svg class="ic"><use href="#i-pin"></use></svg></div>
+      <p data-i="mapNote"></p>
+      <button class="btn solid" type="button" style="display:inline-flex" data-i="mapBtn"></button>
+    </div>
+  </div>
 </div></section>
 
-<div class="wrap"><div class="formsec" id="form">
-  <h2 data-i="formTitle"></h2>
-  <p class="sub" data-i="formSub"></p>
-  <form id="applyForm" class="f" novalidate>
-    <div><label for="f-name" data-i="fName"></label><input id="f-name" name="name" required autocomplete="name"></div>
-    <div><label for="f-phone" data-i="fPhone"></label><input id="f-phone" name="phone" type="tel" required placeholder="+420 …" autocomplete="tel"></div>
-    <div><label for="f-email" data-i="fEmail"></label><input id="f-email" name="email" type="email" autocomplete="email"></div>
-    <div><label for="f-note" data-i="fNote"></label><textarea id="f-note" name="note"></textarea></div>
-    <div class="check"><input id="f-ok" type="checkbox" required>
-      <label for="f-ok" style="margin:0" data-i="fConsent"></label></div>
-    <button class="send" type="submit" data-i="fSubmit"></button>
-    <div class="msg" id="formMsg"></div>
-  </form>
-</div></div>
+<section><div class="wrap">
+  <h2 data-i="whoTitle"></h2>
+  <div class="block"><div class="iconbox"><svg class="ic"><use href="#i-factory"></use></svg></div><h3 data-i="w1t"></h3><p data-i="w1d"></p>
+    <div class="btnrow"><a class="btn ghost wide" href="robota.html"><span data-i="w1c"></span><svg class="ic"><use href="#i-arrow"></use></svg></a></div></div>
+  <div class="block"><div class="iconbox"><svg class="ic"><use href="#i-users"></use></svg></div><h3 data-i="w2t"></h3><p data-i="w2d"></p>
+    <div class="btnrow"><a class="btn ghost wide" href="firmam.html"><span data-i="w2c"></span><svg class="ic"><use href="#i-arrow"></use></svg></a></div></div>
+  <div class="block"><div class="iconbox"><svg class="ic"><use href="#i-doc"></use></svg></div><h3 data-i="w3t"></h3><p data-i="w3d"></p>
+    <div class="btnrow"><a class="btn ghost wide" href="dokumenty.html"><span data-i="w3c"></span><svg class="ic"><use href="#i-arrow"></use></svg></a></div></div>
+</div></section>
+
+
+<div class="wrap"><div data-form id="form"></div></div>
 
 <footer><div class="wrap">
-  <p data-i="footCompany"></p>
-  <p data-i="footLicense"></p>
-  <p><a href="privacy.html" data-i="footPrivacy"></a></p>
+  <p class="brand">PALSIR CZ<sup>&#8482;</sup> &copy; 2015–2026</p>
+  <div class="frow">
+    <span data-i="footTagline"></span>
+    <span>IČO 04383249</span>
+    <a href="privacy.html" data-i="footPrivacy"></a>
+  </div>
 </div></footer>
 
 <nav class="dock">
-  <a class="call" href="tel:+420608067777" data-i="dockCall"></a>
-  <a class="apply" href="#form" data-i="dockApply"></a>
+  <a class="call" href="tel:+420608067777">
+    <svg class="ic"><use href="#i-phone"></use></svg><span data-i="dockCall"></span></a>
+  <a class="apply" href="#form">
+    <svg class="ic"><use href="#i-send"></use></svg><span data-i="dockApply"></span></a>
 </nav>
 
 <script src="common.js"></script>
 <script>
 const PAGE = {
-uk:{
- h1:"Контакти",
- lead:"Телефон, Viber, Telegram і WhatsApp — один номер. Пишіть у зручний спосіб.",
- lCompany:"Компанія", lAddress:"Адреса", lCountry:"Чеська Республіка",
- licenseNote:"Маємо чинну ліцензію на посередництво в працевлаштуванні, зокрема іноземців. Застраховані на випадок банкрутства.",
- whoTitle:"Що вас цікавить",
- w1t:"Шукаю роботу", w1d:"Вакансії на заводах автокомпонентів у Кадані та Хомутові.", w1c:"Переглянути вакансію",
- w2t:"Потрібні працівники", w2d:"Тимчасове призначення персоналу з повним кадровим і зарплатним сервісом.", w2c:"Умови для компаній",
- w3t:"Потрібні документи", w3d:"Робоча карта, віза, постійне проживання, супровід в органах.", w3c:"Послуги для іноземців",
- formTitle:"Написати нам", formSub:"Відповідаємо протягом робочого дня."
-},
-cs:{
- h1:"Kontakt",
- lead:"Telefon, Viber, Telegram i WhatsApp — jedno číslo. Napište, jak vám to vyhovuje.",
- lCompany:"Společnost", lAddress:"Adresa", lCountry:"Česká republika",
- licenseNote:"Máme platné povolení ke zprostředkování zaměstnání včetně zaměstnávání cizinců. Jsme pojištěni proti úpadku.",
- whoTitle:"Co vás zajímá",
- w1t:"Hledám práci", w1d:"Volná místa v závodech na výrobu autodílů v Kadani a Chomutově.", w1c:"Zobrazit nabídku",
- w2t:"Potřebuji pracovníky", w2d:"Dočasné přidělení personálu s kompletním mzdovým a personálním servisem.", w2c:"Podmínky pro firmy",
- w3t:"Potřebuji dokumenty", w3d:"Zaměstnanecká karta, vízum, trvalý pobyt, doprovod na úřadech.", w3c:"Služby pro cizince",
- formTitle:"Napište nám", formSub:"Odpovídáme během pracovního dne."
-},
-ro:{
- h1:"Contact",
- lead:"Telefon, Viber, Telegram și WhatsApp — același număr. Scrieți-ne cum vă este mai comod.",
- lCompany:"Compania", lAddress:"Adresa", lCountry:"Republica Cehă",
- licenseNote:"Deținem licență valabilă de mediere a muncii, inclusiv pentru străini. Suntem asigurați împotriva insolvenței.",
- whoTitle:"Ce vă interesează",
- w1t:"Caut de lucru", w1d:"Posturi în fabricile de piese auto din Kadaň și Chomutov.", w1c:"Vezi oferta",
- w2t:"Am nevoie de lucrători", w2d:"Detașare temporară de personal cu serviciu complet de salarizare și resurse umane.", w2c:"Condiții pentru companii",
- w3t:"Am nevoie de documente", w3d:"Card de angajare, viză, rezidență permanentă, asistență la autorități.", w3c:"Servicii pentru străini",
- formTitle:"Scrieți-ne", formSub:"Răspundem în timpul zilei lucrătoare."
-}
+ "uk": {
+  "h1": "Контакти",
+  "lead": "Телефон, Viber, Telegram і WhatsApp — один номер. Пишіть у зручний спосіб.",
+  "lCompany": "Компанія",
+  "lAddress": "Адреса",
+  "lCountry": "Чеська Республіка",
+  "licenseNote": "Маємо чинну ліцензію на посередництво в працевлаштуванні, зокрема іноземців. Застраховані на випадок банкрутства.",
+  "whoTitle": "Що вас цікавить",
+  "w1t": "Шукаю роботу",
+  "w1d": "Вакансії на заводах автокомпонентів у Кадані та Хомутові.",
+  "w1c": "Переглянути вакансію",
+  "w2t": "Потрібні працівники",
+  "w2d": "Тимчасове призначення персоналу з повним кадровим сервісом.",
+  "w2c": "Умови для компаній",
+  "w3t": "Потрібні документи",
+  "w3d": "Робоча карта, віза, постійне проживання, супровід в органах.",
+  "w3c": "Послуги для іноземців"
+ },
+ "cs": {
+  "h1": "Kontakt",
+  "lead": "Telefon, Viber, Telegram i WhatsApp — jedno číslo. Napište, jak vám to vyhovuje.",
+  "lCompany": "Společnost",
+  "lAddress": "Adresa",
+  "lCountry": "Česká republika",
+  "licenseNote": "Máme platné povolení ke zprostředkování zaměstnání včetně zaměstnávání cizinců. Jsme pojištěni proti úpadku.",
+  "whoTitle": "Co vás zajímá",
+  "w1t": "Hledám práci",
+  "w1d": "Volná místa v závodech na výrobu autodílů v Kadani a Chomutově.",
+  "w1c": "Zobrazit nabídku",
+  "w2t": "Potřebuji pracovníky",
+  "w2d": "Dočasné přidělení personálu s kompletním personálním servisem.",
+  "w2c": "Podmínky pro firmy",
+  "w3t": "Potřebuji dokumenty",
+  "w3d": "Zaměstnanecká karta, vízum, trvalý pobyt, doprovod na úřadech.",
+  "w3c": "Služby pro cizince"
+ },
+ "ro": {
+  "h1": "Contact",
+  "lead": "Telefon, Viber, Telegram și WhatsApp — același număr. Scrieți-ne cum vă este mai comod.",
+  "lCompany": "Compania",
+  "lAddress": "Adresa",
+  "lCountry": "Republica Cehă",
+  "licenseNote": "Deținem licență valabilă de mediere a muncii, inclusiv pentru străini. Suntem asigurați împotriva insolvenței.",
+  "whoTitle": "Ce vă interesează",
+  "w1t": "Caut de lucru",
+  "w1d": "Posturi în fabricile de piese auto din Kadaň și Chomutov.",
+  "w1c": "Vezi oferta",
+  "w2t": "Am nevoie de lucrători",
+  "w2d": "Detașare temporară de personal cu serviciu complet de resurse umane.",
+  "w2c": "Condiții pentru companii",
+  "w3t": "Am nevoie de documente",
+  "w3d": "Card de angajare, viză, rezidență permanentă, asistență la autorități.",
+  "w3c": "Servicii pentru străini"
+ }
 };
-initI18n(PAGE, {title:"h1"});
-initForm("applyForm","formMsg");
+buildPage(PAGE, {title:"h1"});
 </script>
 </body>
 </html>

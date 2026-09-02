@@ -13,36 +13,44 @@
 <body>
 
 <div class="bar"><div class="wrap">
-  <a class="mark" href="index.html">PAL<em>SIR</em> CZ</a>
+  <a class="mark" href="index.html">
+    <img src="img/logo.png" alt="Palsir CZ">
+    <span class="wordmark">PAL<em>SIR</em> CZ</span>
+  </a>
+  <nav class="nav-desk">
+    <a href="index.html" data-i="navHome"></a>
+    <a href="robota.html" data-i="navJobs"></a>
+    <a href="firmam.html" aria-current="page" data-i="navFirms"></a>
+    <a href="dokumenty.html" data-i="navDocs"></a>
+    <a href="kontakt.html" data-i="navContact"></a>
+  </nav>
   <div class="langs" role="group">
     <button data-lang="uk" aria-pressed="true">UA</button>
     <button data-lang="cs" aria-pressed="false">CZ</button>
     <button data-lang="ro" aria-pressed="false">RO</button>
   </div>
+  <button class="burger" type="button" aria-expanded="false" aria-label="Menu">
+    <svg class="ic"><use href="#i-menu"></use></svg>
+  </button>
 </div></div>
-<nav class="nav"><div class="wrap">
-  <a href="index.html" data-i="navJobs"></a>
-  <a href="firmam.html" aria-current="page" data-i="navFirms"></a>
-  <a href="dokumenty.html" data-i="navDocs"></a>
-  <a href="kontakt.html" data-i="navContact"></a>
-</div></nav>
 <div class="hazard"></div>
 
+
 <header><div class="wrap">
-  <span class="tag" data-i="tag"></span>
+  <span class="tag"><svg class="ic sm"><use href="#i-users"></use></svg><span data-i="tag"></span></span>
   <h1 data-i="h1"></h1>
   <div class="prose" style="margin-top:16px" data-html="intro"></div>
 </div></header>
 
 <section><div class="wrap">
-  <div class="dark">
-    <h2 data-i="tempTitle"></h2>
-    <p data-i="tempText"></p>
-  </div>
+  <div class="figure"><img src="img/foto-agentura.jpg" data-alt="img1" alt="" loading="lazy"></div>
+  <div class="dark"><div class="iconbox"><svg class="ic"><use href="#i-users"></use></svg></div>
+    <h2 data-i="tempTitle"></h2><p data-i="tempText"></p></div>
 </div></section>
 
 <section><div class="wrap">
   <h2 data-i="howTitle"></h2>
+  <div class="figure"><img src="img/foto-jaktofunguje.jpg" data-alt="img2" alt="" loading="lazy"></div>
   <ol class="steps">
     <li><div><b data-i="s1t"></b><span data-i="s1d"></span></div></li>
     <li><div><b data-i="s2t"></b><span data-i="s2d"></span></div></li>
@@ -53,6 +61,7 @@
 
 <section><div class="wrap">
   <h2 data-i="priceTitle"></h2>
+  <div class="figure"><img src="img/foto-cena.jpg" data-alt="img3" alt="" loading="lazy"></div>
   <p class="note" style="margin-bottom:14px" data-i="priceIntro"></p>
   <div class="block"><ul class="ticks" data-html="priceList"></ul></div>
   <p class="note" data-i="priceNote"></p>
@@ -60,146 +69,112 @@
 
 <section><div class="wrap">
   <h2 data-i="inclTitle"></h2>
+  <div class="figure"><img src="img/foto-odmena.jpg" data-alt="img4" alt="" loading="lazy"></div>
   <div class="block"><ul class="ticks" data-html="inclList"></ul></div>
 </div></section>
 
-<div class="wrap"><div class="formsec" id="form">
-  <h2 data-i="formTitle"></h2>
-  <p class="sub" data-i="formSub"></p>
-  <form id="applyForm" class="f" novalidate>
-    <div><label for="f-name" data-i="fCompanyName"></label><input id="f-name" name="name" required autocomplete="organization"></div>
-    <div><label for="f-phone" data-i="fPhone"></label><input id="f-phone" name="phone" type="tel" required placeholder="+420 …" autocomplete="tel"></div>
-    <div><label for="f-email" data-i="fEmail"></label><input id="f-email" name="email" type="email" autocomplete="email"></div>
-    <div><label for="f-note" data-i="fDemand"></label><textarea id="f-note" name="note"></textarea></div>
-    <div class="check"><input id="f-ok" type="checkbox" required>
-      <label for="f-ok" style="margin:0" data-i="fConsent"></label></div>
-    <button class="send" type="submit" data-i="fSubmit"></button>
-    <div class="msg" id="formMsg"></div>
-  </form>
-</div></div>
 
-<section><div class="wrap">
-  <h2 data-i="contactTitle"></h2>
-  <a class="phone" href="tel:+420608067777">+420 608 067 777</a>
-  <div class="chips">
-    <a href="mailto:PalsirCz@email.cz">PalsirCz@email.cz</a>
-    <a href="https://wa.me/420608067777">WhatsApp</a>
-  </div>
-</div></section>
+<div class="wrap"><div data-form id="form"></div></div>
 
 <footer><div class="wrap">
-  <p data-i="footCompany"></p>
-  <p data-i="footLicense"></p>
-  <p><a href="privacy.html" data-i="footPrivacy"></a></p>
+  <p class="brand">PALSIR CZ<sup>&#8482;</sup> &copy; 2015–2026</p>
+  <div class="frow">
+    <span data-i="footTagline"></span>
+    <span>IČO 04383249</span>
+    <a href="privacy.html" data-i="footPrivacy"></a>
+  </div>
 </div></footer>
 
 <nav class="dock">
-  <a class="call" href="tel:+420608067777" data-i="dockCall"></a>
-  <a class="apply" href="#form" data-i="dockApply"></a>
+  <a class="call" href="tel:+420608067777">
+    <svg class="ic"><use href="#i-phone"></use></svg><span data-i="dockCall"></span></a>
+  <a class="apply" href="#form">
+    <svg class="ic"><use href="#i-send"></use></svg><span data-i="dockApply"></span></a>
 </nav>
 
 <script src="common.js"></script>
 <script>
 const PAGE = {
-uk:{
- tag:"Агенція праці з 2015 року",
- h1:"Допомагаємо компаніям працювати, коли бракує робочих рук",
- intro:`<p>PALSIR CZ s.r.o. — агенція праці з чинною ліцензією на посередництво в працевлаштуванні, зокрема іноземців, для всіх видів робіт у всіх галузях. Працюємо у формі посередництва за <b>§ 14 абз. 1 літ. b) Закону про зайнятість</b> — працевлаштовуємо людей для виконання роботи в користувача, який розподіляє роботу і наглядає за її виконанням.</p>
-<p>Для цієї діяльності ми належним чином застраховані на випадок банкрутства.</p>
-<p>Забезпечуємо кваліфікованих і допоміжних робітників, ремісничі, технічні, ручні, сервісні, адміністративні та медичні спеціальності — переважно зі Східної Європи.</p>
-<p>Від заснування у 2015 році постачаємо персонал на ринки праці <b>Чехії, Словаччини, Польщі, Угорщини та Німеччини</b>, поступово розширюючись на інші країни Східної, Центральної та Західної Європи.</p>`,
- tempTitle:"Тимчасове призначення персоналу",
- tempText:"Комплексне рішення тимчасової робочої допомоги. Підходить і для коротких пікових періодів, і для довгострокової співпраці, і для заміни постійного працівника.",
- howTitle:"Як це працює",
- s1t:"Ви надсилаєте запит", s1d:"Описуєте, скільки людей і на які позиції потрібно.",
- s2t:"Ми знаходимо і оформлюємо", s2d:"Підбираємо працівників і працевлаштовуємо їх у себе — за DPČ або трудовим договором, залежно від потреби.",
- s3t:"Тимчасове призначення", s3d:"Направляємо працівників на визначене вами робоче місце.",
- s4t:"Уся адміністрація на нас", s4d:"Виплачуємо зарплату, сплачуємо внески, ведемо кадровий облік. Ви лише підтверджуєте відпрацьовані години.",
- priceTitle:"Скільки це коштує",
- priceIntro:"Погодинна фактураційна ставка складається з таких позицій, кінцева сума — їхній підсумок:",
- priceList:`<li>брутто-зарплата працівника;</li>
-<li>законні внески на соціальне і медичне страхування;</li>
-<li>винагорода агенції за комплексну послугу — фіксована позиція, яка не змінюється разом зі зміною погодинної зарплати.</li>`,
- priceNote:"Точна ціна завжди узгоджується індивідуально і фіксується договором. Ставка залежить від виду роботи та передбачених законом порівнянних умов вашого штатного працівника на аналогічній позиції, а також від ситуації на ринку праці. Цінова політика повністю прозора: фактураційна ставка = зарплата + ціна агенції + ПДВ.",
- inclTitle:"Що входить у винагороду агенції",
- inclList:`<li>Пошук і відбір працівників.</li>
-<li>Уся адміністрація тимчасового призначення і зарплатний сервіс: договори, реєстрація і зняття з обліку в OSSZ і ZP, виплата зарплат, внески, розрахунок податків.</li>
-<li>Видача всіх документів для працівників і державних органів.</li>
-<li>Страхування відповідальності за шкоду до 2 000 000 Kč, включно з адмініструванням страхових випадків.</li>
-<li>Страхування нещасних випадків на виробництві, включно з повним адмініструванням.</li>
-<li>Страхування на випадок банкрутства.</li>`,
- formTitle:"Потрібні працівники?",
- formSub:"Опишіть запит — підготуємо пропозицію.",
- fCompanyName:"Компанія та контактна особа", fDemand:"Скільки людей і на які позиції",
- contactTitle:"Або звʼяжіться напряму"
-},
-cs:{
- tag:"Agentura práce od roku 2015",
- h1:"Pomáháme firmám uspět v době nedostatku pracovní síly",
- intro:`<p>Společnost PALSIR CZ s.r.o. má platné povolení ke zprostředkování zaměstnání i povolení ke zprostředkování zaměstnání cizinců pro všechny druhy prací ve všech oborech. Působíme ve formě zprostředkování zaměstnání podle <b>ust. § 14 odst. 1 písm. b) zákona o zaměstnanosti</b> — zaměstnávání fyzických osob za účelem výkonu jejich práce pro uživatele, kterým se rozumí jiná právnická nebo fyzická osoba, která práci přiděluje a dohlíží na její provedení.</p>
-<p>Pro tuto činnost jsme řádně pojištěni proti úpadku.</p>
-<p>Zajišťujeme kvalifikované i pomocné dělníky, řemeslné, technické, manuální, servisní, administrativní a zdravotní profese, a to především z východní Evropy.</p>
-<p>Od založení v roce 2015 dodáváme personál na pracovní trh <b>České republiky, Slovenska, Polska, Maďarska a Německa</b> s postupným rozvojem do dalších států východní, centrální a západní Evropy.</p>`,
- tempTitle:"Dočasné přidělení, agenturní zaměstnávání",
- tempText:"Komplexní řešení dočasné pracovní výpomoci. Vhodné pro krátkodobé i dlouhodobé období, na nárazové akce i jako náhrada za stálého zaměstnance.",
- howTitle:"Jak to funguje",
- s1t:"Pošlete poptávku", s1d:"Popíšete, kolik lidí a na jaké pozice potřebujete.",
- s2t:"Vyhledáme a zaměstnáme", s2d:"Pracovníky vyhledáme a zaměstnáme u nás — na dohodu o pracovní činnosti nebo pracovní poměr, dle potřeby.",
- s3t:"Dočasné přidělení", s3d:"Pracovníky dočasně přidělíme na vámi určené pracovní místo.",
- s4t:"Administrativu vyřídíme my", s4d:"Provedeme výplatu mzdy, odvedeme pojistné a vedeme personální agendu. Vy pouze potvrzujete odpracované hodiny.",
- priceTitle:"Kolik to stojí",
- priceIntro:"Hodinová fakturační sazba se skládá z těchto položek, výsledná částka je jejich součtem:",
- priceList:`<li>hrubá mzda zaměstnance;</li>
-<li>zákonné odvody sociálního a zdravotního pojištění;</li>
-<li>odměna naší agentury za komplexní službu — fixní položka, která se nemění se změnou výše hrubé hodinové mzdy.</li>`,
- priceNote:"Přesná cena je vždy individuálně domluvena a následně smluvně ujednána. Hodinová sazba je odvislá od druhu práce a zákonem vyžadovaných srovnatelných podmínek vašeho kmenového zaměstnance na obdobné pozici. Důležitým faktorem je také situace na trhu práce. Naše cenová politika je zcela transparentní: fakturační sazba = mzda + cena agentury + DPH.",
- inclTitle:"Co odměna agentury zahrnuje",
- inclList:`<li>Vyhledání a výběr pracovníků.</li>
-<li>Veškerá administrativa spojená s dočasným přidělením a mzdovým servisem: sepsání smluv, přihlášky a odhlášky na OSSZ a ZP, výplaty mezd, odvody pojistného, zúčtování daní.</li>
-<li>Vystavení všech dokladů pro zaměstnance a státní úřady.</li>
-<li>Pojištění odpovědnosti za škodu až do výše 2 000 000 Kč včetně administrace škodných událostí a jejich likvidace.</li>
-<li>Pojištění pracovních úrazů včetně celé administrace úrazů a jejich řešení.</li>
-<li>Pojištění proti úpadku.</li>`,
- formTitle:"Potřebujete pracovníky?",
- formSub:"Popište poptávku — připravíme nabídku.",
- fCompanyName:"Firma a kontaktní osoba", fDemand:"Kolik lidí a na jaké pozice",
- contactTitle:"Nebo nás kontaktujte přímo"
-},
-ro:{
- tag:"Agenție de muncă din 2015",
- h1:"Ajutăm companiile să funcționeze când lipsește forța de muncă",
- intro:`<p>PALSIR CZ s.r.o. deține licență valabilă de mediere a muncii, inclusiv pentru încadrarea străinilor, pentru toate tipurile de activități din toate domeniile. Activăm în forma medierii muncii conform <b>art. 14 alin. 1 lit. b) din Legea privind ocuparea forței de muncă</b> — angajarea persoanelor fizice în vederea prestării muncii pentru un utilizator, care repartizează munca și supraveghează executarea acesteia.</p>
-<p>Pentru această activitate suntem asigurați împotriva insolvenței.</p>
-<p>Asigurăm muncitori calificați și necalificați, meseriași, personal tehnic, manual, de service, administrativ și medical, în principal din Europa de Est.</p>
-<p>De la înființarea în 2015 furnizăm personal pe piețele muncii din <b>Cehia, Slovacia, Polonia, Ungaria și Germania</b>, cu extindere treptată în alte state din Europa de Est, Centrală și de Vest.</p>`,
- tempTitle:"Detașare temporară de personal",
- tempText:"Soluție completă de forță de muncă temporară. Potrivită atât pentru perioade scurte de vârf, cât și pentru colaborare de durată sau înlocuirea unui angajat permanent.",
- howTitle:"Cum funcționează",
- s1t:"Trimiteți solicitarea", s1d:"Descrieți de câți oameni și pentru ce posturi aveți nevoie.",
- s2t:"Recrutăm și angajăm", s2d:"Găsim lucrătorii și îi angajăm la noi — prin contract de activitate sau contract de muncă, după necesitate.",
- s3t:"Detașare temporară", s3d:"Repartizăm lucrătorii la locul de muncă stabilit de dumneavoastră.",
- s4t:"Administrația rămâne la noi", s4d:"Plătim salariile, virăm contribuțiile și ținem evidența de personal. Dumneavoastră doar confirmați orele lucrate.",
- priceTitle:"Cât costă",
- priceIntro:"Tariful orar de facturare se compune din următoarele elemente, suma finală fiind totalul acestora:",
- priceList:`<li>salariul brut al angajatului;</li>
-<li>contribuțiile legale de asigurări sociale și de sănătate;</li>
-<li>comisionul agenției pentru serviciul complet — element fix, care nu se modifică odată cu salariul orar brut.</li>`,
- priceNote:"Prețul exact se stabilește întotdeauna individual și se consfințește prin contract. Tariful orar depinde de tipul muncii și de condițiile comparabile, cerute de lege, ale angajaților dumneavoastră permanenți pe posturi similare, precum și de situația pieței muncii. Politica noastră de prețuri este complet transparentă: tarif de facturare = salariu + comisionul agenției + TVA.",
- inclTitle:"Ce include comisionul agenției",
- inclList:`<li>Căutarea și selecția lucrătorilor.</li>
-<li>Întreaga administrație legată de detașarea temporară și de serviciul salarial: contracte, înscrieri și radieri la OSSZ și casele de sănătate, plata salariilor, contribuții, decontarea impozitelor.</li>
-<li>Emiterea tuturor documentelor pentru angajați și pentru autorități.</li>
-<li>Asigurare de răspundere pentru daune până la 2 000 000 CZK, inclusiv administrarea și soluționarea evenimentelor.</li>
-<li>Asigurare pentru accidente de muncă, inclusiv administrarea completă a acestora.</li>
-<li>Asigurare împotriva insolvenței.</li>`,
- formTitle:"Aveți nevoie de lucrători?",
- formSub:"Descrieți solicitarea — pregătim o ofertă.",
- fCompanyName:"Compania și persoana de contact", fDemand:"Câți oameni și pentru ce posturi",
- contactTitle:"Sau contactați-ne direct"
-}
+ "uk": {
+  "tag": "Для компаній",
+  "h1": "Допомагаємо компаніям працювати, коли бракує робочих рук",
+  "img1": "Виробничий цех",
+  "img2": "Робота на виробництві",
+  "img3": "Розрахунок вартості",
+  "img4": "Документи і договори",
+  "intro": "<p>PALSIR CZ s.r.o. — агенція праці з чинною ліцензією на посередництво в працевлаштуванні, зокрема іноземців, для всіх видів робіт у всіх галузях. Працюємо за <b>§ 14 абз. 1 літ. b) Закону про зайнятість</b>: працевлаштовуємо людей для виконання роботи в користувача, який розподіляє роботу і наглядає за її виконанням.</p>\n<p>Для цієї діяльності ми належним чином застраховані на випадок банкрутства.</p>",
+  "tempTitle": "Тимчасове призначення персоналу",
+  "tempText": "Комплексне рішення тимчасової робочої допомоги. Підходить і для коротких пікових періодів, і для довгострокової співпраці, і для заміни постійного працівника.",
+  "howTitle": "Як це працює",
+  "s1t": "Ви надсилаєте запит",
+  "s1d": "Описуєте, скільки людей і на які позиції потрібно.",
+  "s2t": "Ми знаходимо і оформлюємо",
+  "s2d": "Підбираємо працівників і працевлаштовуємо їх у себе — за DPČ або трудовим договором.",
+  "s3t": "Тимчасове призначення",
+  "s3d": "Направляємо працівників на визначене вами робоче місце.",
+  "s4t": "Уся адміністрація на нас",
+  "s4d": "Виплачуємо зарплату, сплачуємо внески, ведемо кадровий облік. Ви лише підтверджуєте відпрацьовані години.",
+  "priceTitle": "Скільки це коштує",
+  "priceIntro": "Погодинна фактураційна ставка складається з таких позицій, кінцева сума — їхній підсумок:",
+  "priceList": "<li>брутто-зарплата працівника;</li>\n<li>законні внески на соціальне і медичне страхування;</li>\n<li>винагорода агенції за комплексну послугу — фіксована позиція, яка не змінюється разом зі зміною погодинної зарплати.</li>",
+  "priceNote": "Точна ціна завжди узгоджується індивідуально і фіксується договором. Ставка залежить від виду роботи та передбачених законом порівнянних умов вашого штатного працівника на аналогічній позиції, а також від ситуації на ринку праці. Цінова політика повністю прозора: фактураційна ставка = зарплата + ціна агенції + ПДВ.",
+  "inclTitle": "Що входить у винагороду агенції",
+  "inclList": "<li>Пошук і відбір працівників.</li>\n<li>Уся адміністрація тимчасового призначення і зарплатний сервіс: договори, реєстрація і зняття з обліку в OSSZ і ZP, виплата зарплат, внески, розрахунок податків.</li>\n<li>Видача всіх документів для працівників і державних органів.</li>\n<li>Страхування відповідальності за шкоду до 2 000 000 Kč, включно з адмініструванням страхових випадків.</li>\n<li>Страхування нещасних випадків на виробництві, включно з повним адмініструванням.</li>\n<li>Страхування на випадок банкрутства.</li>"
+ },
+ "cs": {
+  "tag": "Pro firmy",
+  "h1": "Pomáháme firmám uspět v době nedostatku pracovní síly",
+  "img1": "Výrobní hala",
+  "img2": "Práce ve výrobě",
+  "img3": "Kalkulace ceny",
+  "img4": "Dokumenty a smlouvy",
+  "intro": "<p>Společnost PALSIR CZ s.r.o. má platné povolení ke zprostředkování zaměstnání i povolení ke zprostředkování zaměstnání cizinců pro všechny druhy prací ve všech oborech. Působíme podle <b>ust. § 14 odst. 1 písm. b) zákona o zaměstnanosti</b>: zaměstnáváme fyzické osoby za účelem výkonu jejich práce pro uživatele, který práci přiděluje a dohlíží na její provedení.</p>\n<p>Pro tuto činnost jsme řádně pojištěni proti úpadku.</p>",
+  "tempTitle": "Dočasné přidělení, agenturní zaměstnávání",
+  "tempText": "Komplexní řešení dočasné pracovní výpomoci. Vhodné pro krátkodobé i dlouhodobé období, na nárazové akce i jako náhrada za stálého zaměstnance.",
+  "howTitle": "Jak to funguje",
+  "s1t": "Pošlete poptávku",
+  "s1d": "Popíšete, kolik lidí a na jaké pozice potřebujete.",
+  "s2t": "Vyhledáme a zaměstnáme",
+  "s2d": "Pracovníky vyhledáme a zaměstnáme u nás — na dohodu o pracovní činnosti nebo pracovní poměr.",
+  "s3t": "Dočasné přidělení",
+  "s3d": "Pracovníky dočasně přidělíme na vámi určené pracovní místo.",
+  "s4t": "Administrativu vyřídíme my",
+  "s4d": "Provedeme výplatu mzdy, odvedeme pojistné a vedeme personální agendu. Vy pouze potvrzujete odpracované hodiny.",
+  "priceTitle": "Kolik to stojí",
+  "priceIntro": "Hodinová fakturační sazba se skládá z těchto položek, výsledná částka je jejich součtem:",
+  "priceList": "<li>hrubá mzda zaměstnance;</li>\n<li>zákonné odvody sociálního a zdravotního pojištění;</li>\n<li>odměna naší agentury za komplexní službu — fixní položka, která se nemění se změnou výše hrubé hodinové mzdy.</li>",
+  "priceNote": "Přesná cena je vždy individuálně domluvena a následně smluvně ujednána. Hodinová sazba je odvislá od druhu práce a zákonem vyžadovaných srovnatelných podmínek vašeho kmenového zaměstnance na obdobné pozici. Důležitým faktorem je také situace na trhu práce. Naše cenová politika je zcela transparentní: fakturační sazba = mzda + cena agentury + DPH.",
+  "inclTitle": "Co odměna agentury zahrnuje",
+  "inclList": "<li>Vyhledání a výběr pracovníků.</li>\n<li>Veškerá administrativa spojená s dočasným přidělením a mzdovým servisem: sepsání smluv, přihlášky a odhlášky na OSSZ a ZP, výplaty mezd, odvody pojistného, zúčtování daní.</li>\n<li>Vystavení všech dokladů pro zaměstnance a státní úřady.</li>\n<li>Pojištění odpovědnosti za škodu až do výše 2 000 000 Kč včetně administrace škodných událostí.</li>\n<li>Pojištění pracovních úrazů včetně celé administrace úrazů a jejich řešení.</li>\n<li>Pojištění proti úpadku.</li>"
+ },
+ "ro": {
+  "tag": "Pentru companii",
+  "h1": "Ajutăm companiile să funcționeze când lipsește forța de muncă",
+  "img1": "Hala de producție",
+  "img2": "Munca în producție",
+  "img3": "Calculul prețului",
+  "img4": "Documente și contracte",
+  "intro": "<p>PALSIR CZ s.r.o. deține licență valabilă de mediere a muncii, inclusiv pentru încadrarea străinilor, pentru toate tipurile de activități din toate domeniile. Activăm conform <b>art. 14 alin. 1 lit. b) din Legea privind ocuparea forței de muncă</b>: angajăm persoane fizice pentru prestarea muncii la un utilizator, care repartizează munca și supraveghează executarea acesteia.</p>\n<p>Pentru această activitate suntem asigurați împotriva insolvenței.</p>",
+  "tempTitle": "Detașare temporară de personal",
+  "tempText": "Soluție completă de forță de muncă temporară. Potrivită atât pentru perioade scurte de vârf, cât și pentru colaborare de durată sau înlocuirea unui angajat permanent.",
+  "howTitle": "Cum funcționează",
+  "s1t": "Trimiteți solicitarea",
+  "s1d": "Descrieți de câți oameni și pentru ce posturi aveți nevoie.",
+  "s2t": "Recrutăm și angajăm",
+  "s2d": "Găsim lucrătorii și îi angajăm la noi — prin contract de activitate sau contract de muncă.",
+  "s3t": "Detașare temporară",
+  "s3d": "Repartizăm lucrătorii la locul de muncă stabilit de dumneavoastră.",
+  "s4t": "Administrația rămâne la noi",
+  "s4d": "Plătim salariile, virăm contribuțiile și ținem evidența de personal. Dumneavoastră doar confirmați orele lucrate.",
+  "priceTitle": "Cât costă",
+  "priceIntro": "Tariful orar de facturare se compune din următoarele elemente, suma finală fiind totalul acestora:",
+  "priceList": "<li>salariul brut al angajatului;</li>\n<li>contribuțiile legale de asigurări sociale și de sănătate;</li>\n<li>comisionul agenției pentru serviciul complet — element fix, care nu se modifică odată cu salariul orar brut.</li>",
+  "priceNote": "Prețul exact se stabilește întotdeauna individual și se consfințește prin contract. Tariful orar depinde de tipul muncii și de condițiile comparabile, cerute de lege, ale angajaților dumneavoastră permanenți pe posturi similare, precum și de situația pieței muncii. Politica noastră de prețuri este complet transparentă: tarif de facturare = salariu + comisionul agenției + TVA.",
+  "inclTitle": "Ce include comisionul agenției",
+  "inclList": "<li>Căutarea și selecția lucrătorilor.</li>\n<li>Întreaga administrație legată de detașarea temporară și de serviciul salarial: contracte, înscrieri și radieri la OSSZ și casele de sănătate, plata salariilor, contribuții, decontarea impozitelor.</li>\n<li>Emiterea tuturor documentelor pentru angajați și pentru autorități.</li>\n<li>Asigurare de răspundere pentru daune până la 2 000 000 CZK, inclusiv administrarea evenimentelor.</li>\n<li>Asigurare pentru accidente de muncă, inclusiv administrarea completă a acestora.</li>\n<li>Asigurare împotriva insolvenței.</li>"
+ }
 };
-initI18n(PAGE, {title:"h1"});
-initForm("applyForm","formMsg");
+buildPage(PAGE, {title:"h1"});
 </script>
 </body>
 </html>
