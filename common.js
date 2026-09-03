@@ -10,7 +10,7 @@
 const CONFIG = {
   // Порожньо = заявка відкриється у WhatsApp із готовим текстом.
   // Вставте сюди адресу з formspree.io, щоб заявки йшли на пошту.
-  formEndpoint: "",
+  formEndpoint: "https://formspree.io/f/xoeqwyql",
   whatsapp: "420608067777",
   phone: "+420 608 067 777",
   phoneHref: "+420608067777",
@@ -59,7 +59,7 @@ uk:{
   fSubmit:"Надіслати", fSending:"Надсилаємо…",
   fOk:"Повідомлення надіслано. Ми звʼяжемося з вами найближчим часом.",
   fErr:"Не вдалося надіслати. Зателефонуйте: "+CONFIG.phone,
-  fRequiredNote:"* обовʼязкові поля",
+  fRequiredNote:'<span class="req">*</span> обовʼязкові поля',
   errName:"Вкажіть імʼя або назву компанії.",
   errPhone:"Вкажіть номер телефону.",
   errPhoneBad:"Номер виглядає неповним. Перевірте його.",
@@ -84,7 +84,7 @@ cs:{
   fSubmit:"Odeslat", fSending:"Odesíláme…",
   fOk:"Zpráva odeslána. Brzy se vám ozveme.",
   fErr:"Odeslání se nezdařilo. Zavolejte: "+CONFIG.phone,
-  fRequiredNote:"* povinná pole",
+  fRequiredNote:'<span class="req">*</span> povinná pole',
   errName:"Zadejte jméno nebo název firmy.",
   errPhone:"Zadejte telefonní číslo.",
   errPhoneBad:"Číslo vypadá neúplně. Zkontrolujte ho.",
@@ -109,7 +109,7 @@ ro:{
   fSubmit:"Trimite", fSending:"Se trimite…",
   fOk:"Mesajul a fost trimis. Vă vom contacta în curând.",
   fErr:"Trimiterea a eșuat. Sunați la: "+CONFIG.phone,
-  fRequiredNote:"* câmpuri obligatorii",
+  fRequiredNote:'<span class="req">*</span> câmpuri obligatorii',
   errName:"Introduceți numele sau denumirea companiei.",
   errPhone:"Introduceți numărul de telefon.",
   errPhoneBad:"Numărul pare incomplet. Verificați-l.",
@@ -131,14 +131,14 @@ function formMarkup(){
   <form id="mainForm" class="f" novalidate>
     <div class="fld" data-fld="name">
       <label for="f-name"><span data-i="fName"></span><span class="req" aria-hidden="true">*</span></label>
-      <input id="f-name" name="name" required autocomplete="name"></div>
+      <input id="f-name" name="name" required maxlength="80" autocomplete="name"></div>
     <div class="fld" data-fld="phone">
       <label for="f-phone"><span data-i="fPhone"></span><span class="req" aria-hidden="true">*</span></label>
-      <input id="f-phone" name="phone" type="tel" required placeholder="+420 …" autocomplete="tel"
-             inputmode="tel"></div>
+      <input id="f-phone" name="phone" type="tel" required maxlength="24" placeholder="+420 …"
+             autocomplete="tel" inputmode="tel"></div>
     <div class="fld" data-fld="email">
       <label for="f-email"><span data-i="fEmail"></span></label>
-      <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email"></div>
+      <input id="f-email" name="email" type="email" maxlength="120" autocomplete="email" inputmode="email"></div>
     <div class="fld" data-fld="messenger">
       <label for="f-msg" data-i="fMessenger"></label>
       <select id="f-msg" name="messenger">
@@ -147,14 +147,15 @@ function formMarkup(){
       </select></div>
     <div class="fld" data-fld="note">
       <label for="f-note" data-i="fNote"></label>
-      <textarea id="f-note" name="note"></textarea></div>
+      <textarea id="f-note" name="note" maxlength="1000"></textarea>
+      <span class="count" id="noteCount"></span></div>
     <div style="position:absolute;left:-9999px" aria-hidden="true">
       <label for="f-web">Website</label>
       <input id="f-web" name="website" type="text" tabindex="-1" autocomplete="off">
     </div>
     <div class="fld check" data-fld="consent"><input id="f-ok" type="checkbox" required>
       <label for="f-ok" style="margin:0" data-i="fConsent"></label></div>
-    <p class="reqnote" data-i="fRequiredNote"></p>
+    <p class="reqnote" data-html="fRequiredNote"></p>
     <button class="send" type="submit">
       <svg class="ic"><use href="#i-send"></use></svg><span data-i="fSubmit"></span></button>
     <div class="msg" id="formMsg" role="status" aria-live="polite"></div>
@@ -293,6 +294,17 @@ function buildPage(PAGE, opts){
     box.textContent = DICT[msgKey];
     return false;
   }
+  const note = form.querySelector("#f-note");
+  const counter = document.getElementById("noteCount");
+  if(note && counter){
+    const draw = ()=>{
+      const n = note.value.length, max = 1000;
+      counter.textContent = n > max*0.7 ? n + " / " + max : "";
+      counter.classList.toggle("near", n > max*0.95);
+    };
+    note.addEventListener("input", draw); draw();
+  }
+
   form.addEventListener("input", clearErrors);
   form.addEventListener("change", clearErrors);
 
