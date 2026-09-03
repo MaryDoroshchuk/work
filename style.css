@@ -36,18 +36,18 @@ img{max-width:100%}
 
 /* ---------- шапка ---------- */
 .bar{position:sticky;top:0;z-index:60;background:var(--ink);color:#fff}
-.bar .wrap{display:flex;align-items:center;height:60px;min-height:60px;gap:12px}
+.bar .wrap{display:flex;align-items:center;height:60px;min-height:60px;gap:12px;max-width:1120px}
 .mark{display:flex;align-items:center;gap:9px;text-decoration:none;
   font-weight:800;font-size:17px;letter-spacing:-.01em;white-space:nowrap}
 .mark em{font-style:normal;color:var(--yellow)}
 .mark img{height:26px;width:auto;display:block}
-.nav-desk{display:none;margin-left:14px;gap:2px;flex-wrap:nowrap;overflow:hidden}
+.nav-desk{display:none;margin-left:16px;gap:2px;flex-wrap:nowrap;flex:0 1 auto}
 @media(min-width:860px){.nav-desk{display:flex}}
 .nav-desk a{color:#A5A29B;text-decoration:none;font-weight:600;font-size:14px;
   padding:9px 12px;border-radius:9px;white-space:nowrap}
 .nav-desk a:hover{color:#fff;background:#242424}
 .nav-desk a[aria-current="page"]{background:#fff;color:var(--ink)}
-.langs{margin-left:auto;display:flex;gap:4px;flex:0 0 auto}
+.langs{margin-left:auto;padding-left:14px;display:flex;gap:4px;flex:0 0 auto}
 .langs button{min-width:42px}
 .langs button{font:600 13px/1 Manrope,sans-serif;background:#242424;color:#A5A29B;border:0;
   padding:9px 11px;border-radius:8px;cursor:pointer}
@@ -98,7 +98,9 @@ img{max-width:100%}
 .hbtns .btn.ghost:hover{background:#fff;color:var(--ink)}
 @media(max-width:859px){
   .hero-full{min-height:min(86vh,660px)}
-  .hero-full img{object-position:center}
+  .hero-full::after{background:linear-gradient(180deg,rgba(12,12,12,.34) 0%,rgba(12,12,12,.30) 30%,
+    rgba(12,12,12,.60) 66%,rgba(12,12,12,.92) 100%)}
+  .hero-full img{object-position:17% center}
   .hero-inner{padding:34px 18px 104px}   /* 104px — запас під панель «Подзвонити / Написати» */
   .hero-full h1{font-size:clamp(28px,7.6vw,38px)}
   .hero-full .hlead{font-size:16px}
