@@ -121,6 +121,10 @@ function formMarkup(){
       </select></div>
     <div><label for="f-note" data-i="fNote"></label>
       <textarea id="f-note" name="note"></textarea></div>
+    <div style="position:absolute;left:-9999px" aria-hidden="true">
+      <label for="f-web">Website</label>
+      <input id="f-web" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
     <div class="check"><input id="f-ok" type="checkbox" required>
       <label for="f-ok" style="margin:0" data-i="fConsent"></label></div>
     <button class="send" type="submit">
@@ -250,6 +254,9 @@ function buildPage(PAGE, opts){
                 messenger:v("messenger"), note:v("note") };
     const ok = form.querySelector("input[type=checkbox]");
 
+    if(form.website && form.website.value){        // пастка для ботів
+      box.className = "msg ok"; box.textContent = DICT.fOk; form.reset(); return;
+    }
     if(!d.name || !d.phone || !ok.checked){
       box.className = "msg bad"; box.textContent = DICT.fFill; return;
     }
