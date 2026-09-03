@@ -36,18 +36,19 @@ img{max-width:100%}
 
 /* ---------- шапка ---------- */
 .bar{position:sticky;top:0;z-index:60;background:var(--ink);color:#fff}
-.bar .wrap{display:flex;align-items:center;height:60px;gap:12px}
+.bar .wrap{display:flex;align-items:center;height:60px;min-height:60px;gap:12px}
 .mark{display:flex;align-items:center;gap:9px;text-decoration:none;
   font-weight:800;font-size:17px;letter-spacing:-.01em;white-space:nowrap}
 .mark em{font-style:normal;color:var(--yellow)}
 .mark img{height:26px;width:auto;display:block}
-.nav-desk{display:none;margin-left:14px;gap:2px}
+.nav-desk{display:none;margin-left:14px;gap:2px;flex-wrap:nowrap;overflow:hidden}
 @media(min-width:860px){.nav-desk{display:flex}}
 .nav-desk a{color:#A5A29B;text-decoration:none;font-weight:600;font-size:14px;
   padding:9px 12px;border-radius:9px;white-space:nowrap}
 .nav-desk a:hover{color:#fff;background:#242424}
 .nav-desk a[aria-current="page"]{background:#fff;color:var(--ink)}
-.langs{margin-left:auto;display:flex;gap:4px}
+.langs{margin-left:auto;display:flex;gap:4px;flex:0 0 auto}
+.langs button{min-width:42px}
 .langs button{font:600 13px/1 Manrope,sans-serif;background:#242424;color:#A5A29B;border:0;
   padding:9px 11px;border-radius:8px;cursor:pointer}
 .langs button[aria-pressed="true"]{background:var(--yellow);color:var(--ink)}
@@ -86,7 +87,7 @@ img{max-width:100%}
 .hero-full::after{content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(180deg,rgba(12,12,12,.30) 0%,rgba(12,12,12,.14) 34%,
              rgba(12,12,12,.62) 72%,rgba(12,12,12,.92) 100%)}
-.hero-inner{position:relative;z-index:2;max-width:720px;padding:40px 20px 46px;color:#fff}
+.hero-inner{position:relative;z-index:2;max-width:720px;padding:40px 20px 96px;color:#fff}
 .hero-full h1{font-size:clamp(32px,5.6vw,56px);color:#fff;text-wrap:balance}
 .hero-full .hlead{margin-top:14px;font-size:clamp(16px,2.1vw,20px);
   color:rgba(255,255,255,.88);text-wrap:pretty}
@@ -95,20 +96,15 @@ img{max-width:100%}
 .hbtns .btn{border-radius:999px;padding:15px 26px;border-color:#fff;color:#fff}
 .hbtns .btn.solid{border-color:var(--yellow);color:var(--ink)}
 .hbtns .btn.ghost:hover{background:#fff;color:var(--ink)}
-/* до 860px текст не накладається на фото, а стоїть під ним */
 @media(max-width:859px){
-  .hero-full{display:block;min-height:0;background:var(--ink)}
-  .hero-full::after{display:none}
-  .hero-full picture{position:static;display:block;line-height:0}
-  .hero-full img{height:auto;aspect-ratio:2/1;object-position:center}
-  .hero-inner{max-width:none;padding:22px 18px 28px}
-  .hero-full h1{font-size:clamp(27px,7.4vw,36px)}
-  .hero-full .hlead{font-size:16px;color:rgba(255,255,255,.82)}
-  .hero-full .tag{background:#242424;backdrop-filter:none}
+  .hero-full{min-height:min(86vh,660px)}
+  .hero-full img{object-position:center}
+  .hero-inner{padding:34px 18px 104px}   /* 104px — запас під панель «Подзвонити / Написати» */
+  .hero-full h1{font-size:clamp(28px,7.6vw,38px)}
+  .hero-full .hlead{font-size:16px}
   .hbtns{margin-top:20px}
   .hbtns .btn{flex:1 1 100%}
 }
-
 
 /* ---------- типографіка ---------- */
 header{padding:34px 0 4px}
@@ -194,6 +190,10 @@ h3{font-size:19px;margin-bottom:6px}
 .btn.solid:hover{background:var(--yellow-deep);border-color:var(--yellow-deep)}
 .btn.ghost:hover{background:var(--ink);color:#fff}
 .btn.wide{grid-column:1/-1}
+@media(max-width:520px){
+  .btnrow{grid-template-columns:1fr}
+  .btn{white-space:nowrap}
+}
 .dark .btn.ghost{border-color:#fff;color:#fff}
 .dark .btn.ghost:hover{background:#fff;color:var(--ink)}
 
