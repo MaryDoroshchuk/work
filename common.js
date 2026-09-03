@@ -10,7 +10,7 @@
 const CONFIG = {
   // Порожньо = заявка відкриється у WhatsApp із готовим текстом.
   // Вставте сюди адресу з formspree.io, щоб заявки йшли на пошту.
-  formEndpoint: "https://formspree.io/f/xoeqwyql",
+  formEndpoint: "",
   whatsapp: "420608067777",
   phone: "+420 608 067 777",
   phoneHref: "+420608067777",
@@ -59,7 +59,14 @@ uk:{
   fSubmit:"Надіслати", fSending:"Надсилаємо…",
   fOk:"Повідомлення надіслано. Ми звʼяжемося з вами найближчим часом.",
   fErr:"Не вдалося надіслати. Зателефонуйте: "+CONFIG.phone,
-  fFill:"Заповніть імʼя, телефон і підтвердіть згоду.",
+  fRequiredNote:"* обовʼязкові поля",
+  errName:"Вкажіть імʼя або назву компанії.",
+  errPhone:"Вкажіть номер телефону.",
+  errPhoneBad:"Номер виглядає неповним. Перевірте його.",
+  errEmail:"Перевірте адресу email.",
+  errConsent:"Потрібна згода на обробку даних.",
+  waBlocked:"Браузер заблокував вікно WhatsApp.",
+  waOpen:"Відкрити чат",
   footTagline:"Ліцензована агенція праці", footPrivacy:"Обробка персональних даних",
   mapTitle:"Ми на мапі", mapNote:"Klostermannova 5987, 430 01 Chomutov",
   mapBtn:"Відкрити в Google Maps"
@@ -77,7 +84,14 @@ cs:{
   fSubmit:"Odeslat", fSending:"Odesíláme…",
   fOk:"Zpráva odeslána. Brzy se vám ozveme.",
   fErr:"Odeslání se nezdařilo. Zavolejte: "+CONFIG.phone,
-  fFill:"Vyplňte jméno, telefon a potvrďte souhlas.",
+  fRequiredNote:"* povinná pole",
+  errName:"Zadejte jméno nebo název firmy.",
+  errPhone:"Zadejte telefonní číslo.",
+  errPhoneBad:"Číslo vypadá neúplně. Zkontrolujte ho.",
+  errEmail:"Zkontrolujte e-mailovou adresu.",
+  errConsent:"Je potřeba souhlas se zpracováním údajů.",
+  waBlocked:"Prohlížeč zablokoval okno WhatsApp.",
+  waOpen:"Otevřít chat",
   footTagline:"Licencovaná agentura práce", footPrivacy:"Zpracování osobních údajů",
   mapTitle:"Kde nás najdete", mapNote:"Klostermannova 5987, 430 01 Chomutov",
   mapBtn:"Otevřít v Google Maps"
@@ -95,7 +109,14 @@ ro:{
   fSubmit:"Trimite", fSending:"Se trimite…",
   fOk:"Mesajul a fost trimis. Vă vom contacta în curând.",
   fErr:"Trimiterea a eșuat. Sunați la: "+CONFIG.phone,
-  fFill:"Completați numele, telefonul și bifați acordul.",
+  fRequiredNote:"* câmpuri obligatorii",
+  errName:"Introduceți numele sau denumirea companiei.",
+  errPhone:"Introduceți numărul de telefon.",
+  errPhoneBad:"Numărul pare incomplet. Verificați-l.",
+  errEmail:"Verificați adresa de e-mail.",
+  errConsent:"Este necesar acordul pentru prelucrarea datelor.",
+  waBlocked:"Browserul a blocat fereastra WhatsApp.",
+  waOpen:"Deschide chatul",
   footTagline:"Agenție de muncă licențiată", footPrivacy:"Prelucrarea datelor personale",
   mapTitle:"Unde ne găsiți", mapNote:"Klostermannova 5987, 430 01 Chomutov",
   mapBtn:"Deschide în Google Maps"
@@ -108,28 +129,35 @@ function formMarkup(){
   <h2 data-i="formTitle"></h2>
   <p class="sub" data-i="formSub"></p>
   <form id="mainForm" class="f" novalidate>
-    <div><label for="f-name" data-i="fName"></label>
+    <div class="fld" data-fld="name">
+      <label for="f-name"><span data-i="fName"></span><span class="req" aria-hidden="true">*</span></label>
       <input id="f-name" name="name" required autocomplete="name"></div>
-    <div><label for="f-phone" data-i="fPhone"></label>
-      <input id="f-phone" name="phone" type="tel" required placeholder="+420 …" autocomplete="tel"></div>
-    <div><label for="f-email" data-i="fEmail"></label>
-      <input id="f-email" name="email" type="email" autocomplete="email"></div>
-    <div><label for="f-msg" data-i="fMessenger"></label>
+    <div class="fld" data-fld="phone">
+      <label for="f-phone"><span data-i="fPhone"></span><span class="req" aria-hidden="true">*</span></label>
+      <input id="f-phone" name="phone" type="tel" required placeholder="+420 …" autocomplete="tel"
+             inputmode="tel"></div>
+    <div class="fld" data-fld="email">
+      <label for="f-email"><span data-i="fEmail"></span></label>
+      <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email"></div>
+    <div class="fld" data-fld="messenger">
+      <label for="f-msg" data-i="fMessenger"></label>
       <select id="f-msg" name="messenger">
         <option>Telegram</option><option>Viber</option><option>WhatsApp</option>
         <option data-i="fCall"></option>
       </select></div>
-    <div><label for="f-note" data-i="fNote"></label>
+    <div class="fld" data-fld="note">
+      <label for="f-note" data-i="fNote"></label>
       <textarea id="f-note" name="note"></textarea></div>
     <div style="position:absolute;left:-9999px" aria-hidden="true">
       <label for="f-web">Website</label>
       <input id="f-web" name="website" type="text" tabindex="-1" autocomplete="off">
     </div>
-    <div class="check"><input id="f-ok" type="checkbox" required>
+    <div class="fld check" data-fld="consent"><input id="f-ok" type="checkbox" required>
       <label for="f-ok" style="margin:0" data-i="fConsent"></label></div>
+    <p class="reqnote" data-i="fRequiredNote"></p>
     <button class="send" type="submit">
       <svg class="ic"><use href="#i-send"></use></svg><span data-i="fSubmit"></span></button>
-    <div class="msg" id="formMsg"></div>
+    <div class="msg" id="formMsg" role="status" aria-live="polite"></div>
   </form>`;
 }
 
@@ -242,32 +270,72 @@ function buildPage(PAGE, opts){
   apply(["uk","cs","ro"].includes(urlLang) ? urlLang
       : (["uk","cs","ro"].includes(navLang) ? navLang : "uk"));
 
-  // 7. надсилання форми
+  // 7. перевірка і надсилання форми
   const form = document.getElementById("mainForm");
-  if(form) form.addEventListener("submit", async e=>{
+  if(!form) return;
+
+  const box = document.getElementById("formMsg");
+  const fld = n => form.querySelector(`[data-fld="${n}"]`);
+
+  function clearErrors(){
+    form.querySelectorAll(".fld.err").forEach(el=>el.classList.remove("err"));
+    if(box.classList.contains("bad")){ box.className = "msg"; box.textContent = ""; }
+  }
+  function fail(name, msgKey){
+    clearErrors();
+    const el = fld(name);
+    if(el){
+      el.classList.add("err");
+      const input = el.querySelector("input,select,textarea");
+      if(input) input.focus({preventScroll:false});
+    }
+    box.className = "msg bad";
+    box.textContent = DICT[msgKey];
+    return false;
+  }
+  form.addEventListener("input", clearErrors);
+  form.addEventListener("change", clearErrors);
+
+  const digits = s => (s.match(/\d/g)||[]).length;
+  const emailOk = s => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s);
+
+  form.addEventListener("submit", async e=>{
     e.preventDefault();
-    const box = document.getElementById("formMsg");
     const btn = form.querySelector("button.send");
     const label = btn.querySelector("span");
     const v = n => form[n] ? form[n].value.trim() : "";
     const d = { name:v("name"), phone:v("phone"), email:v("email"),
                 messenger:v("messenger"), note:v("note") };
-    const ok = form.querySelector("input[type=checkbox]");
 
     if(form.website && form.website.value){        // пастка для ботів
       box.className = "msg ok"; box.textContent = DICT.fOk; form.reset(); return;
     }
-    if(!d.name || !d.phone || !ok.checked){
-      box.className = "msg bad"; box.textContent = DICT.fFill; return;
-    }
+
+    if(!d.name)                       return fail("name","errName");
+    if(!d.phone)                      return fail("phone","errPhone");
+    if(digits(d.phone) < 9 || digits(d.phone) > 15)
+                                      return fail("phone","errPhoneBad");
+    if(d.email && !emailOk(d.email))  return fail("email","errEmail");
+    if(!form.querySelector("#f-ok").checked)
+                                      return fail("consent","errConsent");
+
+    clearErrors();
 
     if(!CONFIG.formEndpoint){
       const lines = [DICT.fName+": "+d.name, DICT.fPhone+": "+d.phone];
-      if(d.email) lines.push(DICT.fEmail+": "+d.email);
+      if(d.email)     lines.push(DICT.fEmail+": "+d.email);
       if(d.messenger) lines.push(DICT.fMessenger+": "+d.messenger);
-      if(d.note) lines.push(d.note);
-      window.open("https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(lines.join("\n")),"_blank");
-      box.className = "msg ok"; box.textContent = DICT.fOk; form.reset(); return;
+      if(d.note)      lines.push(d.note);
+      const url = "https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(lines.join("\n"));
+      const win = window.open(url, "_blank");
+      if(!win || win.closed || typeof win.closed === "undefined"){
+        box.className = "msg bad";
+        box.innerHTML = DICT.waBlocked + ' <a href="' + url + '" target="_blank" rel="noopener">'
+                      + DICT.waOpen + '</a>';
+      }else{
+        box.className = "msg ok"; box.textContent = DICT.fOk; form.reset();
+      }
+      return;
     }
 
     btn.disabled = true; label.textContent = DICT.fSending;

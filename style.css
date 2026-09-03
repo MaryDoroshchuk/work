@@ -177,6 +177,12 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--yellow)}
 textarea{min-height:96px;resize:vertical}
 .check{display:flex;gap:11px;align-items:flex-start;font-size:14px;color:#A5A29B;line-height:1.5}
 .check input{width:22px;height:22px;flex:0 0 auto;margin-top:1px;accent-color:var(--yellow)}
+.req{color:var(--yellow);margin-left:3px;font-weight:800}
+.reqnote{font-size:13px;color:#A5A29B;margin:-4px 0 2px}
+.fld.err input,.fld.err select,.fld.err textarea{border-color:#FF8F6B}
+.fld.err label{color:#FFB49B}
+.fld.check.err label{color:#FFB49B}
+.msg a{color:var(--yellow);font-weight:700}
 button.send{background:var(--yellow);color:var(--ink);border:0;border-radius:14px;padding:18px;
   font:800 18px/1 Manrope,sans-serif;cursor:pointer;width:100%;
   display:flex;align-items:center;justify-content:center;gap:9px}
