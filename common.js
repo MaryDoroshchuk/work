@@ -10,7 +10,7 @@
 const CONFIG = {
   // Порожньо = заявка відкриється у WhatsApp із готовим текстом.
   // Вставте сюди адресу з formspree.io, щоб заявки йшли на пошту.
-  formEndpoint: "",
+  formEndpoint: "https://formspree.io/f/xoeqwyql",
   whatsapp: "420608067777",
   phone: "+420 608 067 777",
   phoneHref: "+420608067777",
