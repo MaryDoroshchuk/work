@@ -79,13 +79,13 @@ img{max-width:100%}
 .sidebar .side-contacts a:hover{color:#fff}
 
 /* ---------- повноекранна шапка головної ---------- */
-.hero-full{position:relative;min-height:min(84vh,660px);display:flex;align-items:flex-end;
+.hero-full{position:relative;min-height:min(88vh,720px);display:flex;align-items:flex-end;
   justify-content:center;text-align:center;overflow:hidden;background:var(--ink)}
 .hero-full picture{position:absolute;inset:0}
-.hero-full img{width:100%;height:100%;object-fit:cover;object-position:34% center;display:block}
+.hero-full img{width:100%;height:100%;object-fit:cover;object-position:34% top;display:block}
 .hero-full::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(180deg,rgba(12,12,12,.42) 0%,rgba(12,12,12,.20) 38%,
-             rgba(12,12,12,.66) 74%,rgba(12,12,12,.92) 100%)}
+  background:linear-gradient(180deg,rgba(12,12,12,.30) 0%,rgba(12,12,12,.14) 34%,
+             rgba(12,12,12,.62) 72%,rgba(12,12,12,.92) 100%)}
 .hero-inner{position:relative;z-index:2;max-width:720px;padding:40px 20px 46px;color:#fff}
 .hero-full h1{font-size:clamp(32px,5.6vw,56px);color:#fff;text-wrap:balance}
 .hero-full .hlead{margin-top:14px;font-size:clamp(16px,2.1vw,20px);
@@ -97,7 +97,7 @@ img{max-width:100%}
 .hbtns .btn.ghost:hover{background:#fff;color:var(--ink)}
 @media(max-width:640px){
   .hero-full{min-height:min(76vh,560px)}
-  .hero-full img{object-position:40% center}
+  .hero-full img{object-position:40% top}
   .hbtns .btn{flex:1 1 100%}
 }
 
