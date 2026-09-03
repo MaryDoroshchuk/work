@@ -157,7 +157,7 @@ function buildPage(PAGE, opts){
        <div class="side-contacts">
          <a href="tel:${CONFIG.phoneHref}"><svg class="ic sm"><use href="#i-phone"></use></svg>${CONFIG.phone}</a>
          <a href="mailto:${CONFIG.email}"><svg class="ic sm"><use href="#i-mail"></use></svg>${CONFIG.email}</a>
-         <a href="https://wa.me/${CONFIG.whatsapp}"><svg class="ic sm"><use href="#i-whatsapp"></use></svg>WhatsApp</a>
+         <a href="https://wa.me/${CONFIG.whatsapp}"><svg class="ic sm brand-wa"><use href="#i-whatsapp"></use></svg>WhatsApp</a>
        </div>`;
     const ov = document.createElement("div");
     ov.className = "overlay";

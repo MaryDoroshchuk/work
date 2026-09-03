@@ -194,6 +194,13 @@ button.send:disabled{opacity:.6;cursor:default}
   border:2px solid var(--line);border-radius:999px;padding:10px 17px;
   font-weight:700;font-size:15px;background:#fff}
 .chips a:hover{background:var(--ink);color:#fff}
+.chips a .ic{transition:none}
+.brand-tg{color:#2AABEE}
+.brand-viber{color:#7360F2}
+.brand-wa{color:#25D366}
+.brand-mail{color:var(--body)}
+.chips a:hover .brand-mail{color:#fff}
+.side-contacts .brand-wa{color:#25D366}
 .legal{border:2px solid var(--line);border-radius:18px;background:#fff;padding:18px;margin-top:16px}
 .legal dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 16px;font-size:15px}
 .legal dt{color:var(--body);font-weight:600}
