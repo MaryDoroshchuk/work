@@ -96,23 +96,20 @@ img{max-width:100%}
 .hbtns .btn{border-radius:999px;padding:15px 26px;border-color:#fff;color:#fff}
 .hbtns .btn.solid{border-color:var(--yellow);color:var(--ink)}
 .hbtns .btn.ghost:hover{background:#fff;color:var(--ink)}
-/* до 860px: текст угорі на щільному затемненні, фігура знизу на фото */
+/* до 860px: фігура біля лівого краю, текст на затемненій правій частині */
 @media(max-width:859px){
-  .hero-full{align-items:flex-start;min-height:min(88vh,700px)}
-  .hero-full img{object-position:17% center}
-  .hero-full::after{background:linear-gradient(180deg,
-     rgba(14,14,14,.96) 0%,
-     rgba(14,14,14,.93) 26%,
-     rgba(14,14,14,.72) 40%,
-     rgba(14,14,14,.24) 54%,
-     rgba(14,14,14,.06) 66%,
-     rgba(14,14,14,.55) 88%,
-     rgba(14,14,14,.88) 100%)}
-  .hero-inner{padding:26px 18px 0}
-  .hero-full h1{font-size:clamp(27px,7.2vw,36px)}
-  .hero-full .hlead{font-size:15.5px;color:rgba(255,255,255,.85)}
-  .hero-full .tag{background:rgba(255,255,255,.14)}
-  .hbtns{margin-top:18px}
+  .hero-full{align-items:center;min-height:min(88vh,700px)}
+  .hero-full img{object-position:34% center}
+  .hero-full::after{background:
+     linear-gradient(180deg,rgba(14,14,14,.55) 0%,rgba(14,14,14,.26) 22%,
+       rgba(14,14,14,.22) 62%,rgba(14,14,14,.62) 88%,rgba(14,14,14,.90) 100%),
+     linear-gradient(90deg,rgba(14,14,14,.04) 0%,rgba(14,14,14,.22) 26%,
+       rgba(14,14,14,.72) 58%,rgba(14,14,14,.82) 100%)}
+  .hero-inner{padding:24px 18px 96px;text-align:right}
+  .hero-full h1{font-size:clamp(26px,7vw,34px)}
+  .hero-full .hlead{font-size:15.5px;color:rgba(255,255,255,.86)}
+  .hero-full .tag{background:rgba(255,255,255,.16)}
+  .hbtns{margin-top:18px;justify-content:flex-end}
   .hbtns .btn{flex:1 1 100%}
 }
 
