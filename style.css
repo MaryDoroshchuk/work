@@ -78,6 +78,29 @@ img{max-width:100%}
   text-decoration:none;font-weight:600;font-size:15px;padding:10px 0}
 .sidebar .side-contacts a:hover{color:#fff}
 
+/* ---------- повноекранна шапка головної ---------- */
+.hero-full{position:relative;min-height:min(84vh,660px);display:flex;align-items:flex-end;
+  justify-content:center;text-align:center;overflow:hidden;background:var(--ink)}
+.hero-full picture{position:absolute;inset:0}
+.hero-full img{width:100%;height:100%;object-fit:cover;object-position:34% center;display:block}
+.hero-full::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(12,12,12,.42) 0%,rgba(12,12,12,.20) 38%,
+             rgba(12,12,12,.66) 74%,rgba(12,12,12,.92) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:720px;padding:40px 20px 46px;color:#fff}
+.hero-full h1{font-size:clamp(32px,5.6vw,56px);color:#fff;text-wrap:balance}
+.hero-full .hlead{margin-top:14px;font-size:clamp(16px,2.1vw,20px);
+  color:rgba(255,255,255,.88);text-wrap:pretty}
+.hero-full .tag{background:rgba(255,255,255,.16);color:#fff;backdrop-filter:blur(6px)}
+.hbtns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px}
+.hbtns .btn{border-radius:999px;padding:15px 26px;border-color:#fff;color:#fff}
+.hbtns .btn.solid{border-color:var(--yellow);color:var(--ink)}
+.hbtns .btn.ghost:hover{background:#fff;color:var(--ink)}
+@media(max-width:640px){
+  .hero-full{min-height:min(76vh,560px)}
+  .hero-full img{object-position:40% center}
+  .hbtns .btn{flex:1 1 100%}
+}
+
 /* ---------- типографіка ---------- */
 header{padding:34px 0 4px}
 h1{font-size:clamp(28px,7.2vw,42px)}
