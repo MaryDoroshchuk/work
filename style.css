@@ -96,14 +96,16 @@ img{max-width:100%}
 .hbtns .btn{border-radius:999px;padding:15px 26px;border-color:#fff;color:#fff}
 .hbtns .btn.solid{border-color:var(--yellow);color:var(--ink)}
 .hbtns .btn.ghost:hover{background:#fff;color:var(--ink)}
+/* до 860px: фото смугою зверху, текст під ним на чорному */
 @media(max-width:859px){
-  .hero-full{min-height:min(86vh,660px)}
-  .hero-full::after{background:linear-gradient(180deg,rgba(12,12,12,.34) 0%,rgba(12,12,12,.30) 30%,
-    rgba(12,12,12,.60) 66%,rgba(12,12,12,.92) 100%)}
-  .hero-full img{object-position:17% center}
-  .hero-inner{padding:34px 18px 104px}   /* 104px — запас під панель «Подзвонити / Написати» */
+  .hero-full{display:block;min-height:0;background:var(--ink)}
+  .hero-full::after{display:none}
+  .hero-full picture{position:static;display:block;line-height:0}
+  .hero-full img{height:auto;aspect-ratio:2/1;object-position:center}
+  .hero-inner{max-width:none;padding:24px 18px 30px}
   .hero-full h1{font-size:clamp(28px,7.6vw,38px)}
-  .hero-full .hlead{font-size:16px}
+  .hero-full .hlead{font-size:16px;color:rgba(255,255,255,.82)}
+  .hero-full .tag{background:#242424;backdrop-filter:none}
   .hbtns{margin-top:20px}
   .hbtns .btn{flex:1 1 100%}
 }
