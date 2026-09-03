@@ -96,17 +96,23 @@ img{max-width:100%}
 .hbtns .btn{border-radius:999px;padding:15px 26px;border-color:#fff;color:#fff}
 .hbtns .btn.solid{border-color:var(--yellow);color:var(--ink)}
 .hbtns .btn.ghost:hover{background:#fff;color:var(--ink)}
-/* до 860px: фото смугою зверху, текст під ним на чорному */
+/* до 860px: текст угорі на щільному затемненні, фігура знизу на фото */
 @media(max-width:859px){
-  .hero-full{display:block;min-height:0;background:var(--ink)}
-  .hero-full::after{display:none}
-  .hero-full picture{position:static;display:block;line-height:0}
-  .hero-full img{height:auto;aspect-ratio:2/1;object-position:center}
-  .hero-inner{max-width:none;padding:24px 18px 30px}
-  .hero-full h1{font-size:clamp(28px,7.6vw,38px)}
-  .hero-full .hlead{font-size:16px;color:rgba(255,255,255,.82)}
-  .hero-full .tag{background:#242424;backdrop-filter:none}
-  .hbtns{margin-top:20px}
+  .hero-full{align-items:flex-start;min-height:min(88vh,700px)}
+  .hero-full img{object-position:17% center}
+  .hero-full::after{background:linear-gradient(180deg,
+     rgba(14,14,14,.96) 0%,
+     rgba(14,14,14,.93) 26%,
+     rgba(14,14,14,.72) 40%,
+     rgba(14,14,14,.24) 54%,
+     rgba(14,14,14,.06) 66%,
+     rgba(14,14,14,.55) 88%,
+     rgba(14,14,14,.88) 100%)}
+  .hero-inner{padding:26px 18px 0}
+  .hero-full h1{font-size:clamp(27px,7.2vw,36px)}
+  .hero-full .hlead{font-size:15.5px;color:rgba(255,255,255,.85)}
+  .hero-full .tag{background:rgba(255,255,255,.14)}
+  .hbtns{margin-top:18px}
   .hbtns .btn{flex:1 1 100%}
 }
 
