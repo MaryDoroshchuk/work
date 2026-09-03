@@ -49,15 +49,29 @@
     <a href="mailto:PalsirCz@email.cz"><svg class="ic sm brand-mail"><use href="#i-mail"></use></svg>PalsirCz@email.cz</a>
   </div>
 
-  <div class="legal">
-    <dl>
-      <dt data-i="lCompany"></dt><dd>Palsir CZ s.r.o.</dd>
-      <dt>IČO</dt><dd>04383249</dd>
-      <dt data-i="lAddress"></dt>
-      <dd>Klostermannova 5987<br>430 01 Chomutov<br><span data-i="lCountry"></span></dd>
-    </dl>
+  <div class="info">
+    <div class="item">
+      <svg class="ic"><use href="#i-user"></use></svg>
+      <span><span class="k" data-i="lPerson"></span><span class="val">Vasyl Ciple</span></span>
+    </div>
+    <div class="item">
+      <svg class="ic"><use href="#i-factory"></use></svg>
+      <span><span class="k" data-i="lCompany"></span><span class="val">Palsir CZ s.r.o.</span></span>
+    </div>
+    <div class="item">
+      <svg class="ic"><use href="#i-id"></use></svg>
+      <span><span class="k">IČO</span><span class="val num">04383249</span></span>
+    </div>
+    <div class="item">
+      <svg class="ic"><use href="#i-pin"></use></svg>
+      <span><span class="k" data-i="lAddress"></span>
+        <span class="val">Klostermannova 5987<small>430 01 Chomutov, <span data-i="lCountry"></span></small></span></span>
+    </div>
+    <div class="lic">
+      <svg class="ic"><use href="#i-shield"></use></svg>
+      <p data-i="licenseNote"></p>
+    </div>
   </div>
-  <p class="note" style="margin-top:12px" data-i="licenseNote"></p>
 </div></header>
 
 <section><div class="wrap">
@@ -99,26 +113,29 @@ const PAGE = {
  "uk": {
   "h1": "Контакти",
   "lead": "Телефон, Viber, Telegram і WhatsApp — один номер. Пишіть у зручний спосіб.",
+  "lPerson": "Контактна особа",
   "lCompany": "Компанія",
   "lAddress": "Адреса",
   "lCountry": "Чеська Республіка",
-  "licenseNote": "Маємо чинну ліцензію на посередництво в працевлаштуванні, зокрема іноземців. Застраховані на випадок банкрутства.",
+  "licenseNote": "Чинна ліцензія на посередництво в працевлаштуванні, зокрема іноземців. Застраховані на випадок банкрутства.",
  },
  "cs": {
   "h1": "Kontakt",
   "lead": "Telefon, Viber, Telegram i WhatsApp — jedno číslo. Napište, jak vám to vyhovuje.",
+  "lPerson": "Kontaktní osoba",
   "lCompany": "Společnost",
   "lAddress": "Adresa",
   "lCountry": "Česká republika",
-  "licenseNote": "Máme platné povolení ke zprostředkování zaměstnání včetně zaměstnávání cizinců. Jsme pojištěni proti úpadku.",
+  "licenseNote": "Platné povolení ke zprostředkování zaměstnání včetně cizinců. Pojištěni proti úpadku.",
  },
  "ro": {
   "h1": "Contact",
   "lead": "Telefon, Viber, Telegram și WhatsApp — același număr. Scrieți-ne cum vă este mai comod.",
+  "lPerson": "Persoana de contact",
   "lCompany": "Compania",
   "lAddress": "Adresa",
   "lCountry": "Republica Cehă",
-  "licenseNote": "Deținem licență valabilă de mediere a muncii, inclusiv pentru străini. Suntem asigurați împotriva insolvenței.",
+  "licenseNote": "Licență valabilă de mediere a muncii, inclusiv pentru străini. Asigurați împotriva insolvenței.",
  }
 };
 buildPage(PAGE, {title:"h1"});

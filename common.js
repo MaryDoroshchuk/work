@@ -34,6 +34,8 @@ const ICONS = `
 <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
 <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M12 7.4V12l3 1.8"/></symbol>
 <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 2.6v5.2c0 4.3-2.9 8-7 10.2-4.1-2.2-7-5.9-7-10.2V5.6z"/><path d="m9 12 2.2 2.2L15.4 10"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M5 20a7 7 0 0 1 14 0"/></symbol>
+<symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.4"/><path d="M7 10h4M7 14h6M15.5 10h1.5"/></symbol>
 <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9.2" cy="8.4" r="3.2"/><path d="M3.4 19.4a5.8 5.8 0 0 1 11.6 0M16.4 5.6a3.2 3.2 0 0 1 0 5.7M17.6 13.9a5.6 5.6 0 0 1 3 5.5"/></symbol>
 <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3.4 7.4A2.4 2.4 0 0 1 5.8 5h11.4a2 2 0 0 1 2 2v1.6"/><rect x="3.4" y="7.4" width="17.2" height="11.6" rx="2.4"/><circle cx="16.4" cy="13.2" r="1.3"/></symbol>
 <symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 20V10l5 3V10l5 3V10l5 3V6h3v14z"/><path d="M3 20h18"/></symbol>
