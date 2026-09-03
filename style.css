@@ -95,10 +95,21 @@ img{max-width:100%}
 .hbtns .btn{border-radius:999px;padding:15px 26px;border-color:#fff;color:#fff}
 .hbtns .btn.solid{border-color:var(--yellow);color:var(--ink)}
 .hbtns .btn.ghost:hover{background:#fff;color:var(--ink)}
-@media(max-width:640px){
-  .hero-full{min-height:min(76vh,560px)}
-  .hero-full img{object-position:40% top}
+/* до 860px текст не накладається на фото, а стоїть під ним */
+@media(max-width:859px){
+  .hero-full{display:block;min-height:0;background:var(--ink)}
+  .hero-full::after{display:none}
+  .hero-full picture{position:static;display:block;line-height:0}
+  .hero-full img{height:auto;aspect-ratio:4/3;object-position:42% top}
+  .hero-inner{max-width:none;padding:22px 18px 28px}
+  .hero-full h1{font-size:clamp(27px,7.4vw,36px)}
+  .hero-full .hlead{font-size:16px;color:rgba(255,255,255,.82)}
+  .hero-full .tag{background:#242424;backdrop-filter:none}
+  .hbtns{margin-top:20px}
   .hbtns .btn{flex:1 1 100%}
+}
+@media(max-width:420px){
+  .hero-full img{aspect-ratio:1/1}
 }
 
 /* ---------- типографіка ---------- */
