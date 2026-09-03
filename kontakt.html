@@ -63,23 +63,16 @@
 <section><div class="wrap">
   <h2 data-i="mapTitle"></h2>
   <div class="map">
-    <div class="placeholder">
-      <div class="iconbox" style="margin:0 auto 4px"><svg class="ic"><use href="#i-pin"></use></svg></div>
-      <p data-i="mapNote"></p>
-      <button class="btn solid" type="button" style="display:inline-flex" data-i="mapBtn"></button>
+    <div class="frame"></div>
+    <div class="mapbar">
+      <span><svg class="ic sm"><use href="#i-pin"></use></svg><span data-i="mapNote"></span></span>
+      <a class="btn solid" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/search/?api=1&query=Klostermannova+5987%2C+430+01+Chomutov"
+         data-i="mapBtn"></a>
     </div>
   </div>
 </div></section>
 
-<section><div class="wrap">
-  <h2 data-i="whoTitle"></h2>
-  <div class="block"><div class="iconbox"><svg class="ic"><use href="#i-factory"></use></svg></div><h3 data-i="w1t"></h3><p data-i="w1d"></p>
-    <div class="btnrow"><a class="btn ghost wide" href="robota.html"><span data-i="w1c"></span><svg class="ic"><use href="#i-arrow"></use></svg></a></div></div>
-  <div class="block"><div class="iconbox"><svg class="ic"><use href="#i-users"></use></svg></div><h3 data-i="w2t"></h3><p data-i="w2d"></p>
-    <div class="btnrow"><a class="btn ghost wide" href="firmam.html"><span data-i="w2c"></span><svg class="ic"><use href="#i-arrow"></use></svg></a></div></div>
-  <div class="block"><div class="iconbox"><svg class="ic"><use href="#i-doc"></use></svg></div><h3 data-i="w3t"></h3><p data-i="w3d"></p>
-    <div class="btnrow"><a class="btn ghost wide" href="dokumenty.html"><span data-i="w3c"></span><svg class="ic"><use href="#i-arrow"></use></svg></a></div></div>
-</div></section>
 
 
 <div class="wrap"><div data-form id="form"></div></div>
@@ -110,16 +103,6 @@ const PAGE = {
   "lAddress": "Адреса",
   "lCountry": "Чеська Республіка",
   "licenseNote": "Маємо чинну ліцензію на посередництво в працевлаштуванні, зокрема іноземців. Застраховані на випадок банкрутства.",
-  "whoTitle": "Що вас цікавить",
-  "w1t": "Шукаю роботу",
-  "w1d": "Вакансії на заводах автокомпонентів у Кадані та Хомутові.",
-  "w1c": "Переглянути вакансію",
-  "w2t": "Потрібні працівники",
-  "w2d": "Тимчасове призначення персоналу з повним кадровим сервісом.",
-  "w2c": "Умови для компаній",
-  "w3t": "Потрібні документи",
-  "w3d": "Робоча карта, віза, постійне проживання, супровід в органах.",
-  "w3c": "Послуги для іноземців"
  },
  "cs": {
   "h1": "Kontakt",
@@ -128,16 +111,6 @@ const PAGE = {
   "lAddress": "Adresa",
   "lCountry": "Česká republika",
   "licenseNote": "Máme platné povolení ke zprostředkování zaměstnání včetně zaměstnávání cizinců. Jsme pojištěni proti úpadku.",
-  "whoTitle": "Co vás zajímá",
-  "w1t": "Hledám práci",
-  "w1d": "Volná místa v závodech na výrobu autodílů v Kadani a Chomutově.",
-  "w1c": "Zobrazit nabídku",
-  "w2t": "Potřebuji pracovníky",
-  "w2d": "Dočasné přidělení personálu s kompletním personálním servisem.",
-  "w2c": "Podmínky pro firmy",
-  "w3t": "Potřebuji dokumenty",
-  "w3d": "Zaměstnanecká karta, vízum, trvalý pobyt, doprovod na úřadech.",
-  "w3c": "Služby pro cizince"
  },
  "ro": {
   "h1": "Contact",
@@ -146,16 +119,6 @@ const PAGE = {
   "lAddress": "Adresa",
   "lCountry": "Republica Cehă",
   "licenseNote": "Deținem licență valabilă de mediere a muncii, inclusiv pentru străini. Suntem asigurați împotriva insolvenței.",
-  "whoTitle": "Ce vă interesează",
-  "w1t": "Caut de lucru",
-  "w1d": "Posturi în fabricile de piese auto din Kadaň și Chomutov.",
-  "w1c": "Vezi oferta",
-  "w2t": "Am nevoie de lucrători",
-  "w2d": "Detașare temporară de personal cu serviciu complet de resurse umane.",
-  "w2c": "Condiții pentru companii",
-  "w3t": "Am nevoie de documente",
-  "w3d": "Card de angajare, viză, rezidență permanentă, asistență la autorități.",
-  "w3c": "Servicii pentru străini"
  }
 };
 buildPage(PAGE, {title:"h1"});

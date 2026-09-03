@@ -16,6 +16,7 @@ const CONFIG = {
   phoneHref: "+420608067777",
   email: "PalsirCz@email.cz",
   address: "Klostermannova 5987, 430 01 Chomutov",
+  coords: [50.4620455, 13.4173465],
   brandYear: "2015–2026"
 };
 
@@ -58,8 +59,8 @@ uk:{
   fErr:"Не вдалося надіслати. Зателефонуйте: "+CONFIG.phone,
   fFill:"Заповніть імʼя, телефон і підтвердіть згоду.",
   footTagline:"Ліцензована агенція праці", footPrivacy:"Обробка персональних даних",
-  mapTitle:"Ми на мапі", mapNote:"Мапа завантажується з сервісу Google, який отримає вашу IP-адресу.",
-  mapBtn:"Показати мапу"
+  mapTitle:"Ми на мапі", mapNote:"Klostermannova 5987, 430 01 Chomutov",
+  mapBtn:"Відкрити в Google Maps"
 },
 cs:{
   navHome:"O společnosti", navJobs:"Práce", navFirms:"Pro firmy",
@@ -76,8 +77,8 @@ cs:{
   fErr:"Odeslání se nezdařilo. Zavolejte: "+CONFIG.phone,
   fFill:"Vyplňte jméno, telefon a potvrďte souhlas.",
   footTagline:"Licencovaná agentura práce", footPrivacy:"Zpracování osobních údajů",
-  mapTitle:"Kde nás najdete", mapNote:"Mapa se načítá ze služby Google, která získá vaši IP adresu.",
-  mapBtn:"Zobrazit mapu"
+  mapTitle:"Kde nás najdete", mapNote:"Klostermannova 5987, 430 01 Chomutov",
+  mapBtn:"Otevřít v Google Maps"
 },
 ro:{
   navHome:"Despre companie", navJobs:"Locuri de muncă", navFirms:"Pentru companii",
@@ -94,8 +95,8 @@ ro:{
   fErr:"Trimiterea a eșuat. Sunați la: "+CONFIG.phone,
   fFill:"Completați numele, telefonul și bifați acordul.",
   footTagline:"Agenție de muncă licențiată", footPrivacy:"Prelucrarea datelor personale",
-  mapTitle:"Unde ne găsiți", mapNote:"Harta se încarcă de la Google, care va primi adresa dumneavoastră IP.",
-  mapBtn:"Afișează harta"
+  mapTitle:"Unde ne găsiți", mapNote:"Klostermannova 5987, 430 01 Chomutov",
+  mapBtn:"Deschide în Google Maps"
 }
 };
 
@@ -177,15 +178,14 @@ function buildPage(PAGE, opts){
     document.addEventListener("keydown", e=>{ if(e.key==="Escape") openMenu(false); });
   }
 
-  // 4. мапа вантажиться лише після кліку (без згоди — жодних запитів до Google)
-  const map = document.querySelector(".map");
+  // 4. мапа: OpenStreetMap вантажиться одразу (без cookie і стеження),
+  //    Google відкривається окремою кнопкою в новій вкладці
+  const map = document.querySelector(".map .frame");
   if(map){
-    const btn = map.querySelector("button");
-    if(btn) btn.addEventListener("click", ()=>{
-      map.innerHTML = `<iframe loading="lazy" referrerpolicy="no-referrer"
-        src="https://www.google.com/maps?q=${encodeURIComponent(CONFIG.address)}&output=embed"
-        title="Palsir CZ"></iframe>`;
-    });
+    const [lat, lon] = CONFIG.coords;
+    const d = 0.006;
+    map.innerHTML = `<iframe loading="lazy" title="Palsir CZ"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=${lon-d}%2C${lat-d/2}%2C${lon+d}%2C${lat+d/2}&layer=mapnik&marker=${lat}%2C${lon}"></iframe>`;
   }
 
   // 5. приховати блоки з фото, яких ще немає на сервері
