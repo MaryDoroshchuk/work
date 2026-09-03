@@ -47,7 +47,7 @@ const ICONS = `
 /* ---------- переклади, спільні для всіх сторінок ---------- */
 const COMMON = {
 uk:{
-  navHome:"Про компанію", navJobs:"Робота", navFirms:"Компаніям",
+  navHome:"Про нас", navJobs:"Робота", navFirms:"Компаніям",
   navDocs:"Документи", navContact:"Контакти",
   menu:"Меню", close:"Закрити",
   dockCall:"Подзвонити", dockApply:"Написати",
@@ -72,7 +72,7 @@ uk:{
   mapBtn:"Відкрити в Google Maps"
 },
 cs:{
-  navHome:"O společnosti", navJobs:"Práce", navFirms:"Pro firmy",
+  navHome:"O nás", navJobs:"Práce", navFirms:"Pro firmy",
   navDocs:"Dokumenty", navContact:"Kontakt",
   menu:"Menu", close:"Zavřít",
   dockCall:"Zavolat", dockApply:"Napsat",
@@ -97,7 +97,7 @@ cs:{
   mapBtn:"Otevřít v Google Maps"
 },
 ro:{
-  navHome:"Despre companie", navJobs:"Locuri de muncă", navFirms:"Pentru companii",
+  navHome:"Despre noi", navJobs:"Muncă", navFirms:"Companii",
   navDocs:"Documente", navContact:"Contact",
   menu:"Meniu", close:"Închide",
   dockCall:"Sună", dockApply:"Scrie",
@@ -266,10 +266,11 @@ function buildPage(PAGE, opts){
   document.querySelectorAll(".langs button").forEach(b=>
     b.addEventListener("click", ()=>apply(b.dataset.lang)));
 
+  // мова: 1) ?l= в адресі, 2) мова браузера, 3) чеська за замовчуванням
   const urlLang = new URLSearchParams(location.search).get("l");
-  const navLang = (navigator.language||"uk").slice(0,2);
+  const navLang = (navigator.language || "cs").slice(0,2);
   apply(["uk","cs","ro"].includes(urlLang) ? urlLang
-      : (["uk","cs","ro"].includes(navLang) ? navLang : "uk"));
+      : (["uk","cs","ro"].includes(navLang) ? navLang : "cs"));
 
   // 7. перевірка і надсилання форми
   const form = document.getElementById("mainForm");
