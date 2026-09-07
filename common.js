@@ -15,7 +15,10 @@ const CONFIG = {
   phone: "+420 608 067 777",
   phoneHref: "+420608067777",
   email: "PalsirCz@email.cz",
-  address: "Klostermannova 5987, 430 01 Chomutov",
+  address: "Klostermannova 5987, 430 01 Chomutov",   // офіс, куди приїжджають люди
+  seat: "Březenská 2466/8, Libeň, 182 00 Praha 8",   // sídlo за реєстром
+  ico: "04383249",
+  orEntry: "C 246740, Městský soud v Praze",
   coords: [50.4620455, 13.4173465],
   brandYear: "2015–2026"
 };
@@ -67,7 +70,8 @@ uk:{
   errConsent:"Потрібна згода на обробку даних.",
   waBlocked:"Браузер заблокував вікно WhatsApp.",
   waOpen:"Відкрити чат",
-  footTagline:"Ліцензована агенція праці", footPrivacy:"Обробка персональних даних",
+  footTagline:"Ліцензована агенція праці з 2015 року", footPrivacy:"Обробка персональних даних",
+  footLegal:"Palsir CZ s.r.o., IČO 04383249, sídlo Březenská 2466/8, Libeň, 182 00 Praha 8. Зареєстрована в торговому реєстрі Міського суду в Празі, відділ C, вкладка 246740.",
   mapTitle:"Ми на мапі", mapNote:"Klostermannova 5987, 430 01 Chomutov",
   mapBtn:"Відкрити в Google Maps"
 },
@@ -92,7 +96,8 @@ cs:{
   errConsent:"Je potřeba souhlas se zpracováním údajů.",
   waBlocked:"Prohlížeč zablokoval okno WhatsApp.",
   waOpen:"Otevřít chat",
-  footTagline:"Licencovaná agentura práce", footPrivacy:"Zpracování osobních údajů",
+  footTagline:"Licencovaná agentura práce od roku 2015", footPrivacy:"Zpracování osobních údajů",
+  footLegal:"Palsir CZ s.r.o., IČO 04383249, se sídlem Březenská 2466/8, Libeň, 182 00 Praha 8, zapsaná v obchodním rejstříku vedeném Městským soudem v Praze, oddíl C, vložka 246740.",
   mapTitle:"Kde nás najdete", mapNote:"Klostermannova 5987, 430 01 Chomutov",
   mapBtn:"Otevřít v Google Maps"
 },
@@ -117,7 +122,8 @@ ro:{
   errConsent:"Este necesar acordul pentru prelucrarea datelor.",
   waBlocked:"Browserul a blocat fereastra WhatsApp.",
   waOpen:"Deschide chatul",
-  footTagline:"Agenție de muncă licențiată", footPrivacy:"Prelucrarea datelor personale",
+  footTagline:"Agenție de muncă licențiată din 2015", footPrivacy:"Prelucrarea datelor personale",
+  footLegal:"Palsir CZ s.r.o., IČO 04383249, sediu social Březenská 2466/8, Libeň, 182 00 Praha 8, înregistrată în registrul comerțului ținut de Tribunalul Municipal din Praga, secțiunea C, poziția 246740.",
   mapTitle:"Unde ne găsiți", mapNote:"Klostermannova 5987, 430 01 Chomutov",
   mapBtn:"Deschide în Google Maps"
 }

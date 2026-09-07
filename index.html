@@ -73,6 +73,19 @@
 </div></section>
 
 <section><div class="wrap">
+  <div class="dark">
+    <div class="iconbox"><svg class="ic"><use href="#i-users"></use></svg></div>
+    <h2 data-i="firmsTitle"></h2>
+    <p data-i="firmsText"></p>
+    <ul class="ticks on-dark" style="margin-top:16px" data-html="firmsList"></ul>
+    <p style="margin-top:16px;font-weight:700;color:var(--yellow)" data-i="firmsPrice"></p>
+    <div class="btnrow">
+      <a class="btn solid wide" href="firmam.html"><span data-i="firmsCta"></span><svg class="ic"><use href="#i-arrow"></use></svg></a>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
   <h2 data-i="whoTitle"></h2>
   <div class="block"><div class="iconbox"><svg class="ic"><use href="#i-factory"></use></svg></div>
     <h3 data-i="w1t"></h3><p data-i="w1d"></p>
@@ -89,12 +102,12 @@
 <div class="wrap"><div data-form id="form"></div></div>
 
 <footer><div class="wrap">
-  <p class="brand">PALSIR CZ<sup>&#8482;</sup> &copy; 2015–2026</p>
+  <p class="brand">PALSIR CZ</p>
   <div class="frow">
     <span data-i="footTagline"></span>
-    <span>IČO 04383249</span>
     <a href="privacy.html" data-i="footPrivacy"></a>
   </div>
+  <p class="flegal" data-i="footLegal"></p>
 </div></footer>
 
 <nav class="dock">
@@ -124,7 +137,12 @@ const PAGE = {
   "f4d": "Страхування на випадок банкрутства і відповідальності за шкоду.",
   "aboutTitle": "Хто ми",
   "aboutText": "<p>PALSIR CZ s.r.o. — агенція праці з чинним дозволом на посередництво в працевлаштуванні, зокрема іноземців, для всіх видів робіт у всіх галузях. Працюємо у формі посередництва за <b>§ 14 абз. 1 літ. b) Закону про зайнятість</b>.</p>\n<p>Забезпечуємо кваліфікованих і допоміжних робітників, ремісничі, технічні, ручні, сервісні, адміністративні та медичні спеціальності — переважно зі Східної Європи.</p>\n<p>Від заснування у 2015 році постачаємо персонал на ринки праці Чехії, Словаччини, Польщі, Угорщини та Німеччини, поступово розширюючись на інші країни Східної, Центральної та Західної Європи.</p>",
-  "whoTitle": "Що вас цікавить",
+  "firmsTitle": "Компаніям: тимчасове призначення персоналу",
+ "firmsText": "Підбираємо працівників за вашим запитом, оформлюємо їх у себе і направляємо на ваше робоче місце. Ви лише підтверджуєте відпрацьовані години — кадровий облік, зарплати і внески залишаються на нас.",
+ "firmsList": "<li>Пошук і відбір працівників</li><li>Договори, реєстрація в OSSZ і ZP, виплати, податки</li><li>Страхування відповідальності за шкоду до 2 000 000 Kč</li><li>Страхування нещасних випадків і на випадок банкрутства</li>",
+ "firmsPrice": "Прозора ставка: зарплата + ціна агенції + ПДВ",
+ "firmsCta": "Умови та ціни для компаній",
+ "whoTitle": "Що вас цікавить",
   "w1t": "Шукаю роботу",
   "w1d": "Вакансії на заводах автокомпонентів у Кадані та Хомутові. Офіційний договір, 160–185 Kč/год.",
   "w1c": "Переглянути вакансію",
@@ -152,7 +170,12 @@ const PAGE = {
   "f4d": "Pojištění proti úpadku i pojištění odpovědnosti za škodu.",
   "aboutTitle": "Kdo jsme",
   "aboutText": "<p>PALSIR CZ s.r.o. má platné povolení ke zprostředkování zaměstnání i povolení ke zprostředkování zaměstnání cizinců pro všechny druhy prací ve všech oborech. Působíme ve formě zprostředkování zaměstnání podle <b>ust. § 14 odst. 1 písm. b) zákona o zaměstnanosti</b>.</p>\n<p>Zajišťujeme kvalifikované i pomocné dělníky, řemeslné, technické, manuální, servisní, administrativní a zdravotní profese, a to především z východní Evropy.</p>\n<p>Od založení v roce 2015 dodáváme personál na pracovní trh České republiky, Slovenska, Polska, Maďarska a Německa s postupným rozvojem do dalších států východní, centrální a západní Evropy.</p>",
-  "whoTitle": "Co vás zajímá",
+  "firmsTitle": "Pro firmy: dočasné přidělení personálu",
+ "firmsText": "Pracovníky vyhledáme, zaměstnáme u nás a dočasně přidělíme na vámi určené pracovní místo. Vy pouze potvrzujete odpracované hodiny — personální agendu, mzdy i odvody vyřídíme my.",
+ "firmsList": "<li>Vyhledání a výběr pracovníků</li><li>Smlouvy, přihlášky na OSSZ a ZP, výplaty, odvody, daně</li><li>Pojištění odpovědnosti za škodu až do 2 000 000 Kč</li><li>Pojištění pracovních úrazů a pojištění proti úpadku</li>",
+ "firmsPrice": "Transparentní sazba: mzda + cena agentury + DPH",
+ "firmsCta": "Podmínky a ceny pro firmy",
+ "whoTitle": "Co vás zajímá",
   "w1t": "Hledám práci",
   "w1d": "Volná místa v závodech na výrobu autodílů v Kadani a Chomutově. Oficiální smlouva, 160–185 Kč/hod.",
   "w1c": "Zobrazit nabídku",
@@ -180,7 +203,12 @@ const PAGE = {
   "f4d": "Asigurare împotriva insolvenței și de răspundere pentru daune.",
   "aboutTitle": "Cine suntem",
   "aboutText": "<p>PALSIR CZ s.r.o. deține licență valabilă de mediere a muncii, inclusiv pentru încadrarea străinilor, pentru toate tipurile de activități din toate domeniile. Activăm în forma medierii muncii conform <b>art. 14 alin. 1 lit. b) din Legea privind ocuparea forței de muncă</b>.</p>\n<p>Asigurăm muncitori calificați și necalificați, meseriași, personal tehnic, manual, de service, administrativ și medical, în principal din Europa de Est.</p>\n<p>De la înființarea în 2015 furnizăm personal pe piețele muncii din Cehia, Slovacia, Polonia, Ungaria și Germania, cu extindere treptată în alte state din Europa de Est, Centrală și de Vest.</p>",
-  "whoTitle": "Ce vă interesează",
+  "firmsTitle": "Pentru companii: detașare temporară de personal",
+ "firmsText": "Recrutăm lucrătorii, îi angajăm la noi și îi repartizăm la locul de muncă stabilit de dumneavoastră. Dumneavoastră doar confirmați orele lucrate — evidența de personal, salariile și contribuțiile rămân la noi.",
+ "firmsList": "<li>Căutarea și selecția lucrătorilor</li><li>Contracte, înscrieri la OSSZ și casele de sănătate, salarii, contribuții</li><li>Asigurare de răspundere pentru daune până la 2 000 000 CZK</li><li>Asigurare pentru accidente de muncă și împotriva insolvenței</li>",
+ "firmsPrice": "Tarif transparent: salariu + comisionul agenției + TVA",
+ "firmsCta": "Condiții și prețuri pentru companii",
+ "whoTitle": "Ce vă interesează",
   "w1t": "Caut de lucru",
   "w1d": "Posturi în fabricile de piese auto din Kadaň și Chomutov. Contract oficial, 160–185 CZK/oră.",
   "w1c": "Vezi oferta",
