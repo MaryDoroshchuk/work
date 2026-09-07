@@ -135,13 +135,26 @@ h3{font-size:19px;margin-bottom:6px}
 .note{color:var(--body);font-size:15px}
 
 /* ---------- блоки ---------- */
-.block{border:2px solid var(--line);border-radius:18px;padding:20px;background:#fff;margin-bottom:12px}
+.block{border:2px solid var(--line);border-radius:18px;padding:18px;background:#fff;margin-bottom:12px}
 .block p{color:var(--body);font-size:16px}
 .block h3+p{margin-top:4px}
 .dark{background:var(--ink);color:#fff;border-radius:22px;padding:24px}
 .dark h2,.dark h3{color:#fff}
 .dark p{color:#C6C2BA}
 .dark .iconbox{background:var(--yellow)}
+
+/* світлий акцентний блок */
+.hl{background:var(--yellow);color:var(--ink);border-radius:22px;padding:22px}
+.hl h2,.hl h3{color:var(--ink)}
+.hl p{color:#5A4A00;font-size:16px}
+.hl .iconbox{background:var(--ink);color:var(--yellow)}
+.hl .ticks li{color:var(--ink)}
+.hl .ticks li+li{border-top-color:rgba(20,20,20,.20)}
+.hl .ticks li:before{background:var(--ink)}
+.hl .btn.ghost{border-color:var(--ink);color:var(--ink)}
+.hl .btn.ghost:hover{background:var(--ink);color:var(--yellow)}
+.hl .btn.solid{background:var(--ink);border-color:var(--ink);color:var(--yellow)}
+.hl .btn.solid:hover{background:#000;border-color:#000}
 .cards2{display:grid;gap:12px}
 @media(min-width:620px){.cards2{grid-template-columns:1fr 1fr}}
 
@@ -155,16 +168,17 @@ h3{font-size:19px;margin-bottom:6px}
 
 /* списки */
 .ticks{list-style:none;margin:0;padding:0}
-.ticks li{position:relative;padding:11px 0 11px 32px;border-bottom:1px solid var(--soft);font-size:16px}
-.ticks li:last-child{border-bottom:0}
-.ticks li:before{content:"";position:absolute;left:2px;top:19px;width:13px;height:13px;
+.ticks li{position:relative;padding:10px 0 10px 30px;font-size:16px;line-height:1.5}
+.ticks li+li{border-top:2px dotted #CFCAC0}
+.ticks li:before{content:"";position:absolute;left:3px;top:17px;width:12px;height:12px;
   border-radius:4px;background:var(--yellow)}
-.ticks.on-dark li{border-color:#2E2E2E;color:#E6E3DE}
+.ticks.on-dark li{color:#E6E3DE}
+.ticks.on-dark li+li{border-top-color:#333}
 .tags{display:flex;flex-wrap:wrap;gap:9px;padding:0;margin:0}
 .tags li{list-style:none;border:2px solid var(--line);border-radius:999px;padding:10px 16px;
   font-weight:600;font-size:15px;background:#fff}
 .steps{list-style:none;counter-reset:s;margin:0;padding:0}
-.steps li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;padding:14px 0}
+.steps li{counter-increment:s;display:flex;gap:13px;align-items:flex-start;padding:11px 0}
 .steps li+li{border-top:2px dotted #CFCAC0}
 .steps li:before{content:counter(s);flex:0 0 auto;width:34px;height:34px;border-radius:10px;
   background:var(--yellow);font:800 16px/34px Manrope,sans-serif;text-align:center}
