@@ -282,6 +282,7 @@ button.send:disabled{opacity:.6;cursor:default}
 .brand-viber{color:#7360F2}
 .brand-wa{color:#25D366}
 .brand-mail{color:var(--body)}
+.brand-ig{color:#D6295E}
 .chips a:hover .brand-mail{color:#fff}
 .side-contacts .brand-wa{color:#25D366}
 .info{display:grid;gap:12px;margin-top:18px}
