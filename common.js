@@ -30,6 +30,7 @@ const ICONS = `
 <symbol id="i-telegram" viewBox="0 0 24 24"><path d="M21 4.5 2.9 11.4c-.7.3-.7 1.2 0 1.4l4.5 1.4 1.7 5c.2.6 1 .8 1.4.3l2.5-2.6 4.4 3.2c.5.4 1.3.1 1.4-.6L21.9 5.4c.2-.7-.4-1.2-1-.9z"/><path d="m7.4 14.2 10-6.6-7.5 7.6"/></symbol>
 <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z"/><path d="M9 8.5c.3 2 1.6 4.2 3.6 5.3.7.4 1.4.6 1.9.2l.8-.7-1.8-1.6-.9.6c-.9-.5-1.7-1.4-2.1-2.3l.7-.8-1.4-1.8-.8.6z"/></symbol>
 <symbol id="i-viber" viewBox="0 0 24 24"><path d="M12 2.8c4.6 0 7.6 2.8 7.6 7.3 0 4.4-3 7.2-7.6 7.2-.7 0-1.4 0-2-.2l-3.4 2.6c-.4.3-.9 0-.9-.5v-2.6C3.5 15.3 2.4 13 2.4 10c0-4.5 3-7.3 7.6-7.3z"/><path d="M9 7.6c.3 1.9 1.6 3.6 3.4 4.4.6.3 1.2.4 1.6.1"/></symbol>
+<symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.2" cy="6.8" r="1.1"/></symbol>
 <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.7" y="5" width="18.6" height="14" rx="2.4"/><path d="m3.4 6.6 8.6 6 8.6-6"/></symbol>
 <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></symbol>
 <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
