@@ -71,7 +71,7 @@ uk:{
   waBlocked:"Браузер заблокував вікно WhatsApp.",
   waOpen:"Відкрити чат",
   footTagline:"Ліцензована агенція праці з 2015 року", footPrivacy:"Обробка персональних даних",
-  footLegal:"Palsir CZ s.r.o., IČO 04383249, sídlo Březenská 2466/8, Libeň, 182 00 Praha 8. Зареєстрована в торговому реєстрі Міського суду в Празі, відділ C, вкладка 246740.",
+  footLegal:"footLegal:"Palsir CZ s.r.o., IČO 04383249, Březenská 2466/8, 182 00 Praha 8. Міський суд у Празі, sp. zn. C 246740.",
   mapTitle:"Ми на мапі", mapNote:"Klostermannova 5987, 430 01 Chomutov",
   mapBtn:"Відкрити в Google Maps"
 },
@@ -97,7 +97,7 @@ cs:{
   waBlocked:"Prohlížeč zablokoval okno WhatsApp.",
   waOpen:"Otevřít chat",
   footTagline:"Licencovaná agentura práce od roku 2015", footPrivacy:"Zpracování osobních údajů",
-  footLegal:"Palsir CZ s.r.o., IČO 04383249, se sídlem Březenská 2466/8, Libeň, 182 00 Praha 8, zapsaná v obchodním rejstříku vedeném Městským soudem v Praze, oddíl C, vložka 246740.",
+  footLegal:"footLegal:"Palsir CZ s.r.o., IČO 04383249, Březenská 2466/8, 182 00 Praha 8, sp. zn. C 246740 vedená u Městského soudu v Praze.",
   mapTitle:"Kde nás najdete", mapNote:"Klostermannova 5987, 430 01 Chomutov",
   mapBtn:"Otevřít v Google Maps"
 },
@@ -123,7 +123,7 @@ ro:{
   waBlocked:"Browserul a blocat fereastra WhatsApp.",
   waOpen:"Deschide chatul",
   footTagline:"Agenție de muncă licențiată din 2015", footPrivacy:"Prelucrarea datelor personale",
-  footLegal:"Palsir CZ s.r.o., IČO 04383249, sediu social Březenská 2466/8, Libeň, 182 00 Praha 8, înregistrată în registrul comerțului ținut de Tribunalul Municipal din Praga, secțiunea C, poziția 246740.",
+  footLegal:"footLegal:"Palsir CZ s.r.o., IČO 04383249, Březenská 2466/8, 182 00 Praha 8. Tribunalul Municipal Praga, sp. zn. C 246740.",
   mapTitle:"Unde ne găsiți", mapNote:"Klostermannova 5987, 430 01 Chomutov",
   mapBtn:"Deschide în Google Maps"
 }
