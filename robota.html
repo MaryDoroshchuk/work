@@ -95,7 +95,35 @@
     <li><div><b data-i="s4t"></b><span data-i="s4d"></span></div></li>
   </ol>
 </div></section>
+<section><div class="wrap">
+  <h2 data-i="moreTitle"></h2>
 
+  <div class="block">
+    <h3 data-i="v1t"></h3>
+    <div class="figure" style="margin:12px 0"><picture>
+  <source srcset="img/foto-svarka.webp" type="image/webp">
+  <img src="img/foto-svarka.jpg" data-alt="v1img" alt="" loading="lazy">
+</picture></div>
+    <ul class="tags" style="margin:10px 0 14px">
+      <li data-i="v1loc"></li><li data-i="v1pay"></li>
+    </ul>
+    <ul class="ticks" data-html="v1list"></ul>
+    <div class="btnrow"><a class="btn solid wide" href="#form"><span data-i="ctaApply"></span></a></div>
+  </div>
+
+  <div class="block">
+    <h3 data-i="v2t"></h3>
+    <div class="figure" style="margin:12px 0"><picture>
+  <source srcset="img/foto-vzv.webp" type="image/webp">
+  <img src="img/foto-vzv.jpg" data-alt="v2img" alt="" loading="lazy">
+</picture></div>
+    <ul class="tags" style="margin:10px 0 14px">
+      <li data-i="v2loc"></li><li data-i="v2pay"></li>
+    </ul>
+    <ul class="ticks" data-html="v2list"></ul>
+    <div class="btnrow"><a class="btn solid wide" href="#form"><span data-i="ctaApply"></span></a></div>
+  </div>
+</div></section>
 <section><div class="wrap"><div class="hl">
   <div class="iconbox"><svg class="ic"><use href="#i-doc"></use></svg></div>
   <h2 data-i="docsTitle"></h2><p data-i="docsText"></p>
@@ -125,7 +153,7 @@
 <script>
 const PAGE = {
  "uk": {
-  "place": "Кадань і Хомутов, Чехія",
+  "place": "Кадань, Хомутов і Жатець",
   "h1": "Виробництво деталей для автомобілів",
   "lead": "Набираємо чоловіків і жінок на повний робочий день. Офіційний договір, зміни 8–12 годин.",
   "imgAlt": "Працівники заводу автокомпонентів біля виробничої лінії",
@@ -165,10 +193,21 @@ const PAGE = {
   "s4d": "Показуємо робоче місце і ставимо в графік.",
   "docsTitle": "Потрібна робоча карта або віза?",
   "docsText": "Ми оформлюємо документи для іноземців: робочу карту, довгострокову візу, постійне проживання, супровід в органах.",
-  "docsCta": "Що ми оформлюємо"
+  "docsCta": "Що ми оформлюємо",
+    "moreTitle": "Інші вакансії",
+ "v1t": "Зварювальники",
+  "v1img": "Зварювальник за роботою",
+ "v1loc": "Устецький край, Чехія",
+ "v1pay": "Оплата за домовленістю",
+ "v1list": "<li>Офіційне працевлаштування</li><li>Стабільна робота</li><li>Підтримка під час оформлення документів</li>",
+ "v2t": "Водій навантажувача (VZV)",
+  "v2img": "Водій навантажувача на складі",
+ "v2loc": "Кадань і Жатець",
+ "v2pay": "Оплата за домовленістю",
+ "v2list": "<li>Посвідчення на VZV або допоможемо пройти навчання</li><li>Офіційне працевлаштування</li><li>Стабільна робота</li><li>Підтримка під час оформлення документів</li>"
  },
  "cs": {
-  "place": "Kadaň a Chomutov, ČR",
+  "place": "Kadaň, Chomutov a Žatec",
   "h1": "Výroba dílů pro automobily",
   "lead": "Nabíráme muže i ženy na plný úvazek. Oficiální smlouva, směny 8–12 hodin.",
   "imgAlt": "Pracovníci závodu na výrobu autodílů u výrobní linky",
@@ -208,10 +247,21 @@ const PAGE = {
   "s4d": "Ukážeme pracoviště a zařadíme vás do rozpisu.",
   "docsTitle": "Potřebujete zaměstnaneckou kartu nebo vízum?",
   "docsText": "Vyřizujeme dokumenty pro cizince: zaměstnaneckou kartu, dlouhodobé vízum, trvalý pobyt i doprovod na úřadech.",
-  "docsCta": "Co vyřizujeme"
+  "docsCta": "Co vyřizujeme",
+    "moreTitle": "Další volná místa",
+ "v1t": "Svářeči",
+  "v1img": "Svářeč při práci",
+ "v1loc": "Ústecký kraj, ČR",
+ "v1pay": "Mzda dohodou",
+ "v1list": "<li>Oficiální zaměstnání</li><li>Stabilní práce</li><li>Podpora při vyřizování dokumentů</li>",
+ "v2t": "Řidič vysokozdvižného vozíku",
+  "v2img": "Řidič vysokozdvižného vozíku ve skladu",
+ "v2loc": "Kadaň a Žatec",
+ "v2pay": "Mzda dohodou",
+ "v2list": "<li>Průkaz na VZV, nebo zajistíme zaškolení</li><li>Oficiální zaměstnání</li><li>Stabilní práce</li><li>Podpora při vyřizování dokumentů</li>"
  },
  "ro": {
-  "place": "Kadaň și Chomutov, Cehia",
+  "place": "Kadaň, Chomutov și Žatec",
   "h1": "Producție de piese auto",
   "lead": "Angajăm bărbați și femei cu normă întreagă. Contract oficial, ture de 8–12 ore.",
   "imgAlt": "Angajați ai fabricii de piese auto lângă linia de producție",
@@ -251,7 +301,18 @@ const PAGE = {
   "s4d": "Vă arătăm locul de muncă și vă includem în program.",
   "docsTitle": "Aveți nevoie de card de angajare sau viză?",
   "docsText": "Întocmim documente pentru străini: card de angajare, viză de lungă ședere, rezidență permanentă și asistență la autorități.",
-  "docsCta": "Ce întocmim"
+  "docsCta": "Ce întocmim",
+    "moreTitle": "Alte posturi disponibile",
+ "v1t": "Sudori",
+  "v1img": "Sudor la lucru",
+ "v1loc": "Regiunea Ústí, Cehia",
+ "v1pay": "Salariu negociabil",
+ "v1list": "<li>Angajare oficială</li><li>Loc de muncă stabil</li><li>Sprijin la întocmirea documentelor</li>",
+ "v2t": "Stivuitorist",
+  "v2img": "Stivuitorist în depozit",
+ "v2loc": "Kadaň și Žatec",
+ "v2pay": "Salariu negociabil",
+ "v2list": "<li>Permis de stivuitorist sau asigurăm instruirea</li><li>Angajare oficială</li><li>Loc de muncă stabil</li><li>Sprijin la întocmirea documentelor</li>"
  }
 };
 buildPage(PAGE, {title:"h1"});
